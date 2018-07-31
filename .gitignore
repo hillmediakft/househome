@@ -50,6 +50,7 @@ _TEMP/
 system/config/db_local.php
 system/config/db_online.php
 system/config/email.php
+system/config/email_dev.php
 
 #system/libs/tfpdf/font/unifont/arial.mtx.php
 #system/libs/tfpdf/font/unifont/arialb.mtx.php
