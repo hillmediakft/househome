@@ -1,0 +1,786 @@
+/* modal beállítások */
+.modal {
+    z-index: 9900;
+}
+
+.modal-content {
+    /*
+      background-clip: padding-box;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    */  
+    border-radius: 0px;
+    /*
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+      outline: 0 none;
+      position: relative;
+    */
+}
+
+/*
+.modal-open {
+  overflow-y: hidden !important;
+}
+*/
+
+/*
+.modal-header {
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 16.43px;
+    padding: 15px;
+}
+
+.modal-body {
+    padding: 15px;
+    position: relative;
+}
+
+.modal-footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 15px;
+    text-align: right;
+}
+*/
+
+.modal-content .send-btn {
+    background-color: #9e2828;
+    border: medium none;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0;
+    text-shadow: none;
+    text-transform: uppercase;
+    transition: all 0.2s linear 0s;
+    width: 50%;
+    margin: auto;
+}
+
+.modal-content .send-btn:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+
+/*
+.register-block {
+    border: 1px solid #e7e4e4;
+    padding: 19px;
+}
+
+.register-form input[type="text"], .register-form input[type="email"], .register-form input[type="tel"] {
+    border: 1px solid #e7e4e4;
+    font-size: 16px;
+    height: 46px;
+    margin-bottom: 15px;
+    padding-left: 16px;
+    width: 100%;
+}
+*/
+
+
+.item .preview .item-label.sale {
+    background-color: rgba(62, 199, 69, 0.8);
+}
+.item .preview .item-label.rest {
+    background-color: rgba(73, 158, 255, 0.8);
+}
+
+.item .preview .item-label {
+    padding: 6px 0;
+    right: 37%;
+    text-align: center;
+    top: 10%;
+    transform: rotate(-45deg);
+    width: 100%;
+    z-index: 0;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    text-shadow: 1px 1px 2px #969696;
+    text-transform: uppercase;
+}
+
+.preview {
+    overflow: hidden;
+}
+
+/* ingatalan reszletek 3 oszlop beállítások */
+.detail-info-block .column-2 {
+    border-right: 1px solid #e7e4e4;
+    float: left;
+    padding: 2px 30px;
+    width: 50%;
+}
+.features-info-block .column-2 {
+    /*border-right: 1px solid #e7e4e4;*/
+    float: left;
+    padding: 2px 30px;
+    width: 33%;
+}
+.features-info-block .column-2:last-child {
+    border-right: 0 none;
+}
+.detail-info-block .column-2:nth-child(even) {
+    border-right: 0 none;
+}
+
+
+.main-slides .item-label.sale {
+    background-color: rgba(62, 199, 69, 0.8);
+}
+.main-slides .item-label.rest {
+    background-color: rgba(73, 158, 255, 0.8);
+}
+.main-slides .item-label {
+    padding: 8px 0;
+    right: 42%;
+    text-align: center;
+    top: 10%;
+    transform: rotate(-45deg);
+    width: 100%;
+    z-index: 1000;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    text-shadow: 1px 1px 2px #969696;
+    text-transform: uppercase;
+}
+.main-slides {
+    overflow: hidden;
+}
+/* *********** ingatlan infobox adatlap oldalon ****** */
+.ingatlan-info-box {
+    background-color: #f8f8f8;
+    border: 1px solid #e7e4e4;
+    height: auto;
+    margin: 20px 0 20px 0;
+    overflow: hidden;
+}
+.ingatlan-info-box .section-title {
+    margin: 10px 0 7px 0;
+}
+.ingatlan-info-box h5 {
+    margin: 7px 0 5px 0;
+    font-size: 16px;
+}
+.ingatlan-info-box h3.section-title .price {
+    float: none;
+}
+.ingatlan-info-box .agent-box {
+    display: table;
+    margin: 10px 10px 5px 0;
+}
+
+.ingatlan-info-box .agent-box .agent-image {
+    display: table-cell;
+}
+.ingatlan-info-box .agent-box .agent-image img {
+    max-width: 85px;
+}
+.ingatlan-info-box .agent-box .agent-details {
+    display: table-cell;
+    padding-left: 15px;
+    vertical-align: top;
+}
+.ingatlan-info-box .agent-box .agent-details .agent-name {
+    display: block;
+    padding-bottom: 5px;
+}
+.ingatlan-info-box .agent-box .agent-details .agent-name h6{
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.ingatlan-info-box .icon-box .heading .title {
+    font-family: 'Lato-Bold', Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
+    display: table-cell;
+    vertical-align: middle;
+}
+.ingatlan-info-box .icon-box .heading {
+    display: table;
+    margin-bottom: 5px;
+}
+
+/* features elemek, amelyek nincsenek az ingatlamban */ 
+.features-info-block .info-item .feature-item-none::before {
+    color: #D8D8D8;
+    content: "\f00d";
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.features-info-block .info-item .feature-item-none {
+    display: block;
+    padding-left: 21px;
+    position: relative;
+    color: #D8D8D8;
+}
+
+
+#submit-button.button-loading::before {
+    animation: 2s linear 0s normal none infinite running fa-spin;
+    content: "\f110";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 14px;
+    margin: 0 10px 0 0;
+}
+
+#mezes_bodon {
+    display: none;
+}
+
+
+#district_select_div {
+    margin-bottom: 6px;
+} 
+#district_select_div_mobile {
+    margin-bottom: 12px;
+} 
+
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    background-color: #cc5151;
+    border: 1px solid #e7e4e4;
+    border-radius: 0px;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #e7e4e4;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.dropdown-menu > li > a {
+    line-height: 2;
+    background-color: none;
+    border-top: 5px;
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color: #9e2828;
+    text-decoration: none;
+    background-color: none;
+    border-top: 5px;
+}
+
+.bs-caret {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 34px;
+    height: 34px;
+    background-color: #cc5151;
+}
+
+.caret {
+    color: #fff;
+}
+
+
+#district_select_div .btn-default, #district_select_div_mobile .btn-default {
+    background-color: #fff;
+    border-color: #e7e4e4;
+    color: #808080;
+    font-family: "Lato-Regular",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.active:hover,
+.btn-default.focus:active,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open > .dropdown-toggle.btn-default.focus,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.dropup .dropdown-menu {
+    margin-bottom: 0px;
+}
+/* ******* alacsonyabb ár áthúzása ingatlan adatlapon ******* */
+h3.section-title .lower-price {
+    text-decoration: line-through;
+    font-size: 24px;
+    color:#000; 
+}
+/* ******* alacsonyabb ár áthúzása dobozban ******* */
+.objects-block.list-sidebar .item-info .price .lower-price {
+    text-decoration: line-through;
+    font-size: 18px;
+    color:#000; 
+}
+.latest-properties .carousel .item .preview .price-box .lower-price, .property-list .item .preview .price-box .lower-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    color:#e9e9e9;
+} 
+
+
+.badge.badge-danger {
+    background-color: #9e2828;
+}
+.kedvencek .main-sidebar {
+    padding-top: 0px;
+}
+.kedvencek .main-sidebar .widget.main-filter-widget {
+    margin-top: 0px;
+}
+
+.objects-block.list-full .item .preview .lower-price, 
+.objects-block.with-sidebar .item .preview > .lower-price,
+.objects-block.list-sidebar .item .preview .lower-price, 
+.object-slider .carousel .item .preview > .lower-price {
+    position: absolute;
+    background: rgba(73, 158, 255, 0.8);
+    bottom: 0px;
+    right: 0px;
+    padding: 5px 7px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* ** RÉSZLETES KERESÉS * */
+.search-page fieldset {
+    margin: 10px 15px 5px 15px;
+    background: #eee;
+}
+.search-page fieldset legend {
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    font-weight: normal;
+}
+
+.form-control {
+    border: 1px solid #e7e4e4;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.input-group-addon-hypen {
+    font-style: bold;
+    /*background-color: #f0f0f0;*/
+    background-color: #ffffff;
+    color: #7D7D7D;
+} 
+
+.agent-single-item .top .middle .desc {
+    font-size: 18px;
+    display: block;
+    /*color: red;*/
+    margin-bottom: 9px;
+}
+
+/* profil user adatok form validáláskor */
+input.has-error {
+    border-color: #a94442 !important;
+}
+
+
+
+
+.extrak-list {
+    padding: 26px 0px 0px 0px;
+    list-style: none;
+    margin: 0;
+}
+.extrak-list .filter-item {
+    margin-bottom: 10px;
+}
+.extrak-list .filter-item input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #e7e4e4;
+    background-color: #fff;
+    outline: none;
+    text-align: center;
+    line-height: 23px;
+    vertical-align: top;
+    margin-top: -1px;
+    margin-right: 10px;
+}
+
+.extrak-list .filter-item input[type="checkbox"]:checked::before {
+    content: "\f00c";
+    display: block;
+    color: #000;
+    font-family: "FontAwesome";
+}
+
+/* Keresés mentések */
+.saved_search_box {
+    font-size: 20px;
+    border: 1px solid #e7e4e4;
+    background-color: #eee;
+    margin-bottom: 10px;
+}
+.saved_search_box .elem {
+    padding: 10px;
+}
+.saved_search_box .elem .link {
+    text-decoration: none;
+    color: #000;
+}
+.saved_search_box .elem .link:hover {
+    color: #9e2828;
+}
+.saved_search_box .buttons .share {
+    color: #3a383b;
+    font-size: 12px;
+}
+.saved_search_box .buttons .share:hover {
+    color: #9e2828;
+}
+
+.save_search_button {
+    padding:5px 8px;
+    margin-bottom: 5px;
+    background-color: #3a383b;
+    color: #fff;
+    border: none;
+}
+.save_search_button:hover {
+    background-color: #9e2828;
+}
+
+.rent-flat-sidebar .widget.filter input[type="checkbox"]:checked::before {
+    content: "\f00c";
+    display: block;
+    color: #e42b1e;
+    font-family: "FontAwesome";
+}
+
+.slicknav_menu {
+    display:none;
+}
+
+@media screen and (max-width: 40em) {
+    /* #menu is the original menu */
+    #menu_mobile {
+        display:none;
+    }
+
+    .slicknav_menu {
+        display:block;
+    }
+}
+
+.well {
+    border-radius: 0px;
+    border-left: 5px solid #9e2828;
+}
+@media only screen and (max-width: 370px) {
+    /* ************ ADATLAP OLDAL  ********* */
+    .main-slides .item-label {
+        right: 35%;
+        font-size: 15px;
+    }
+
+    h3.section-title {
+        font-size: 20px;
+    }
+    .ingatlan-info-box h5 {
+        font-size: 16px;
+    }
+    .single-item-page .item-photos .main-thumbnail ul li {
+        height: auto;
+    }
+    .detail-info-block .column-2 {
+        padding: 2px 5px;
+        width: 100%;
+    }
+    .features-info-block .column-2 {
+        padding: 2px 5px;
+        width: 50%;
+    }
+    .ingatlan-info-box .agent-box {
+        display: table;
+        margin: 10px 0 10px 0; 
+    }
+    .ingatlan-info-box .agent-box .agent-image img {
+        max-width: 80px;
+    }
+    .detail-info-block, .features-info-block {
+        padding: 16px 0;
+    }
+}
+
+#sticker {
+    z-index: 10000!important;
+}
+
+.popover {
+    max-width: 500px;
+    border-radius: 0px;
+}
+
+#social-share-icons a {
+    color: #9e2828;
+}
+
+#social-share-icons a.share_facebook {
+    color: #3b5998;
+}
+
+#social-share-icons a.share_google {
+    color: #c63224;
+}
+
+#social-share-icons a.share_tweet {
+    color: #0085be;
+}
+
+#social-share-icons a:hover {
+    opacity: 0.5;
+}
+
+
+.item .banner-wrapper {
+    text-align: center;
+    padding: 10px;
+}
+.item .banner-wrapper .banner-title {
+    margin: 70px 0 10px 0;
+}
+.item .banner-wrapper .banner-text {
+    margin-bottom:30px;
+}
+.banner-wrapper-list {
+    text-align: center;
+    border: 1px solid #e7e4e4;
+    padding: 10px 50px 10px 50px;
+    margin-bottom: 30px;
+    background: #eee;
+    min-height: 176px;
+}
+.banner-wrapper-list h3 {
+    margin: 20px 0 10px 0;
+}
+.banner-wrapper-list .banner-text {
+    margin-bottom: 20px;
+}
+
+
+/* adatlap slider lapozó gombok - main-red.css 7252 sor a befogado objektum beállításait tartalamazza */
+.single-item-page .item-photos .main-slides .jcarousel-arrows a.next-slide {
+    float: right;
+    margin-right: 20px;
+}
+.single-item-page .item-photos .main-slides .jcarousel-arrows a.prev-slide {
+    margin-left: 20px;
+}
+
+/* **** cookie ** */
+#cookie-law { 
+    width:100%;
+    background:rgba(0,0,0,0.6); 
+    margin:0px auto 0; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+#cookie-law p { 
+    padding:10px; 
+    font-size:1em; 
+    font-weight:normal; 
+    text-align:center; 
+    color:#fff; 
+    margin:0;
+}
+
+#cookie-law p a { 
+    margin-left:10px; 
+}
+
+
+footer.footer .bottom-footer .copy {
+    text-align: left;
+}
+footer.footer .bottom-footer .policies {
+    text-align: right;
+}
+@media only screen and (max-width: 480px) {
+    footer.footer .bottom-footer .copy, footer.footer .bottom-footer .policies {
+        text-align: center;
+    }
+}
+
+#show_phone_number {
+    margin-top: 2px;
+    padding: 3px 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+
+/* ingatlanok doboz szürke egyész felületén lehet kattintani */
+.object-slider .carousel .item-anchor {
+    text-decoration: none;
+}
+.object-slider .carousel .item-anchor .item-title {
+    color: #000;
+}
+/*
+.object-slider .carousel .item-anchor .item-title:hover {
+    color: #9e2828;
+}
+*/
+.object-slider .carousel .item-anchor .item-thumbnail,
+.object-slider .carousel .item-anchor .item-entry p {
+    color: #808080;
+}
+
+
+.objects-block .item-anchor {
+    text-decoration: none;
+}
+.objects-block .item-anchor .item-title {
+    color: #000;
+}
+/*
+.objects-block .item-anchor .item-title:hover {
+    color: #9e2828;
+}
+*/
+.objects-block .item-anchor .item-thumbnail,
+.objects-block .item-anchor .item-entry p {
+    color: #808080;
+}
+
+/* *********** SZÖVEG MÉRETEK ***** */
+p.text-16 {
+    font-size: 16px;
+}
+p.outbound-link {
+    color: #9e2828; 
+}
+
+hr {
+    border-top: 3px solid #eee;
+}
+
+
+/* INGYENES ELEMZES OLDAL */
+
+    .ingy-elem-box {
+        padding:0;
+        margin:0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        position: relative;
+    }
+
+    .ingy-elem-image {
+        width:100%;
+        height:auto;
+        background-color: #000;
+        position:absolute;
+    }
+    .ingy-elem-image img {
+        width:100%;
+        display:block;
+        opacity:0.5;
+        /*position:fixed;*/
+    }
+    .ingy-elem-image .ingy-elem-image-gradient {
+        height:50px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+        position:relative;
+        top:-50px;
+    }
+
+    .ingy-elem-box h1 {
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .ingy-elem-box p {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .ingy-elem-box p.lead {
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .ingy-elem-box .btn{
+        margin:40px 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        display: inline-block;
+        background: #9e2828;
+        padding: 15px 30px;
+        text-decoration: none;
+    } 
+    .ingy-elem-box .btn:hover{
+        opacity: 0.8;
+    }
+
+    .ingy-elem-box .ingy-elem-logo {
+        text-align: center;
+        padding: 20px 0px 80px 0px;
+    }
+    .ingy-elem-box .ingy-elem-logo img{
+        position: relative;
+    }
