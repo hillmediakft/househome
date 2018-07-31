@@ -5,5 +5,5 @@
 - A virtual host beállításnál kell berakni a következõ sort (httpd-vhosts.conf file!): SetEnv ENVIRONMENT DEV
 
 ### Composer update
-- Composer update elvégzése manuálisan, hogy létrejöjjön a composer.lock file (.gitignore fáljban szerepel ezért nincs repo létrehozása után)
-- (ha nem update-lesz, akkor csak simán másold át az ingatlanok-hitelek composer.lock file-t)
+1. megoldás: másold át a másik projektbõl a composer.lock file-t és vendor mappát
+2. megoldás: Composer update elvégzése (composer.json alapján), hogy létrejöjjön a composer.lock file és a vendor mappa
