@@ -1,2 +1,8 @@
 # househome
-househome ingatlanos weboldal
+## househome ingatlanos weboldal
+
+### Környezeti változó megadása a fejlesztõi környezetben:
+- A virtual host beállításnál kell berakni a következõ sort (httpd-vhosts.conf file!): SetEnv ENVIRONMENT DEV
+
+### Composer update
+- Composer update elvégzése manuálisan, hogy létrejöjjön a composer.lock file (.gitignore fáljban szerepel ezért nincs repo létrehozása után)
