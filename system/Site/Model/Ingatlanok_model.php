@@ -369,6 +369,7 @@ class Ingatlanok_model extends SiteModel {
           `ingatlanok`.`id`,
           `ingatlanok`.`ref_num`,
           `ingatlanok`.`ingatlan_nev_" . $this->lang . "`,
+          `ingatlanok`.`leiras_" . $this->lang . "`,
           `ingatlanok`.`status`,
           `ingatlanok`.`tipus`,
           `ingatlanok`.`kerulet`,
