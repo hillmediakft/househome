@@ -104,7 +104,7 @@ use System\Libs\Language as Lang;
 
                                             <div class="item">
                                                 <div class="preview">
-        <?php $this->html_helper->showLowerPriceIcon($value); ?>
+                                                    <?php $this->html_helper->showLowerPriceIcon($value); ?>
 
                                                     <!-- <a href="<?php //echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>"></a>                                         -->
                                                     <?php if (!is_null($value['kepek'])) { ?>
@@ -113,11 +113,14 @@ use System\Libs\Language as Lang;
                                                         <img src="<?php echo Config::get('ingatlan_photo.upload_path') . 'placeholder.jpg'; ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
                                                     <?php } ?>
 
-                                                        <?php $this->html_helper->showHeartIcon($value); ?>
-                                                    <span class="price-box">
-        <?php $this->html_helper->showPrice($value); ?>
-                                                    </span>
+                                                    <?php $this->html_helper->showHeartIcon($value); ?>
+                                                    <!-- <span class="price-box"> -->
+                                                    <?php //$this->html_helper->showPrice($value); ?>
+                                                    <!-- </span> -->
                                                 </div>
+
+
+
                                                 <div class="item-thumbnail">
                                                     <div class="single-thumbnail">
                                                         <span class="value"><?php echo $value['kat_nev_' . LANG]; ?></span>
@@ -135,20 +138,29 @@ use System\Libs\Language as Lang;
                                                     </div>
                                                 </div>
 
+
+                                                <!-- item info  -->
+                                                <div class="item-info">
+                                                    <span class="price"><?php $this->html_helper->showPrice($value); ?></span>
+                                                </div>
+
+
                                                 <div class="item-entry">
                                                     <span class="item-title">
-        <?php echo $value['ingatlan_nev_' . LANG]; ?>
+                                                    <?php echo $value['ingatlan_nev_' . LANG]; ?>
                                                     </span>
+                                                    <!-- item text -->
                                                     <p>
                                                         <?php
+                                                        /*
                                                         echo $value['city_name'];
                                                         echo (isset($value['kerulet'])) ? ', ' . $value['kerulet'] . '. ' . Lang::get('adatlap_kerulet') : '';
                                                         echo (($value['utca_megjelenites'] == 1) && (!is_null($value['utca']))) ? '<br>' . $value['utca'] : '';
+                                                        */
+                                                        echo $this->str_helper->substrWord($value['leiras_' . LANG], 120, ' ...');
                                                         ?>
                                                     </p>
 
-                                                    <div class="item-info">
-                                                    </div>
                                                 </div>
                                             </div>
 
@@ -166,8 +178,6 @@ use System\Libs\Language as Lang;
                             <?php
                             foreach ($properties as $value) {
                                 ?>
-
-
 
                                 <?php if ($value == 'banner') { ?>
                                     <div class="col-sm-12">
@@ -195,7 +205,7 @@ use System\Libs\Language as Lang;
 
                                         <div class="item">
                                             <div class="preview">
-        <?php $this->html_helper->showLowerPriceIcon($value); ?>
+                                            <?php $this->html_helper->showLowerPriceIcon($value); ?>
 
                                             <!-- <a href="<?php //echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>"></a>                                         -->
                                                 <?php if (!is_null($value['kepek'])) { ?>
@@ -224,23 +234,24 @@ use System\Libs\Language as Lang;
                                                 </div>
                                                 <div class="item-info">
                                                     <span class="price"> 
-        <?php $this->html_helper->showPrice($value); ?>
+                                                    <?php $this->html_helper->showPrice($value); ?>
                                                     </span>
                                                 </div>
                                             </div>
 
                                             <div class="item-entry">
                                                 <span class="item-title">
-        <?php echo $value['ingatlan_nev_' . LANG]; ?>
+                                                <?php echo $value['ingatlan_nev_' . LANG]; ?>
                                                 </span>
-                                                <p class="item-text">
                                                 <p>
                                                     <?php
+                                                    /*
                                                     echo $value['city_name'];
                                                     echo (isset($value['kerulet'])) ? ', ' . $value['kerulet'] . '. ' . Lang::get('adatlap_kerulet') : '';
                                                     echo (($value['utca_megjelenites'] == 1) && (!is_null($value['utca']))) ? '<br>' . $value['utca'] : '';
+                                                    */
+                                                    echo $this->str_helper->substrWord($value['leiras_' . LANG], 250, ' ...');
                                                     ?>
-                                                </p>
                                                 </p>
                                             </div>
                                         </div>
