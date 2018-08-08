@@ -96,12 +96,21 @@ class Str
      *  
      * @param   string  $string  szöveg
      * @param   int  $char  karakterek száma
+     * @param   int  $closer  klezáró karakterek pl.: ...
      * @return  string  a levágott szöveg
      */
-    public function substrWord($string, $char)
+    public function substrWord($string, $char, $closer = '')
     {
-        $s = mb_substr($string, 0, $char, 'UTF-8');
-        return substr($s, 0, strrpos($s, ' '));
+        // A string karaktereinek száma
+        $length = strlen($string);
+
+        if ($length > $char) {
+            $s = mb_substr($string, 0, $char, 'UTF-8');
+            return substr($s, 0, strrpos($s, ' ')) . $closer;
+        } else {
+            return $string;
+        }
+
     }
 
     /**
