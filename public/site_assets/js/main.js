@@ -1322,7 +1322,7 @@ function initContacMap() {
             url: 'public/site_assets/images/markers/dark-green-map-marker-2.png'
         };
 
-        var myLatlng = new google.maps.LatLng(47.482374, 19.064554);
+        var myLatlng = new google.maps.LatLng(47.480434, 19.053523);
 
         var mapOptions = {
             zoom: 17,
