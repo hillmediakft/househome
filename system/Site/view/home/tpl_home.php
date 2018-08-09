@@ -24,7 +24,7 @@ use System\Libs\Language as Lang;
 <div id="content" class="container-fluid">
 
 
-     <div class="row">
+    <div class="row">
         <div class="our-features-banner gray-bg light">
             <div class="container">
                 <h2 class="block-title"><?php echo Lang::get('home_szolgaltatasok_cim'); ?></h2>
@@ -86,12 +86,12 @@ use System\Libs\Language as Lang;
             </div>
         </div>
     </div>   
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     <div class="row">
         <div class="our-features-banner style-1">
             <div class="container">
@@ -103,7 +103,7 @@ use System\Libs\Language as Lang;
                             <div class="icon-container">
                                 <span class="icon lg-icon house"></span>
                             </div>
-                           <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
                                 <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
                                 <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
                             </a>
@@ -152,85 +152,83 @@ use System\Libs\Language as Lang;
 
 
 
-
-
-
-
-
- 
-
-
-
-
-
-
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="block-title"><?php echo Lang::get('home_kiemelt_ingatlanok'); ?></h2>
-                <div class="object-slider latest-properties">
-                    <div class="jcarousel-arrows">
-                        <a href="#" class="prev-slide"><i class="fa fa-angle-left"></i></a>
-                        <span class="text"><?php echo Lang::get('home_osszes_ingatlan'); ?></span>
-                        <a href="#" class="next-slide"><i class="fa fa-angle-right"></i></a>
+                <div class="object-slider interesting-offer">
+                    <div class="block-title-style-2">
+                        <span class="block-title-text"><?php echo Lang::get('home_kiemelt_ingatlanok'); ?></span>
+                        <div class="right-block">
+                            <div class="jcarousel-arrows">
+                                <a href="#" class="prev-slide" data-jcarouselcontrol="true"><i class="fa fa-angle-left"></i></a>
+                                <a href="#" class="next-slide" data-jcarouselcontrol="true"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                            <a href="#" class="all-offers-btn"><?php echo Lang::get('home_osszes_ingatlan'); ?></a>
+                        </div>
                     </div>
-                    <div class="obj-carousel carousel">
-                        <ul>
+                    <div class="obj-carousel carousel" data-jcarousel="true">
+                        <ul style="left: -300px; top: 0px;">
+
+
                             <?php
                             foreach ($all_properties as $value) {
                                 $photo_array = json_decode($value['kepek']);
                                 ?>
-                                <li>
+
+
+                                <li style="width: 270px;">
                                     <div class="item">
                                         <div class="preview">
                                             <?php $this->html_helper->showLowerPriceIcon($value); ?>
+                                            <?php $this->html_helper->showLowerPriceIcon($value); ?>
 
-                                            <?php if ($value['kepek']) { ?>
+    <?php if ($value['kepek']) { ?>
                                                 <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>">
                                                     <img src="<?php echo $this->url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small'); ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
                                                 </a>
                                             <?php } ?>
-                                            <?php if ($value['kepek'] == null) { ?>
+    <?php if ($value['kepek'] == null) { ?>
                                                 <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>">
                                                     <img src="<?php echo Config::get('ingatlan_photo.upload_path') . 'placeholder.jpg'; ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
                                                 </a>
                                             <?php } ?>
-                                            <?php $this->html_helper->showHeartIcon($value); ?>
+                                                <?php $this->html_helper->showHeartIcon($value); ?>
                                             <span class="price-box">
-                                                <?php $this->html_helper->showPrice($value); ?>
+    <?php $this->html_helper->showPrice($value); ?>
                                             </span>
                                         </div>
                                         <div class="item-thumbnail">
                                             <div class="single-thumbnail">
+                                                <i class="icon sleep"></i>
                                                 <span class="value"><?php echo $value['kat_nev_' . LANG]; ?></span>
                                             </div>
                                             <div class="single-thumbnail">
-                                                <span class="value">
-                                                    <?php
+                                                <i class="icon bath"></i>
+                                                <span class="value"><?php
                                                     $felszobaszam = (!empty($value['felszobaszam'])) ? '+ ' . $value['felszobaszam'] . ' ' : '';
                                                     echo (!empty($value['szobaszam'])) ? $value['szobaszam'] . ' ' . $felszobaszam . mb_strtolower(Lang::get('jell_szobaszam'), 'UTF-8') : '';
-                                                    ?>
-                                                </span>
+                                                    ?></span>
                                             </div>
                                             <div class="single-thumbnail">
+                                                <i class="icon corner"></i>
                                                 <span class="value"><?php echo $value['alapterulet']; ?> m<sup>2</sup></span>
                                             </div>
                                         </div>
                                         <div class="item-entry">
                                             <span class="item-title">
-                                                <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>"><?php echo $value['ingatlan_nev_' . LANG]; ?></a>
+                                                <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>"><?php echo $value['ingatlan_nev_' . LANG]; ?>
+                                                </a>
                                             </span>
-                                            <p><?php
+                                            <p class="item-text"><?php
                                                 echo $value['city_name'];
                                                 echo (isset($value['kerulet'])) ? ', ' . $value['kerulet'] . '. ' . Lang::get('adatlap_kerulet') : '';
                                                 ?></p>
 
-                                            <div class="item-info">
-                                            </div>
                                         </div>
                                     </div>
                                 </li>
-                            <?php } ?>
+
+<?php } ?>
 
                         </ul>
                     </div>
@@ -238,7 +236,14 @@ use System\Libs\Language as Lang;
                 </div>
             </div>
         </div>
+
     </div>
+
+
+
+
+
+
 
 
 
@@ -256,7 +261,7 @@ use System\Libs\Language as Lang;
                     </div>
                     <div class="ag-carousel carousel">
                         <ul>
-                            <?php foreach ($agents as $agent) : ?>
+<?php foreach ($agents as $agent) : ?>
                                 <li>
                                     <div class="item">
                                         <div class="preview">
@@ -281,7 +286,7 @@ use System\Libs\Language as Lang;
                                         </ul>
                                     </div>
                                 </li>
-                            <?php endforeach; ?>
+<?php endforeach; ?>
 
 
 
