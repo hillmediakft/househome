@@ -34,11 +34,9 @@ use System\Libs\Language as Lang;
 
                     <div class="ingatlan-info-box">
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-8">
                             <h1 class="section-title"><?php echo $ingatlan['ingatlan_nev_' . LANG]; ?></h1>
-                            <?php
-                            $district = (!is_null($ingatlan['district_name'])) ? $ingatlan['district_name'] . ' ' . Lang::get('adatlap_kerulet') : '';
-                            ?>
+                            <?php $district = (!is_null($ingatlan['district_name'])) ? $ingatlan['district_name'] . ' ' . Lang::get('adatlap_kerulet') : ''; ?>
                             <h5>
                                 <?php echo $ingatlan['city_name'] . ' ' . $district; ?>
                                 <?php echo (($ingatlan['utca_megjelenites'] == 1) && (!is_null($ingatlan['utca']))) ? ', ' . $ingatlan['utca'] : ''; ?>    
@@ -46,17 +44,34 @@ use System\Libs\Language as Lang;
                             </h5>
 
 
-                        </div>
-
-                        <div class="col-sm-4">
                             <h3 class="section-title">
+                            </h3>
+
+
+                                <div class="icon-box">
+                                    <div class="heading">
+                                        <div class="icon">
+                                            <i class="fa fa-money"></i>
+                                        </div>
+                                        <span class="title">
+                                            <span class="price">
+                                                
+                                            <?php $this->html_helper->showPrice($ingatlan); ?>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                    <!-- 
                                 <span class="price">
                                     <span class="value">
-                                        <!-- ÁR MEGJELENÍTÉSE -->
-                                        <?php $this->html_helper->showPrice($ingatlan); ?>
+                                       
+                                        <?php //$this->html_helper->showPrice($ingatlan); ?>
                                     </span>
                                 </span>
-                            </h3>
+                                     -->
+
+
                             <div class="icon-box">
                                 <div class="heading">
                                     <div class="icon">
@@ -79,7 +94,7 @@ use System\Libs\Language as Lang;
                                 <div class="icon-box" style="; float: none;">
                                     <div class="heading">
                                         <div class="icon">
-                                            <i class="fa fa-building"></i>
+                                            <i class="fa fa-th-large"></i>
                                         </div>
                                         <span class="title"><?php echo Lang::get('jell_szobaszam') . ': ' . $ingatlan['szobaszam'] . $felszoba; ?></span>
                                     </div>
@@ -88,7 +103,16 @@ use System\Libs\Language as Lang;
                             <div style="padding: 0px 0px;">
                                 <?php echo Lang::get('kereso_ref_szam'); ?>: <span style="font-weight: 700; color:#000;"><?php echo 'S-' . $ingatlan['ref_num']; ?></span>
                             </div>
-                        </div> 
+
+
+                        </div>
+ 
+
+                        <!-- <div class="col-sm-4">                     </div>  -->
+
+
+
+
 
                         <div class="col-sm-4">
                             <div class="agent-box">
