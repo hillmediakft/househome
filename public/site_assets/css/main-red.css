@@ -1172,7 +1172,7 @@ footer.footer .bottom-footer .copy {
     height: 550px;
     background: url(../images/banners/home-top.jpg) no-repeat center;
     position: relative;
-    margin-top: -60px;
+    margin-top: -110px;
 }
 /* line 6, scss/_slider.scss */
 .home-banner.style-2 {
@@ -4553,6 +4553,7 @@ footer.footer .bottom-footer .copy {
 /* line 2139, scss/_slider.scss */
 .interesting-offer {
     padding-bottom: 30px;
+    padding-top: 50px;
 }
 /* line 2141, scss/_slider.scss */
 .interesting-offer .block-title-style-2 {
@@ -10622,18 +10623,21 @@ a.simple-btn.outlined.red:hover {
 /* line 2522, scss/_shortcodes.scss */
 .main-sidebar .widget .heading {
     padding: 8px 16px;
-    background-color: #3a383b;
+    background-color: #eee;
+    border-bottom: 2px solid #dcdcdc;
+    margin-bottom: 7px;
+    color: #666;
 }
 /* line 2524, scss/_shortcodes.scss */
 .main-sidebar .widget .heading .widget-title {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 22px;
-    color: #fff;
+    color: #8q8q8q;
 }
 /* line 2530, scss/_shortcodes.scss */
 .main-sidebar .widget .widget-entry {
-    /*border: 1px solid #e7e4e4;*/
-    border: 1px solid #73ac37;
+    border: 1px solid #e7e4e4;
+/*    border: 1px solid #73ac37; */
     padding-bottom: 20px;
     padding: 5px 20px;
 }
@@ -15069,7 +15073,7 @@ a.simple-btn.outlined.red:hover {
     border: 1px solid #e7e4e4;
     padding: 26px 0;
     margin-bottom: 27px;
-    background: #f8f8f8;
+    background: none;
 }
 /* line 6094, scss/_shortcodes.scss */
 .detail-info-block:after,

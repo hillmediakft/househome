@@ -114,10 +114,17 @@
     padding: 2px 30px;
     width: 50%;
 }
+
+.detail-info-block .column-1 {
+    float: left;
+    padding: 2px 30px;
+    width: 100%;
+}
+
 .features-info-block .column-2 {
     /*border-right: 1px solid #e7e4e4;*/
     float: left;
-    padding: 2px 30px;
+    padding: 2px 20px;
     width: 33%;
 }
 .features-info-block .column-2:last-child {
@@ -818,3 +825,17 @@ hr {
         text-align: center;
         width: 100%
     }      
+    
+     .panel.heading {
+    padding: 8px 16px;
+    background-color: #eee;
+    border-bottom: 2px solid #dcdcdc;
+    margin-bottom: 7px;
+    color: #666;
+}
+
+.panel.heading .widget-title {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 22px;
+    color: #808080;
+}
