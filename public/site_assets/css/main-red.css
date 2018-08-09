@@ -1194,11 +1194,11 @@ footer.footer .bottom-footer .copy {
 /* line 21, scss/_slider.scss */
 .home-banner.style-4 {
     background: url("../images/banners/typography-top-banner.jpg") no-repeat center;
-    height: 243px;
+    height: 110px;
 }
 /* line 24, scss/_slider.scss */
 .home-banner.style-4 .banner-content {
-    height: 243px;
+    height: 80px;
 }
 /* line 28, scss/_slider.scss */
 .home-banner.style-5 {
@@ -1213,9 +1213,9 @@ footer.footer .bottom-footer .copy {
 .home-banner .banner-content {
     height: 100px;
     position: relative;
-    background: rgba(0,0,0,0.5);
+    background: none;
     padding: 10px;
-    margin-top: 390px;
+    margin-top: 120px;
 }
 /* line 38, scss/_slider.scss */
 .home-banner .banner-content .main-filter {
@@ -1240,10 +1240,10 @@ footer.footer .bottom-footer .copy {
 }
 /* line 56, scss/_slider.scss */
 .home-banner .banner-content .banner-message {
-    background-color: rgba(58, 56, 59, 0.8);
+    background-color: rgba(58, 56, 59, 0.6);
     position: absolute;
-    top: 7%;
-    padding: 40px;
+    top: 10%;
+    padding: 10px;
     left: 0;
 }
 /* line 62, scss/_slider.scss */
@@ -1265,7 +1265,7 @@ footer.footer .bottom-footer .copy {
 }
 /* line 74, scss/_slider.scss */
 .home-banner .banner-content .banner-message .banner-entry span.entry-message {
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Source Sans Pro-Light', Arial, sans-serif;
     line-height: 26px;
 }

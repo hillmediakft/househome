@@ -182,6 +182,7 @@
 .ingatlan-info-box .title .price {
     color: #e6462a;
     font-weight: bold;
+
 }
 
 .ingatlan-info-box .agent-box {
@@ -219,6 +220,9 @@
 .ingatlan-info-box .icon-box .heading {
     display: table;
     margin-bottom: 5px;
+    background: #eee;
+    padding: 7px;
+    border-radius: 5px;
 }
 
 /* features elemek, amelyek nincsenek az ingatlamban */ 
