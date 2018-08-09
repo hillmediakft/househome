@@ -16,7 +16,7 @@ use System\Libs\Language as Lang;
 </div> 
 <div class="nav-block">
     <div class="col-sm-12">
-    <a style="float: none;" href="<?php echo $this->request->get_uri('site_url') . Config::get('url.kereses.index.' . LANG); ?>" class="submit-nav hidden-sm hidden-md hidden-lg text-center"><i class="fa fa-search"></i> <?php echo Lang::get('menu_kereses'); ?></a>
+        <a style="float: none;" href="<?php echo $this->request->get_uri('site_url') . Config::get('url.kereses.index.' . LANG); ?>" class="submit-nav hidden-sm hidden-md hidden-lg text-center"><i class="fa fa-search"></i> <?php echo Lang::get('menu_kereses'); ?></a>
     </div>
 </div>
 
@@ -24,61 +24,143 @@ use System\Libs\Language as Lang;
 <div id="content" class="container-fluid">
 
 
-    <div class="row">
+     <div class="row">
         <div class="our-features-banner gray-bg light">
             <div class="container">
                 <h2 class="block-title"><?php echo Lang::get('home_szolgaltatasok_cim'); ?></h2>
                 <span class="sub-title"><?php echo Lang::get('home_szolgaltatasok_szoveg'); ?></span>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
-                                    <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.mennyit-er-az-ingatlanom.index.' . LANG); ?>">
-                                        <img src="<?php echo SITE_IMAGE; ?>mennyit-er-az-ingatlanom.png">
-                                    </a>	
+                                    <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>"><span class="icon lg-icon papers"></span></a>
                                 </div>
                             </div>
-							<a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.mennyit-er-az-ingatlanom.index.' . LANG); ?>">
-								<span class="main-title"><?php echo Lang::get('home_szolgaltatasok_1_cim'); ?></span>
-								<span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_1_szoveg'); ?></span>
-							</a>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.mennyit-er-az-ingatlanom.index.' . LANG); ?>">
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_1_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_1_szoveg'); ?></span>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
-                                    <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.befektetoknek.index.' . LANG); ?>">
-                                        <img src="<?php echo SITE_IMAGE; ?>befektetoknek.png">
-                                    </a>	
+                                    <span class="icon lg-icon like"></span>
                                 </div>
                             </div>
-							<a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.befektetoknek.index.' . LANG); ?>">
-								<span class="main-title"><?php echo Lang::get('home_szolgaltatasok_2_cim'); ?></span>
-								<span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_2_szoveg'); ?></span>
-							</a>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.befektetoknek.index.' . LANG); ?>">
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_2_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_2_szoveg'); ?></span>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
-                                    <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
-                                        <img src="<?php echo SITE_IMAGE; ?>berbeadoknak.png">
-                                    </a>	
+                                    <span class="icon lg-icon human"></span>
                                 </div>
                             </div>
-							<a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
-								<span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
-								<span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
-							</a>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="single-feature">
+                            <div class="icon-container">
+                                <div class="icon-border">
+                                    <span class="icon lg-icon home"></span>
+                                </div>
+                            </div>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>	
+    </div>   
+    
+    
+    
+    
+    
+    
+    <div class="row">
+        <div class="our-features-banner style-1">
+            <div class="container">
+                <h2 class="block-title"><?php echo Lang::get('home_szolgaltatasok_cim'); ?></h2>
+                <span class="sub-title"><?php echo Lang::get('home_szolgaltatasok_szoveg'); ?></span>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="single-feature">
+                            <div class="icon-container">
+                                <span class="icon lg-icon house"></span>
+                            </div>
+                           <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="single-feature">
+                            <div class="icon-container">
+                                <span class="icon lg-icon like"></span>
+                            </div>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="single-feature">
+                            <div class="icon-container">
+                                <span class="icon lg-icon achivment"></span>
+                            </div>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="single-feature">
+                            <div class="icon-container">
+                                <span class="icon lg-icon hand"></span>
+                            </div>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
 
 
 
@@ -125,8 +207,8 @@ use System\Libs\Language as Lang;
                                             <div class="single-thumbnail">
                                                 <span class="value">
                                                     <?php
-                                                        $felszobaszam = (!empty($value['felszobaszam'])) ? '+ ' . $value['felszobaszam'] . ' ' : '';
-                                                        echo (!empty($value['szobaszam'])) ? $value['szobaszam'] . ' ' . $felszobaszam . mb_strtolower(Lang::get('jell_szobaszam'), 'UTF-8') : ''; 
+                                                    $felszobaszam = (!empty($value['felszobaszam'])) ? '+ ' . $value['felszobaszam'] . ' ' : '';
+                                                    echo (!empty($value['szobaszam'])) ? $value['szobaszam'] . ' ' . $felszobaszam . mb_strtolower(Lang::get('jell_szobaszam'), 'UTF-8') : '';
                                                     ?>
                                                 </span>
                                             </div>
