@@ -800,3 +800,21 @@ hr {
     .ingy-elem-box .ingy-elem-logo img{
         position: relative;
     }
+
+
+/* Adatlap gombok lista */
+    ul.adatlap_gombok {
+        list-style-type: none;
+        padding:0px;
+    }
+
+    ul.adatlap_gombok li{
+        float: left;
+        margin-right: 5px;
+    }    
+
+    ul.adatlap_gombok li a{
+        border-radius: 100%;
+        text-align: center;
+        width: 100%
+    }      
