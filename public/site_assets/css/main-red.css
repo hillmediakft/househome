@@ -4379,6 +4379,7 @@ footer.footer .bottom-footer .copy {
     padding-bottom: 16px;
     border-bottom: 1px solid #e7e4e4;
 }
+
 /* line 2103, scss/_slider.scss */
 .object-slider .carousel .item .item-entry .item-info,
 .best-agents .carousel .item .item-entry .item-info,
@@ -4390,6 +4391,22 @@ footer.footer .bottom-footer .copy {
 .featured-products .carousel .item .item-entry .item-info {
     padding-bottom: 14px;
 }
+
+    .object-slider .carousel .item .item-info,
+    .best-agents .carousel .item .item-info,
+    .partners-holder .carousel .item .item-info,
+    .testimonials-holder .carousel .item .item-info,
+    .country-holder .carousel .item .item-info,
+    .blog-posts-holder .carousel .item .item-info,
+    .interesting-offer .carousel .item .item-info,
+    .featured-products .carousel .item .item-info {
+        /*padding-bottom: 14px;*/
+        padding: 10px 18px 5px 18px;
+        border-bottom: 1px solid #e7e4e4;
+        width: 100%;
+    }
+
+
 /* line 2105, scss/_slider.scss */
 .object-slider .carousel .item .item-entry .item-info .price,
 .best-agents .carousel .item .item-entry .item-info .price,
@@ -4406,6 +4423,25 @@ footer.footer .bottom-footer .copy {
     float: left;
     padding-top: 14px;
 }
+
+
+    .object-slider .carousel .item .item-info .price,
+    .best-agents .carousel .item .item-info .price,
+    .partners-holder .carousel .item .item-info .price,
+    .testimonials-holder .carousel .item .item-info .price,
+    .country-holder .carousel .item .item-info .price,
+    .blog-posts-holder .carousel .item .item-info .price,
+    .interesting-offer .carousel .item .item-info .price,
+    .featured-products .carousel .item .item-info .price {
+        text-transform: uppercase;
+        font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
+        font-size: 20px;
+        color: #e6462a;
+        float: none;
+    }
+
+
+
 /* line 2113, scss/_slider.scss */
 .object-slider .carousel .item .item-entry .item-info:after,
 .best-agents .carousel .item .item-entry .item-info:after,
@@ -10581,20 +10617,23 @@ a.simple-btn.outlined.red:hover {
 /* line 2520, scss/_shortcodes.scss */
 .main-sidebar .widget {
     margin-bottom: 6px;
+        margin-top: 15px;
 }
 /* line 2522, scss/_shortcodes.scss */
 .main-sidebar .widget .heading {
-    padding: 16px 0;
+    padding: 8px 16px;
+    background-color: #3a383b;
 }
 /* line 2524, scss/_shortcodes.scss */
 .main-sidebar .widget .heading .widget-title {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 22px;
-    color: #000;
+    color: #fff;
 }
 /* line 2530, scss/_shortcodes.scss */
 .main-sidebar .widget .widget-entry {
-    border: 1px solid #e7e4e4;
+    /*border: 1px solid #e7e4e4;*/
+    border: 1px solid #73ac37;
     padding-bottom: 20px;
     padding: 5px 20px;
 }
@@ -11791,6 +11830,7 @@ a.simple-btn.outlined.red:hover {
 .main-sidebar .widget.questions .widget-entry .questions-form textarea {
     height: 120px;
     resize: none;
+    padding-top: 8px;
 }
 /* line 3504, scss/_shortcodes.scss */
 .main-sidebar .widget.questions .widget-entry .questions-form .send-btn {
@@ -14761,6 +14801,7 @@ a.simple-btn.outlined.red:hover {
     width: 200px;
 }
 /* line 5902, scss/_shortcodes.scss */
+/*
 .objects-block .item .item-info .price,
 .objects-block .shop-item .item-info .price {
     text-transform: none;
@@ -14771,6 +14812,18 @@ a.simple-btn.outlined.red:hover {
     float: left;
     padding-top: 10px;
 }
+*/
+
+    .item-info .price {
+        text-transform: none;
+        font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: #e6462a;
+        float: left;
+        padding-top: 10px;
+    }
+
 /* line 5910, scss/_shortcodes.scss */
 .objects-block .item .item-info:after,
 .objects-block .shop-item .item-info:after {
