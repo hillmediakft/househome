@@ -61,7 +61,7 @@ if (ENV == 'development') {
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
 
-    define('BASE_URL', 'http://househome.hu/'); //Az oldal elérési útjának beállítása
+    define('BASE_URL', 'http://househome.onlinemarketingguru.hu/'); //Az oldal elérési útjának beállítása
     define('BASE_PATH', ''); //A domainnév utáni elérési út beállítása
 
     //db adatok	
