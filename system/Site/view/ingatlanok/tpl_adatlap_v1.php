@@ -261,6 +261,52 @@ use System\Libs\Language as Lang;
                     </div>
 
 
+<!-- GOMBOK LISTA -->
+
+<div class="row">
+    <div class="col-md-12">
+
+        <ul class="adatlap_gombok">
+            <li>
+                <a id="arvaltozas_ertesites" class="simple-btn sm-button outlined red <?php echo ($ertesites_arvaltozasrol) ? 'disabled' : ''; ?>" data-id="<?php echo $ingatlan['id']; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_arvaltozas_gomb'); ?>"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+                <a id="kedvencekhez_<?php echo $ingatlan['id']; ?>" data-id="<?php echo $ingatlan['id']; ?>" class="simple-btn sm-button outlined red <?php echo (Cookie::is_id_in_cookie('kedvencek', $ingatlan['id'])) ? 'disabled' : ''; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_kedvencekhez_gomb'); ?>"><i class="fa fa-heart"></i></a>
+            </li>
+            <li>
+                <form style="display: inline;" id="adatlap_nyomtatas_form" method="POST" action="adatlap/<?php echo $ingatlan['id']; ?>">
+                    <a id="adatlap_nyomtatas" class="simple-btn sm-button outlined red" title="<?php echo Lang::get('adatlap_nyomtatas_gomb'); ?>"><i class="fa fa-print"></i></a>
+                    <input type="hidden" name="agent_id" value="<?php echo $agent['id']; ?>"/>
+                    <!-- <button id="adatlap_nyomtatas" type="submit" class="send-btn"><i class="fa fa-print"></i> <?php //echo Lang::get('adatlap_nyomtatas_gomb');           ?></button> -->
+                </form>
+            </li>
+            <li>
+                <a id="myPopover" data-toggle="popover" data-placement="bottom" data-content="<?php echo $this->html_helper->socialMediaShare($this->getConfig('ingatlan_photo.upload_path') . $pictures[0], $ingatlan['ingatlan_nev_' . LANG]); ?>" class="simple-btn sm-button outlined red" href="javascript:void(0)" title="<?php echo Lang::get('adatlap_megosztas_gomb'); ?>"><i class="fa fa-share"></i></a>
+            </li>
+        </ul>
+    
+        <!-- ELŐZŐ-KÖVETKEZŐ INGATLAN -->
+        <?php $talali_lista = Session::get('talalati_lista'); ?>
+        <?php if ($talali_lista) : ?>
+            <div class="col-sm-12">
+                <div>
+                    <a style="text-align: center; width: 20%; float: left" class="simple-btn sm-button outlined red" href="<?php echo $this->url_helper->talalatiListaElozo($ingatlan['id'], LANG, Session::get('talalati_lista')); ?>"><i class="fa fa-arrow-left"></i> </a>
+                </div>
+                <div>
+                    <a style="text-align: center; width: 52%; float: left; margin: 0 4% 0 4%;" class="simple-btn sm-button outlined red" href="<?php echo Session::get('talalati_lista_url'); ?>"><?php echo Lang::get('adatlap_talalati_lista'); ?></a>
+                </div>
+                <div>
+                    <a style="text-align: center; width: 20%; float: right" class="simple-btn sm-button outlined red" href="<?php echo $this->url_helper->talalatiListaKovetkezo($ingatlan['id'], LANG, Session::get('talalati_lista')); ?>"><i class="fa fa-arrow-right"></i> </a>
+                </div>
+            </div>
+        <?php endif ?>
+
+    </div>
+</div>
+
+
+
+
 
 
                     <!-- 
