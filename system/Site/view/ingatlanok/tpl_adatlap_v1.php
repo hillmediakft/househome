@@ -296,7 +296,7 @@ use System\Libs\Language as Lang;
                                 <div class="heading">
                                     <span class="widget-title"><?php echo Lang::get('adatlap_kapcsolat_cim'); ?></span>
                                 </div>
-                                <div class="widget-entry gray-bg">
+                                <div class="widget-entry">
                                     <div class="questions-form">
                                         <form action="<?php echo (LANG != 'hu') ? LANG . '/' : ''; ?>sendemail/init/agent" method="post" id="contact-form-agent">
                                             <input type="text" class="name" name="name" placeholder="<?php echo Lang::get('kapcsolat_email_nev'); ?>" required oninvalid="this.setCustomValidity('Töltse ki ezt a mezőt!')" oninput="setCustomValidity('')">
@@ -535,8 +535,6 @@ use System\Libs\Language as Lang;
                                                             <div class="preview">
                                                                 <?php $this->html_helper->showLowerPriceIcon($value); ?>
 
-                                                                                                                                                <!-- <a href="<?php //echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]);           ?>"></a> -->
-
                                                                 <?php if (!is_null($value['kepek'])) { ?>
                                                                     <img src="<?php echo $this->url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small'); ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
                                                                 <?php } else { ?>
@@ -545,9 +543,9 @@ use System\Libs\Language as Lang;
 
                                                                 <?php $this->html_helper->showHeartIcon($value); ?>
 
-                                                                <span class="price-box">
-                                                                    <?php $this->html_helper->showPrice($value); ?>
-                                                                </span>
+                        <!-- <span class="price-box"> -->
+                            <?php //$this->html_helper->showPrice($value); ?>
+                        <!-- </span> -->
                                                             </div>
                                                             <div class="item-thumbnail">
                                                                 <div class="single-thumbnail">
@@ -566,6 +564,11 @@ use System\Libs\Language as Lang;
                                                                 </div>
                                                             </div>
 
+                                                <!-- item info  -->
+                                                <div class="item-info">
+                                                    <span class="price"><?php $this->html_helper->showPrice($value); ?></span>
+                                                </div>
+
                                                             <div class="item-entry">
                                                                 <span class="item-title">
                                                                     <?php echo $value['ingatlan_nev_' . LANG]; ?>
@@ -577,9 +580,7 @@ use System\Libs\Language as Lang;
                                                                     echo (($value['utca_megjelenites'] == 1) && (!is_null($value['utca']))) ? '<br>' . $value['utca'] : '';
                                                                     ?>
                                                                 </p>
-
-                                                                <div class="item-info">
-                                                                </div>
+                                                                <!-- <div class="item-info"></div> -->
                                                             </div>
                                                         </div>
 
@@ -634,9 +635,9 @@ use System\Libs\Language as Lang;
 
                                                                 <?php $this->html_helper->showHeartIcon($value); ?>
 
-                                                                <span class="price-box">
-                                                                    <?php $this->html_helper->showPrice($value); ?>
-                                                                </span>
+                                    <!-- <span class="price-box"> -->
+                                        <?php //$this->html_helper->showPrice($value); ?>
+                                    <!-- </span> -->
                                                             </div>
                                                             <div class="item-thumbnail">
                                                                 <div class="single-thumbnail">
@@ -655,6 +656,12 @@ use System\Libs\Language as Lang;
                                                                 </div>
                                                             </div>
 
+                                                <!-- item info  -->
+                                                <div class="item-info">
+                                                    <span class="price"><?php $this->html_helper->showPrice($value); ?></span>
+                                                </div>
+
+
                                                             <div class="item-entry">
                                                                 <span class="item-title">
 
@@ -668,8 +675,6 @@ use System\Libs\Language as Lang;
                                                                     ?>
                                                                 </p>
 
-                                                                <div class="item-info">
-                                                                </div>
                                                             </div>
                                                         </div>
 
