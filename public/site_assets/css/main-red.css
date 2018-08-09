@@ -1213,9 +1213,9 @@ footer.footer .bottom-footer .copy {
 .home-banner .banner-content {
     height: 100px;
     position: relative;
-    background: none;
+    background: rgba(0,0,0,0.6);
     padding: 10px;
-    margin-top: 120px;
+    margin-top: 380px;
 }
 /* line 38, scss/_slider.scss */
 .home-banner .banner-content .main-filter {
