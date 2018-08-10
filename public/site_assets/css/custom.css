@@ -514,12 +514,19 @@ input.has-error {
 .save_search_button {
     padding:5px 8px;
     margin-bottom: 5px;
-    background-color: #3a383b;
-    color: #fff;
-    border: none;
+    background-color: #fff;
+    color: #73ac37;
+    border: 1px solid #73ac37;
+    width: 100%;
 }
 .save_search_button:hover {
     background-color: #73ac37;
+    color: #fff;
+    -webkit-transition: 0.12s linear;
+    -moz-transition: 0.12s linear;
+    -ms-transition: 0.12s linear;
+    -o-transition: 0.12s linear;
+    transition: 0.12s linear;
 }
 
 .rent-flat-sidebar .widget.filter input[type="checkbox"]:checked::before {
