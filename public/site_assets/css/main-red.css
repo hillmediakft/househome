@@ -513,8 +513,7 @@ header.header .h-cart-btn:hover {
 /*______________________NAVIGATION_______________________*/
 /* line 2, scss/_nav.scss */
 .nav-block {
-    background-color: rgba(0,0,0,0.8);
- /*   min-height: 100px;*/
+    background-color: rgba(115,172,55,0.9);
     font-size: 14px;
     margin-bottom: -1px;
     z-index: 100;
@@ -527,7 +526,7 @@ header.header .h-cart-btn:hover {
 /* line 8, scss/_nav.scss */
 .nav-block .main-navigation {
     float: right;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 /* line 10, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing {
@@ -570,7 +569,7 @@ header.header .h-cart-btn:hover {
     display: block;
     /* padding: 0 20px; */
     padding: 21px 20px;
-    border-right: 1px solid #999;
+    border-right: 1px solid #b9b9b9;
     z-index: 1000;
     position: relative;
 }
@@ -1172,7 +1171,7 @@ footer.footer .bottom-footer .copy {
     height: 550px;
     background: url(../images/banners/home-top.jpg) no-repeat center;
     position: relative;
-    margin-top: -110px;
+    margin-top: -65px;
 }
 /* line 6, scss/_slider.scss */
 .home-banner.style-2 {
@@ -15134,7 +15133,7 @@ a.simple-btn.outlined.red:hover {
 }
 /* line 6131, scss/_shortcodes.scss */
 .features-info-block .info-item .feature-item:before {
-    content: '\f00c';
+    content: '\f14a';
     position: absolute;
     left: 0;
     top: 0;
