@@ -91,10 +91,6 @@ use System\Libs\Language as Lang;
 
                         <!-- <div class="col-sm-4">                     </div>  -->
 
-
-<?php var_dump($agent);?>
-
-
                         <div class="col-sm-4">
                             <div class="agent-box">
                                 <div class="agent-image">
