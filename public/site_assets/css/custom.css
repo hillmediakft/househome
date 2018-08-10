@@ -461,7 +461,7 @@ input.has-error {
 .extrak-list .filter-item {
     margin-bottom: 10px;
 }
-.extrak-list .filter-item input[type="checkbox"] {
+.extrak-list .filter-item input[type="checkbox"], .questions-form input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -479,7 +479,7 @@ input.has-error {
     margin-right: 10px;
 }
 
-.extrak-list .filter-item input[type="checkbox"]:checked::before {
+.extrak-list .filter-item input[type="checkbox"]:checked::before, .questions-form input[type="checkbox"]:checked::before {
     content: "\f00c";
     display: block;
     color: #000;
