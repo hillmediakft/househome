@@ -6,10 +6,6 @@ use System\Libs\Session;
 use System\Libs\Language as Lang;
 ?>
 
-<div class="home-banner style-4">
-</div>
-
-
 <div id="content" class="container-fluid">
 
     <div id="map_circle_size_div" data-mapsize="<?php echo $ingatlan['map_circle_size']; ?>" style="display:none;"></div>
