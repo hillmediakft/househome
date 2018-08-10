@@ -2,11 +2,14 @@
 use System\Libs\Config;
 use System\Libs\Language as Lang;
 ?>
-<div class="widget main-filter-widget gray-bg">
+<div class="widget main-filter-widget">
+    <div class="heading">
+        <span class="widget-title"><?php echo Lang::get('kereso_kereses'); ?></span>
+    </div>            
     <div class="widget-entry">
-        <div class="filter-label-block">
-            <span class="filter-label"></span>
-        </div>
+
+        <!-- <div class="filter-label-block"><span class="filter-label"></span></div> -->
+
         <form action="<?php echo (LANG != 'hu') ? LANG . '/' . Config::get('url.ingatlanok.index.' . LANG) : 'ingatlanok'; ?>" class="filter-form">
             
             <!-- ELADÓ/KIADÓ -->
