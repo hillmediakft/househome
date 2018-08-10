@@ -11312,7 +11312,6 @@ a.simple-btn.outlined.red:hover {
 .main-sidebar .widget.main-filter-widget .widget-entry {
     padding: 19px;
     /*padding-top: 73px;*/
-    padding-top: 50px;
     position: relative;
 }
 /* line 3065, scss/_shortcodes.scss */
