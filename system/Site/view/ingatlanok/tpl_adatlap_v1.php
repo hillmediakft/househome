@@ -251,35 +251,6 @@ use System\Libs\Language as Lang;
                     </div>
 
 
-
-
-                    <!-- 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <a id="arvaltozas_ertesites" class="simple-btn sm-button filled red <?php //echo ($ertesites_arvaltozasrol) ? 'disabled' : '';                   ?>" data-id="<?php echo $ingatlan['id']; ?>" href="javascript:void(0);"><i class="fa fa-envelope"></i> <?php echo Lang::get('adatlap_arvaltozas_gomb'); ?></a>
-                                                <a id="kedvencekhez_<?php //echo $ingatlan['id'];                   ?>" data-id="<?php //echo $ingatlan['id'];                   ?>" class="simple-btn sm-button filled red <?php echo (Cookie::is_id_in_cookie('kedvencek', $ingatlan['id'])) ? 'disabled' : ''; ?>" href="javascript:void(0);"><i class="fa fa-heart"></i> <?php echo Lang::get('adatlap_kedvencekhez_gomb'); ?></a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <form style="display:inline;" id="adatlap_nyomtatas_form" method="POST" action="adatlap/<?php //echo $ingatlan['id'];                   ?>">
-                    -->
-                                                   <!-- <button id="adatlap_nyomtatas" type="submit" class="send-btn"><i class="fa fa-print"></i> <?php //echo Lang::get('adatlap_nyomtatas_gomb');                   ?></button> -->
-                    <!-- 
-                                                    <a id="adatlap_nyomtatas" class="simple-btn sm-button filled red"><i class="fa fa-print"></i> <?php //echo Lang::get('adatlap_nyomtatas_gomb');                   ?></a>
-                                                </form>
-                                                <a class="simple-btn sm-button filled red" href="#"><i class="fa fa-share"></i> <?php //echo Lang::get('adatlap_megosztas_gomb');                   ?></a>
-                                            </div>
-                                        </div>
-                    -->
-
-
-
-
-
-
-
-
                     <div class="row">
                         <div class="col-sm-12">
                             <div style="margin-bottom: 30px;" class="widget questions">
@@ -300,7 +271,7 @@ use System\Libs\Language as Lang;
                                             <input type="hidden" name="agent_email" value="<?php echo $agent['email']; ?>">
                                             <input type="hidden" name="ref_num" value="<?php echo 'S-' . $ingatlan['ref_num']; ?>">
                                             <input type="hidden" name="url" value="<?php echo $this->request->get_uri('current_url'); ?>">
-
+                                            <input type="checkbox" name="afsz_confirm" required oninvalid="this.setCustomValidity('Nem fogadta el az Adatvédelmi Nyilatkozatot.')" oninput="setCustomValidity('')"/><span>Elfogadom az <a href="/uploads/files/adatvedelmi-szabalyzat.pdf">Adatvédelmi Nyilatkozatot</a></span>
                                             <button type="submit" class="send-btn" id="submit-button"><?php echo Lang::get('kapcsolat_email_kuldes'); ?></button>
                                         </form>
                                     </div>
@@ -514,21 +485,6 @@ use System\Libs\Language as Lang;
                             </div>
                         </div>
                     <?php } ?>
-
-
-                    <!-- MEGOSZTÁS -->
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="panel heading">
-                                <span class="widget-title"><?php echo Lang::get('adatlap_leiras_cim'); ?></span>
-                            </div>
-                            <div class="detail-info-block">
-                                <div class="column-1">
-                                    <?php echo $ingatlan['leiras_' . LANG]; ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                       
 
                     <!-- HASONLÓ INGATLANOK -->
                     <?php if (!empty($hasonlo_ingatlan)) { ?>
