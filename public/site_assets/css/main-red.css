@@ -171,7 +171,7 @@ a:hover{
 }
 .extra-header .extra-item .country-select a img {
     margin-right: 2px;
-	margin-bottom: 2px;
+    margin-bottom: 2px;
 }
 /* line 56, scss/_header.scss */
 .extra-header .extra-item.language {
@@ -520,8 +520,8 @@ header.header .h-cart-btn:hover {
     position: relative;
 }
 .nav-block .logo {
-	float: left;
-	padding: 5px 0 5px 0;
+    float: left;
+    padding: 5px 0 5px 0;
 }
 /* line 8, scss/_nav.scss */
 .nav-block .main-navigation {
@@ -616,7 +616,7 @@ header.header .h-cart-btn:hover {
     content: '';
     transition: .5s;
     position: absolute;
-/*    border-right: 3px solid #73ac37; */
+    /*    border-right: 3px solid #73ac37; */
     top: 50%;
     width: 100%;
     height: 0px;
@@ -627,7 +627,7 @@ header.header .h-cart-btn:hover {
     content: '';
     transition: .5s;
     position: absolute;
-/*    border-left: 3px solid #73ac37; */
+    /*    border-left: 3px solid #73ac37; */
     top: 50%;
     width: 100%;
     height: 0px;
@@ -640,13 +640,13 @@ header.header .h-cart-btn:hover {
 }
 /* line 98, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item .subnav .subnav-item:hover:after {
-/*    border-right: 3px solid #73ac37; */
+    /*    border-right: 3px solid #73ac37; */
     height: 100%;
     top: 0;
 }
 /* line 103, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item .subnav .subnav-item:hover:before {
-/*    border-left: 3px solid #73ac37; */
+    /*    border-left: 3px solid #73ac37; */
     height: 100%;
     top: 0;
 }
@@ -683,8 +683,8 @@ header.header .h-cart-btn:hover {
     content: '';
     transition: .5s;
     position: absolute;
-/*    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent; */
+    /*    border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent; */
     top: 0;
     bottom: 0;
     width: 0;
@@ -696,8 +696,8 @@ header.header .h-cart-btn:hover {
 }
 /* line 147, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item:hover:after {
-/*    border-bottom: 3px solid #73ac37;
-    border-top: 3px solid #73ac37; */
+    /*    border-bottom: 3px solid #73ac37;
+        border-top: 3px solid #73ac37; */
     width: 100%;
     left: 0;
     height: 100%;
@@ -2983,15 +2983,15 @@ footer.footer .bottom-footer .copy {
 }
 /* line 1481, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container {
-  width: 130px;
-  height: 130px;
-  border: 3px solid #c44a35;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  padding: 7px;
-  margin: 0 auto;
-  margin-bottom: 27px;
+    width: 130px;
+    height: 130px;
+    border: 3px solid #c44a35;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    padding: 7px;
+    margin: 0 auto;
+    margin-bottom: 27px;
 }
 /* line 1489, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon {
@@ -4391,19 +4391,19 @@ footer.footer .bottom-footer .copy {
     padding-bottom: 14px;
 }
 
-    .object-slider .carousel .item .item-info,
-    .best-agents .carousel .item .item-info,
-    .partners-holder .carousel .item .item-info,
-    .testimonials-holder .carousel .item .item-info,
-    .country-holder .carousel .item .item-info,
-    .blog-posts-holder .carousel .item .item-info,
-    .interesting-offer .carousel .item .item-info,
-    .featured-products .carousel .item .item-info {
-        /*padding-bottom: 14px;*/
-        padding: 10px 18px 5px 18px;
-        border-bottom: 1px solid #e7e4e4;
-        width: 100%;
-    }
+.object-slider .carousel .item .item-info,
+.best-agents .carousel .item .item-info,
+.partners-holder .carousel .item .item-info,
+.testimonials-holder .carousel .item .item-info,
+.country-holder .carousel .item .item-info,
+.blog-posts-holder .carousel .item .item-info,
+.interesting-offer .carousel .item .item-info,
+.featured-products .carousel .item .item-info {
+    /*padding-bottom: 14px;*/
+    padding: 10px 18px 5px 18px;
+    border-bottom: 1px solid #e7e4e4;
+    width: 100%;
+}
 
 
 /* line 2105, scss/_slider.scss */
@@ -4424,20 +4424,20 @@ footer.footer .bottom-footer .copy {
 }
 
 
-    .object-slider .carousel .item .item-info .price,
-    .best-agents .carousel .item .item-info .price,
-    .partners-holder .carousel .item .item-info .price,
-    .testimonials-holder .carousel .item .item-info .price,
-    .country-holder .carousel .item .item-info .price,
-    .blog-posts-holder .carousel .item .item-info .price,
-    .interesting-offer .carousel .item .item-info .price,
-    .featured-products .carousel .item .item-info .price {
-        text-transform: uppercase;
-        font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
-        font-size: 20px;
-        color: #e6462a;
-        float: none;
-    }
+.object-slider .carousel .item .item-info .price,
+.best-agents .carousel .item .item-info .price,
+.partners-holder .carousel .item .item-info .price,
+.testimonials-holder .carousel .item .item-info .price,
+.country-holder .carousel .item .item-info .price,
+.blog-posts-holder .carousel .item .item-info .price,
+.interesting-offer .carousel .item .item-info .price,
+.featured-products .carousel .item .item-info .price {
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
+    font-size: 20px;
+    color: #e6462a;
+    float: none;
+}
 
 
 
@@ -10617,7 +10617,7 @@ a.simple-btn.outlined.red:hover {
 /* line 2520, scss/_shortcodes.scss */
 .main-sidebar .widget {
     margin-bottom: 6px;
-        margin-top: 15px;
+    margin-top: 15px;
 }
 /* line 2522, scss/_shortcodes.scss */
 .main-sidebar .widget .heading {
@@ -10636,7 +10636,7 @@ a.simple-btn.outlined.red:hover {
 /* line 2530, scss/_shortcodes.scss */
 .main-sidebar .widget .widget-entry {
     border: 1px solid #e7e4e4;
-/*    border: 1px solid #73ac37; */
+    /*    border: 1px solid #73ac37; */
     padding-bottom: 20px;
     padding: 5px 20px;
 }
@@ -13422,8 +13422,8 @@ a.simple-btn.outlined.red:hover {
 
 /* line 4820, scss/_shortcodes.scss */
 .sort-block {
-    border: 1px solid #e7e4e4;
     margin-top: 70px;
+    border-bottom: 2px solid #dcdcdc; 
 }
 /* line 4823, scss/_shortcodes.scss */
 .sort-block.unmarged {
@@ -13482,8 +13482,7 @@ a.simple-btn.outlined.red:hover {
 .sort-block.extended .sort-item {
     float: left;
     border-left: 1px solid #e7e4e4;
-    padding: 12px 20px;
-    padding-bottom: 9px;
+    padding: 7px 20px 2px 20px;
 }
 /* line 4869, scss/_shortcodes.scss */
 .sort-block.extended .sort-item.order {
@@ -13507,7 +13506,7 @@ a.simple-btn.outlined.red:hover {
 }
 /* line 4884, scss/_shortcodes.scss */
 .sort-block.extended .sort-item.view-block {
-    padding: 17px 20px;
+    padding: 12px 20px 7px 20px;
 }
 /* line 4886, scss/_shortcodes.scss */
 .sort-block.extended .sort-item.view-block:before {
@@ -13523,7 +13522,7 @@ a.simple-btn.outlined.red:hover {
 }
 /* line 4893, scss/_shortcodes.scss */
 .sort-block.extended .sort-item.view-block a:hover, .sort-block.extended .sort-item.view-block a.active {
-    color: #e6462a;
+    color: #73ac37;
     text-decoration: none;
 }
 /* line 4898, scss/_shortcodes.scss */
@@ -13730,7 +13729,7 @@ a.simple-btn.outlined.red:hover {
 /* line 5073, scss/_shortcodes.scss */
 .sort-block .left {
     float: left;
-    padding: 12px 0;
+    padding: 5px 0;
     padding-left: 20px;
 }
 /* line 5078, scss/_shortcodes.scss */
@@ -14816,15 +14815,15 @@ a.simple-btn.outlined.red:hover {
 }
 */
 
-    .item-info .price {
-        text-transform: none;
-        font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
-        font-size: 20px;
-        font-weight: bold;
-        color: #e6462a;
-        float: left;
-        padding-top: 10px;
-    }
+.item-info .price {
+    text-transform: none;
+    font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e6462a;
+    float: left;
+    padding-top: 10px;
+}
 
 /* line 5910, scss/_shortcodes.scss */
 .objects-block .item .item-info:after,
@@ -17449,7 +17448,7 @@ body .wrap:after {
 }
 /* line 30, scss/_main.scss */
 body .gray-bg {
-    background-color: #f8f8f8;
+    background-color: #eee;
 }
 /* line 33, scss/_main.scss */
 body .inversed {
