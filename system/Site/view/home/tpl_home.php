@@ -298,8 +298,8 @@ use System\Libs\Language as Lang;
             </div>
         </div>
     </div>
-
-    <div class="container">
+    
+        <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="subscribe-banner">
@@ -314,6 +314,130 @@ use System\Libs\Language as Lang;
             </div>
         </div>
     </div>
+    
+    <div class="row">
+			<div class="latest gray-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<h2 class="block-title">Hírek</h2>
+							<ul class="latest-news-listing row">
+								<li class="col-sm-6">
+									<div class="item">
+										<div class="preview">
+											<a href="#">
+												<img alt="img" src="public/site_assets/images/270-170.png">
+											</a>
+										</div>
+										<span class="title"><a href="#">Donec placerat augue vitae quam finibus semper.</a></span>
+										<p>Cras commodo vehicula sem nec convallis. Cras eu dapibus urna. Suspendisse potenti.</p>
+										<div class="item-thumbnail">
+											<div class="single-item date">
+												<i class="fa fa-calendar"></i>
+												<a class="value" href="">2018-07-26</a>
+											</div>
+											<div class="single-item views">
+												<i class="fa fa-eye"></i>
+												<a class="value" href="#">1234</a>
+											</div>
+											<div class="single-item comment">
+												<i class="fa fa-comments"></i>
+												<a class="value" href="#">13</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="col-sm-6">
+									<div class="item">
+										<div class="preview">
+											<a href="#">
+												<img alt="img" src="public/site_assets/images/270-170.png">
+											</a>
+										</div>
+										<span class="title"><a href="#">Sed elit felis, tempor nec egestas sit amet, porttitor ut magna.</a></span>
+										<p>Nullam convallis est a est maximus, eget lacinia magna pharetra. Cum sociis natoque penatibus et magnis.</p>
+										<div class="item-thumbnail">
+											<div class="single-item date">
+												<i class="fa fa-calendar"></i>
+												<a class="value" href="">2018.08.02</a>
+											</div>
+											<div class="single-item views">
+												<i class="fa fa-eye"></i>
+												<a class="value" href="#">1234</a>
+											</div>
+											<div class="single-item comment">
+												<i class="fa fa-comments"></i>
+												<a class="value" href="#">13</a>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<h2 class="block-title">Blog bejegyzések</h2>
+							<ul class="latest-blog-posts">
+								<li class="item">
+									<div class="preview">
+										<a href="#">
+											<img alt="img" src="public/site_assets/images/270-170.png">
+										</a>
+									</div>
+									<div class="descr">
+										<span class="title"><a href="#">Mauris quis metus dictum, porttitor.</a></span>
+										<p>Nullam ac vestibulum nisl, in rutrum felis. Pellentesque quis facilisis nisl. Aliquam ut tincidunt sem. Sed at condimentum.</p>
+										<div class="item-thumbnail">
+											<div class="single-item date">
+												<i class="fa fa-calendar"></i>
+												<a class="value" href="">2018-08-03</a>
+											</div>
+											<div class="single-item views">
+												<i class="fa fa-eye"></i>
+												<a class="value" href="#">1234</a>
+											</div>
+											<div class="single-item comment">
+												<i class="fa fa-comments"></i>
+												<a class="value" href="#">13</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="preview">
+										<a href="#">
+											<img alt="img" src="public/site_assets/images/270-170.png">
+										</a>
+									</div>
+									<div class="descr">
+										<span class="title"><a href="#">Cras commodo vehicula sem nec.</a></span>
+										<p>Nullam ac vestibulum nisl, in rutrum felis. Pellentesque quis facilisis nisl. Aliquam ut tincidunt sem. Sed at condimentum.</p>
+										<div class="item-thumbnail">
+											<div class="single-item date">
+												<i class="fa fa-calendar"></i>
+												<a class="value" href="">2018-07-23</a>
+											</div>
+											<div class="single-item views">
+												<i class="fa fa-eye"></i>
+												<a class="value" href="#">1234</a>
+											</div>
+											<div class="single-item comment">
+												<i class="fa fa-comments"></i>
+												<a class="value" href="#">13</a>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="empty-space"></div>
+			</div>
+		</div>
+    
+    
+
+
 
 
 </div>

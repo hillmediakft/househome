@@ -5823,6 +5823,7 @@ footer.footer .bottom-footer .copy {
 /* line 3179, scss/_slider.scss */
 .subscribe-banner {
     margin-top: 48px;
+    margin-bottom: 48px;
     background-color: #666;
     padding: 0 30px;
     padding-top: 20px;
