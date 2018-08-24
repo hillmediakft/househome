@@ -63,27 +63,27 @@ function initControls() {
     }
 
     if ($('.select').length > 0) {
-	
-$.widget( 'app.selectmenu', $.ui.selectmenu, {
-    _drawButton: function() {
-        this._super();
-        
-        var selected = this.element
-                .find( '[selected]' )
-                .length,
-            placeholder = this.options.placeholder;
-        
-        if ( !selected && placeholder ) {
-            this.buttonText.text( placeholder );    
-        }
-    }
-});	
-	
-	
-	
+
+        $.widget('app.selectmenu', $.ui.selectmenu, {
+            _drawButton: function () {
+                this._super();
+
+                var selected = this.element
+                        .find('[selected]')
+                        .length,
+                        placeholder = this.options.placeholder;
+
+                if (!selected && placeholder) {
+                    this.buttonText.text(placeholder);
+                }
+            }
+        });
+
+
+
         $('.select').selectmenu({
             width: '100%',
-			placeholder: valasszon
+            placeholder: valasszon
         });
     }
     if ($('.tabs').length > 0) {
@@ -160,9 +160,9 @@ var countDown = function () {
 
 var initSticky = function () {
     var viewportWidth = $(window).width();
-        if (viewportWidth > 1024) {
-            $("#sticker").sticky({topSpacing: -20});
-        }
+    if (viewportWidth > 1024) {
+        $("#sticker").sticky({topSpacing: -20});
+    }
 };
 
 //initResponsiveNav
@@ -442,6 +442,27 @@ function carouselInit() {
                             // target: '+='+items_offers
                 });
 
+        $('.object-slider .jcarousel-pagination')
+                .on('jcarouselpagination:active', 'a', function () {
+                    $(this).addClass('active');
+                })
+                .on('jcarouselpagination:inactive', 'a', function () {
+                    $(this).removeClass('active');
+                })
+                .jcarouselPagination({
+                    item: function (page) {
+                        return '<a href="#' + page + '" class="page-item">' + page + '</a>';
+                    }
+                });
+
+
+        /*       
+         $('.jcarousel-pagination').jcarouselPagination({
+         item: function(page) {
+         return '<a href="#' + page + '">' + page + '</a>';
+         }
+         });      */
+
     }
 
     var items_ag;
@@ -487,6 +508,13 @@ function carouselInit() {
                     target: '+=1'
                             // target: '+='+items_offers
                 });
+
+
+        $('.jcarousel-pagination').jcarouselPagination({
+            item: function (page) {
+                return '<a href="#' + page + '">' + page + '</a>';
+            }
+        });
 
     }
 
@@ -1209,7 +1237,7 @@ function initBannerMap1() {
 
         map = new google.maps.Map(document.getElementById('map-banner-canvas'), mapOptions);
         // kör átmérője
-        circle_size = Number( $("#map_circle_size_div").attr('data-mapsize') );
+        circle_size = Number($("#map_circle_size_div").attr('data-mapsize'));
 
         for (var i in locations) {
 
