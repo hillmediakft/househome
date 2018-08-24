@@ -23,15 +23,15 @@ class Html {
 
         if ($ingatlan['tipus'] == 1) {
             if (isset($ingatlan['ar_elado_eredeti']) && $ingatlan['ar_elado_eredeti'] != $ingatlan['ar_elado']) {
-                $price = $num_helper->niceNumber($ingatlan['ar_elado']) . ' Ft ' . '<span class="lower-price">' . $num_helper->niceNumber($ingatlan['ar_elado_eredeti']) . ' Ft</span>';
+                $price = number_format($ingatlan['ar_elado'], 0, '.', ' ') . ' Ft ' . '<span class="lower-price">' . number_format($ingatlan['ar_elado_eredeti'], 0, '.', ' ') . ' Ft</span>';
             } else {
-                $price = $num_helper->niceNumber($ingatlan['ar_elado']) . ' Ft';
+                $price = number_format($ingatlan['ar_elado'], 0, '.', ' ') . ' Ft';
             }
         } else {
             if (isset($ingatlan['ar_kiado_eredeti']) && $ingatlan['ar_kiado_eredeti'] != $ingatlan['ar_kiado']) {
-                $price = $num_helper->niceNumber($ingatlan['ar_kiado']) . ' Ft ' . '<span class="lower-price">' . $num_helper->niceNumber($ingatlan['ar_kiado_eredeti']) . ' Ft</span>';
+                $price = number_format($ingatlan['ar_kiado']) . ' Ft ' . '<span class="lower-price">' . number_format($ingatlan['ar_kiado_eredeti']) . ' Ft</span>';
             } else {
-                $price = $num_helper->niceNumber($ingatlan['ar_kiado']) . ' Ft';
+                $price = number_format($ingatlan['ar_kiado']) . ' Ft';
             }
         }
         echo $price;
@@ -96,6 +96,52 @@ class Html {
         $html .= "</div>";
         return $html;
     }
+    
+    /**
+     * Template menü elem class-t active-ra állítja, ha a controller és az action a megadott paraméterekkel egyezik
+     *
+     * @param string $controller 			- vizsgálandó controller neve illetve nevek 
+     * @param string $action 				- action neve illetve nevek
+     * @param string $attribute_name 		- html elem class neve
+     */
+    public function menuActive($controller, $action = null, $attribute_name = 'active', $active_controller, $active_action) {
+   //     $active_controller = strtolower($this->request->get_controller());
+   //     $active_action = strtolower($this->request->get_action());
+
+        // ha csak controller van megadva paraméterként
+        if (!is_null($controller) && is_null($action)) {
+
+            $controller = explode('|', $controller);
+            // megnézzük, hogy az aktuális controller neve benne van-e a $controller tömbben 
+            if (in_array($active_controller, $controller)) {
+                return $attribute_name;
+            }
+            return '';
+        }
+
+        // ha csak action van megadva paraméterként
+        elseif (is_null($controller) && !is_null($action)) {
+
+            $action = explode('|', $action);
+            // megnézzük, hogy az aktuális action neve benne van-e a $action tömbben 
+            if (in_array($active_action, $action)) {
+                return $attribute_name;
+            }
+            return '';
+        }
+
+        // ha controller és action is meg van adva
+        elseif (!is_null($controller) && !is_null($action)) {
+
+            $controller = explode('|', $controller);
+            $action = explode('|', $action);
+
+            if (in_array($active_controller, $controller) && in_array($active_action, $action)) {
+                return $attribute_name;
+            }
+            return '';
+        }
+    }    
 
 }
 
