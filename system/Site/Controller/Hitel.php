@@ -32,7 +32,7 @@ class Hitel extends SiteController {
  //       $data['all_properties'] = $this->ingatlanok_model->kiemelt_properties_query(10);
 
         $view = new View();
-        $view->setHelper(array('url_helper', 'str_helper'));
+        $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));
 		
 		$view->add_link('js', SITE_JS . 'pages/hitel.js');
 

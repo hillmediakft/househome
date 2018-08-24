@@ -56,7 +56,7 @@ class Kereses extends SiteController {
 // var_dump($data);die;
 
         $view = new View();
-        $view->setHelper(array('url_helper', 'str_helper', 'num_helper'));
+        $view->setHelper(array('url_helper', 'str_helper', 'num_helper', 'html_helper'));
 
         //$view->setLazyRender();
 //$this->view->debug(true); 

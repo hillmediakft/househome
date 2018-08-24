@@ -44,7 +44,7 @@ class Hirek extends SiteController {
         $data['pagine_links'] = $pagine->page_links($this->request->get_uri('path_full'));
 
         $view = new View();
-        $view->setHelper(array('url_helper', 'str_helper'));
+        $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));
 //$this->view->debug(true); 
         $view->add_link('js', SITE_JS . 'pages/hirek.js');
         $view->render('blog/tpl_blog', $data);
@@ -60,7 +60,7 @@ class Hirek extends SiteController {
     {
         $id = (int)$id;	
         $view = new View();
-        $view->setHelper(array('url_helper', 'str_helper'));
+        $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));
 
         $data = $this->addGlobalData();
          // blog kategóriák
@@ -92,7 +92,7 @@ class Hirek extends SiteController {
         $id = (int)$id;
         
         $view = new View();
-        $view->setHelper(array('url_helper', 'str_helper'));  
+        $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));  
 
         $page_data = $this->blog_model->getPageData('hirek');
 
