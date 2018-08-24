@@ -1061,7 +1061,7 @@
                                                 <i class ="fa fa-info-circle"></i> Dokumentumok (fájlok) feltöltéséhez először mentse el az ingatlant (kattintson a "mentés és folytatás gombra") a kötelezően megadandó adatokkal, majd ezt követően tölthet fel.  </div>
                                         </div>
 
-                                        <div class="col-md-3">
+                                        <div class="col-md-7">
                                             <div class="portlet">
                                                 <div class="portlet-body">
                                                     <h4 class="block">Feltöltött dokumentumok:</h4>
@@ -1070,7 +1070,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-9">
+                                        <div class="col-md-5">
 
                                             <div class="portlet">
                                                 <div class="portlet-body">

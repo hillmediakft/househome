@@ -1096,7 +1096,7 @@
                                 </div>
                                 <div class="portlet-body">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-7">
                                             <div class="portlet">
                                                 <div class="portlet-body">
                                                     <h4 class="block">Feltöltött dokumentumok:</h4>
@@ -1116,7 +1116,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-9">
+                                        <div class="col-md-5">
                                             <!-- DOKUMENTUMOK FELTÖLTÉSE -->
                                             <div class="portlet">
                                                 <div class="portlet-body">
