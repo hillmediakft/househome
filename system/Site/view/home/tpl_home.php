@@ -92,63 +92,6 @@ use System\Libs\Language as Lang;
 
 
 
-    <div class="row">
-        <div class="our-features-banner style-1">
-            <div class="container">
-                <h2 class="block-title"><?php echo Lang::get('home_szolgaltatasok_cim'); ?></h2>
-                <span class="sub-title"><?php echo Lang::get('home_szolgaltatasok_szoveg'); ?></span>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="single-feature">
-                            <div class="icon-container">
-                                <span class="icon lg-icon house"></span>
-                            </div>
-                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
-                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
-                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-feature">
-                            <div class="icon-container">
-                                <span class="icon lg-icon like"></span>
-                            </div>
-                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
-                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
-                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-feature">
-                            <div class="icon-container">
-                                <span class="icon lg-icon achivment"></span>
-                            </div>
-                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
-                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
-                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-feature">
-                            <div class="icon-container">
-                                <span class="icon lg-icon hand"></span>
-                            </div>
-                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
-                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
-                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-
-
-
 
 
 
@@ -180,21 +123,20 @@ use System\Libs\Language as Lang;
                                     <div class="item">
                                         <div class="preview">
                                             <?php $this->html_helper->showLowerPriceIcon($value); ?>
-                                            <?php $this->html_helper->showLowerPriceIcon($value); ?>
 
-    <?php if ($value['kepek']) { ?>
+                                            <?php if ($value['kepek']) { ?>
                                                 <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>">
                                                     <img src="<?php echo $this->url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small'); ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
                                                 </a>
                                             <?php } ?>
-    <?php if ($value['kepek'] == null) { ?>
+                                            <?php if ($value['kepek'] == null) { ?>
                                                 <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>">
                                                     <img src="<?php echo Config::get('ingatlan_photo.upload_path') . 'placeholder.jpg'; ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
                                                 </a>
                                             <?php } ?>
-                                                <?php $this->html_helper->showHeartIcon($value); ?>
+                                            <?php $this->html_helper->showHeartIcon($value); ?>
                                             <span class="price-box">
-    <?php $this->html_helper->showPrice($value); ?>
+                                                <?php $this->html_helper->showPrice($value); ?>
                                             </span>
                                         </div>
                                         <div class="item-thumbnail">
@@ -228,11 +170,11 @@ use System\Libs\Language as Lang;
                                     </div>
                                 </li>
 
-<?php } ?>
+                            <?php } ?>
 
                         </ul>
                     </div>
-                    <p class="jcarousel-pagination"></p>
+                    <div class="jcarousel-pagination"></div>
                 </div>
             </div>
         </div>
@@ -261,7 +203,7 @@ use System\Libs\Language as Lang;
                     </div>
                     <div class="ag-carousel carousel">
                         <ul>
-<?php foreach ($agents as $agent) : ?>
+                            <?php foreach ($agents as $agent) : ?>
                                 <li>
                                     <div class="item">
                                         <div class="preview">
@@ -286,20 +228,19 @@ use System\Libs\Language as Lang;
                                         </ul>
                                     </div>
                                 </li>
-<?php endforeach; ?>
+                            <?php endforeach; ?>
 
 
 
 
                         </ul>
                     </div>
-                    <p class="jcarousel-pagination"></p>
                 </div>
             </div>
         </div>
     </div>
-    
-        <div class="container">
+
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="subscribe-banner">
@@ -314,128 +255,128 @@ use System\Libs\Language as Lang;
             </div>
         </div>
     </div>
-    
+
     <div class="row">
-			<div class="latest gray-bg">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-sm-12">
-							<h2 class="block-title">Hírek</h2>
-							<ul class="latest-news-listing row">
-								<li class="col-sm-6">
-									<div class="item">
-										<div class="preview">
-											<a href="#">
-												<img alt="img" src="public/site_assets/images/270-170.png">
-											</a>
-										</div>
-										<span class="title"><a href="#">Donec placerat augue vitae quam finibus semper.</a></span>
-										<p>Cras commodo vehicula sem nec convallis. Cras eu dapibus urna. Suspendisse potenti.</p>
-										<div class="item-thumbnail">
-											<div class="single-item date">
-												<i class="fa fa-calendar"></i>
-												<a class="value" href="">2018-07-26</a>
-											</div>
-											<div class="single-item views">
-												<i class="fa fa-eye"></i>
-												<a class="value" href="#">1234</a>
-											</div>
-											<div class="single-item comment">
-												<i class="fa fa-comments"></i>
-												<a class="value" href="#">13</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="col-sm-6">
-									<div class="item">
-										<div class="preview">
-											<a href="#">
-												<img alt="img" src="public/site_assets/images/270-170.png">
-											</a>
-										</div>
-										<span class="title"><a href="#">Sed elit felis, tempor nec egestas sit amet, porttitor ut magna.</a></span>
-										<p>Nullam convallis est a est maximus, eget lacinia magna pharetra. Cum sociis natoque penatibus et magnis.</p>
-										<div class="item-thumbnail">
-											<div class="single-item date">
-												<i class="fa fa-calendar"></i>
-												<a class="value" href="">2018.08.02</a>
-											</div>
-											<div class="single-item views">
-												<i class="fa fa-eye"></i>
-												<a class="value" href="#">1234</a>
-											</div>
-											<div class="single-item comment">
-												<i class="fa fa-comments"></i>
-												<a class="value" href="#">13</a>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="col-sm-12 col-md-6">
-							<h2 class="block-title">Blog bejegyzések</h2>
-							<ul class="latest-blog-posts">
-								<li class="item">
-									<div class="preview">
-										<a href="#">
-											<img alt="img" src="public/site_assets/images/270-170.png">
-										</a>
-									</div>
-									<div class="descr">
-										<span class="title"><a href="#">Mauris quis metus dictum, porttitor.</a></span>
-										<p>Nullam ac vestibulum nisl, in rutrum felis. Pellentesque quis facilisis nisl. Aliquam ut tincidunt sem. Sed at condimentum.</p>
-										<div class="item-thumbnail">
-											<div class="single-item date">
-												<i class="fa fa-calendar"></i>
-												<a class="value" href="">2018-08-03</a>
-											</div>
-											<div class="single-item views">
-												<i class="fa fa-eye"></i>
-												<a class="value" href="#">1234</a>
-											</div>
-											<div class="single-item comment">
-												<i class="fa fa-comments"></i>
-												<a class="value" href="#">13</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="item">
-									<div class="preview">
-										<a href="#">
-											<img alt="img" src="public/site_assets/images/270-170.png">
-										</a>
-									</div>
-									<div class="descr">
-										<span class="title"><a href="#">Cras commodo vehicula sem nec.</a></span>
-										<p>Nullam ac vestibulum nisl, in rutrum felis. Pellentesque quis facilisis nisl. Aliquam ut tincidunt sem. Sed at condimentum.</p>
-										<div class="item-thumbnail">
-											<div class="single-item date">
-												<i class="fa fa-calendar"></i>
-												<a class="value" href="">2018-07-23</a>
-											</div>
-											<div class="single-item views">
-												<i class="fa fa-eye"></i>
-												<a class="value" href="#">1234</a>
-											</div>
-											<div class="single-item comment">
-												<i class="fa fa-comments"></i>
-												<a class="value" href="#">13</a>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="empty-space"></div>
-			</div>
-		</div>
-    
-    
+        <div class="latest gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <h2 class="block-title">Hírek</h2>
+                        <ul class="latest-news-listing row">
+                            <li class="col-sm-6">
+                                <div class="item">
+                                    <div class="preview">
+                                        <a href="#">
+                                            <img alt="img" src="public/site_assets/images/270-170.png">
+                                        </a>
+                                    </div>
+                                    <span class="title"><a href="#">Donec placerat augue vitae quam finibus semper.</a></span>
+                                    <p>Cras commodo vehicula sem nec convallis. Cras eu dapibus urna. Suspendisse potenti.</p>
+                                    <div class="item-thumbnail">
+                                        <div class="single-item date">
+                                            <i class="fa fa-calendar"></i>
+                                            <a class="value" href="">2018-07-26</a>
+                                        </div>
+                                        <div class="single-item views">
+                                            <i class="fa fa-eye"></i>
+                                            <a class="value" href="#">1234</a>
+                                        </div>
+                                        <div class="single-item comment">
+                                            <i class="fa fa-comments"></i>
+                                            <a class="value" href="#">13</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-sm-6">
+                                <div class="item">
+                                    <div class="preview">
+                                        <a href="#">
+                                            <img alt="img" src="public/site_assets/images/270-170.png">
+                                        </a>
+                                    </div>
+                                    <span class="title"><a href="#">Sed elit felis, tempor nec egestas sit amet, porttitor ut magna.</a></span>
+                                    <p>Nullam convallis est a est maximus, eget lacinia magna pharetra. Cum sociis natoque penatibus et magnis.</p>
+                                    <div class="item-thumbnail">
+                                        <div class="single-item date">
+                                            <i class="fa fa-calendar"></i>
+                                            <a class="value" href="">2018.08.02</a>
+                                        </div>
+                                        <div class="single-item views">
+                                            <i class="fa fa-eye"></i>
+                                            <a class="value" href="#">1234</a>
+                                        </div>
+                                        <div class="single-item comment">
+                                            <i class="fa fa-comments"></i>
+                                            <a class="value" href="#">13</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <h2 class="block-title">Blog bejegyzések</h2>
+                        <ul class="latest-blog-posts">
+                            <li class="item">
+                                <div class="preview">
+                                    <a href="#">
+                                        <img alt="img" src="public/site_assets/images/270-170.png">
+                                    </a>
+                                </div>
+                                <div class="descr">
+                                    <span class="title"><a href="#">Mauris quis metus dictum, porttitor.</a></span>
+                                    <p>Nullam ac vestibulum nisl, in rutrum felis. Pellentesque quis facilisis nisl. Aliquam ut tincidunt sem. Sed at condimentum.</p>
+                                    <div class="item-thumbnail">
+                                        <div class="single-item date">
+                                            <i class="fa fa-calendar"></i>
+                                            <a class="value" href="">2018-08-03</a>
+                                        </div>
+                                        <div class="single-item views">
+                                            <i class="fa fa-eye"></i>
+                                            <a class="value" href="#">1234</a>
+                                        </div>
+                                        <div class="single-item comment">
+                                            <i class="fa fa-comments"></i>
+                                            <a class="value" href="#">13</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="preview">
+                                    <a href="#">
+                                        <img alt="img" src="public/site_assets/images/270-170.png">
+                                    </a>
+                                </div>
+                                <div class="descr">
+                                    <span class="title"><a href="#">Cras commodo vehicula sem nec.</a></span>
+                                    <p>Nullam ac vestibulum nisl, in rutrum felis. Pellentesque quis facilisis nisl. Aliquam ut tincidunt sem. Sed at condimentum.</p>
+                                    <div class="item-thumbnail">
+                                        <div class="single-item date">
+                                            <i class="fa fa-calendar"></i>
+                                            <a class="value" href="">2018-07-23</a>
+                                        </div>
+                                        <div class="single-item views">
+                                            <i class="fa fa-eye"></i>
+                                            <a class="value" href="#">1234</a>
+                                        </div>
+                                        <div class="single-item comment">
+                                            <i class="fa fa-comments"></i>
+                                            <a class="value" href="#">13</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="empty-space"></div>
+        </div>
+    </div>
+
+
 
 
 
