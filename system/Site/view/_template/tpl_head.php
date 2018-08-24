@@ -89,15 +89,15 @@ include($this->path('tpl_forgottenpw_modal'));
 
 
                                                     <ul class="navigation-listing" id="mobile_menu">
-                                                        <li class="navigation-item">
+                                                        <li class="navigation-item <?php echo $this->html_helper->menuActive('home', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
                                                             <a href="<?php echo $this->request->get_uri('site_url'); ?>"><i class="fa fa-home"></i></a>
                                                             <div class="overlay"></div>
                                                         </li>
-                                                        <li class="navigation-item">
+                                                        <li class="navigation-item <?php echo $this->html_helper->menuActive('ingatlanok', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
                                                             <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.index.' . LANG); ?>"><?php echo Lang::get('menu_ingatlanok'); ?></a>
                                                             <div class="overlay"></div>
                                                         </li>
-                                                        <li class="navigation-item">
+                                                        <li class="navigation-item <?php echo $this->html_helper->menuActive('rolunk|ingatlanertekesitoink', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
                                                             <a href="javascript:void(0)"><?php echo Lang::get('menu_magunkrol'); ?></a>
                                                             <div class="overlay hidden-xs"></div>
                                                             <ul class="subnav">
@@ -112,21 +112,21 @@ include($this->path('tpl_forgottenpw_modal'));
 
                                                             </ul>
                                                         </li>
-                                                        <li class="navigation-item">
+                                                        <li class="navigation-item <?php echo $this->html_helper->menuActive('kapcsolat', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
                                                             <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.kapcsolat.index.' . LANG); ?>"><?php echo Lang::get('menu_kapcsolat'); ?></a>
                                                             <div class="overlay"></div>
                                                         </li>
-                                                        <li class="navigation-item">
+                                                        <li class="navigation-item <?php echo $this->html_helper->menuActive('hitel', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
                                                             <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.hitel.index.' . LANG); ?>"><?php echo Lang::get('menu_hitel'); ?></a>
                                                             <div class="overlay"></div>
                                                         </li>
 
-                                                        <li class="navigation-item">
+                                                        <li class="navigation-item <?php echo $this->html_helper->menuActive('hirek', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
                                                             <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.hirek.index.' . LANG); ?>"><?php echo Lang::get('menu_hirek'); ?></a>
                                                             <div class="overlay"></div>
                                                         </li> 
-                                                        <li class="navigation-item">
-                                                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.kereses.index.' . LANG); ?>"><i class="fa fa-search"></i> <?php echo "Keresés"; ?></a>
+                                                        <li class="navigation-item <?php echo $this->html_helper->menuActive('kereses', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
+                                                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.kereses.index.' . LANG); ?>" class="search-button"><i class="fa fa-search"></i> <?php echo "Keresés"; ?></a>
                                                             <div class="overlay"></div>
                                                         </li>
 
