@@ -73,7 +73,7 @@ var Home = function () {
 
     var equalHeights = function () {
         setTimeout(function () {
-            $('.object-slider.latest-properties div.item').equalHeights();
+            $('.object-slider.interesting-offer div.item').equalHeights();
         }, 200);
     };
 
