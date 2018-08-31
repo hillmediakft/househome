@@ -1230,7 +1230,7 @@ function initBannerMap1() {
             scrollwheel: false,
             zoom: 15,
             disableDefaultUI: false,
-            zoomControl: false,
+            zoomControl: true,
             streetViewControl: false,
             center: new google.maps.LatLng(locations[0][1], locations[0][2]),
         };
@@ -1254,14 +1254,21 @@ function initBannerMap1() {
                 map: map,
                 center: new google.maps.LatLng(locations[i][1], locations[i][2]),
                 radius: circle_size,
-                strokeColor: "#F0CA5C",
-                fillColor: "#F0CA5C"
+                strokeColor: "#73ac37",
+                fillColor: "#73ac37"
             });
 
         }
     }
+
+    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
+    
     //  disableMapPan('map-banner-canvas');
     google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
     return true;
 }
 
