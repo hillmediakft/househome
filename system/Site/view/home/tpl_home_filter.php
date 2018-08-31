@@ -2,7 +2,7 @@
 use System\Libs\Config;
 use System\Libs\Language as Lang;
 ?>
-<div class="home-banner style-2">
+<div id="home_background_image" class="home-banner style-2">
     <div class="container">
 
         <div class="banner-content">
