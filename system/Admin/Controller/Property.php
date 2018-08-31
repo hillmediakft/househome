@@ -1601,8 +1601,12 @@ class Property extends AdminController {
                 $height = Config::get('ingatlan_photo.height', 600);
 
                 $imageobject->allowed(array('image/*'));
-                $imageobject->cropFillToSize($width, $height, '#fff');
-                //       $imageobject->cropToSize($width, $height);
+                
+                // kiegészíti a képet fehér részekkel, ha a képarány más mint a megadott
+                    //$imageobject->cropFillToSize($width, $height, '#fff');
+                // Levágja a kép széleit, ha a képarány más, minta a megadott
+                    $imageobject->cropToSize($width, $height);
+                
                 $imageobject->save($upload_path, $newfilename);
 
                 // kép neve bekerül a $new_filenames tömbbe
@@ -1619,14 +1623,16 @@ class Property extends AdminController {
                     $new_small_filename = $newfilename . '_small';
                     $small_width = Config::get('ingatlan_photo.small_width', 400);
                     $small_height = Config::get('ingatlan_photo.small_height', 300);
-                    $imageobject->cropFillToSize($small_width, $small_height);
+                    // $imageobject->cropFillToSize($small_width, $small_height);
+                    $imageobject->cropToSize($small_width, $small_height);
                     $imageobject->save($upload_path, $new_small_filename);
 
                     // thumb kép feltöltése
                     $new_thumb_filename = $newfilename . '_thumb';
                     $thumb_width = Config::get('ingatlan_photo.thumb_width', 80);
                     $thumb_height = Config::get('ingatlan_photo.thumb_height', 60);
-                    $imageobject->cropFillToSize($thumb_width, $thumb_height);
+                    //$imageobject->cropFillToSize($thumb_width, $thumb_height);
+                    $imageobject->cropToSize($thumb_width, $thumb_height);
                     $imageobject->save($upload_path, $new_thumb_filename);
                 }
             }
@@ -1690,7 +1696,7 @@ class Property extends AdminController {
 
                 $imageobject->allowed(array('image/*'));
                 $imageobject->cropFillToSize($width, $height, '#fff');
-                //       $imageobject->cropToSize($width, $height);
+                //$imageobject->cropToSize($width, $height);
                 $imageobject->save($upload_path, $newfilename);
 
                 // kép neve bekerül a $new_filenames tömbbe
@@ -1708,6 +1714,7 @@ class Property extends AdminController {
                     $small_width = Config::get('ingatlan_photo_floor_plan.small_width', 400);
                     $small_height = Config::get('ingatlan_photo_floor_plan.small_height', 300);
                     $imageobject->cropFillToSize($small_width, $small_height);
+                    //$imageobject->cropToSize($small_width, $small_height);
                     $imageobject->save($upload_path, $new_small_filename);
 
                     // thumb kép feltöltése
@@ -1715,6 +1722,7 @@ class Property extends AdminController {
                     $thumb_width = Config::get('ingatlan_photo_floor_plan.thumb_width', 80);
                     $thumb_height = Config::get('ingatlan_photo_floor_plan.thumb_height', 60);
                     $imageobject->cropFillToSize($thumb_width, $thumb_height);
+                    //$imageobject->cropToSize($thumb_width, $thumb_height);
                     $imageobject->save($upload_path, $new_thumb_filename);
                 }
             }
