@@ -80,7 +80,7 @@ include($this->path('tpl_forgottenpw_modal'));
 
                                                 <!-- MOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                                 <div class="logo">
-                                                    <a href="<?php echo $this->request->get_uri('site_url'); ?>"><img src="<?php echo SITE_IMAGE; ?>logo.png" alt=""></a>
+                                                    <a href="<?php echo $this->request->get_uri('site_url'); ?>"><img src="<?php echo SITE_IMAGE; ?>logo.png?201808301" alt=""></a>
                                                 </div>	
 
 
