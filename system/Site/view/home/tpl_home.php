@@ -377,8 +377,9 @@ use System\Libs\Language as Lang;
     </div>
 
 
-
-
-
-
 </div>
+
+<!-- kezdőkép adat a javascriptnek -->
+<script type="text/javascript">
+var home_background_path = '<?php echo $home_background_path; ?>';
+</script>
