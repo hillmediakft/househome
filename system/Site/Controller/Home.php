@@ -3,6 +3,7 @@ namespace System\Site\Controller;
 
 use System\Core\SiteController;
 use System\Core\View;
+use System\Libs\Config;
 use System\Libs\Session;
 
 class Home extends SiteController {
@@ -22,7 +23,15 @@ class Home extends SiteController {
         $data['title'] = $page_data['metatitle_' . $this->lang];
         $data['description'] = $page_data['metadescription_' . $this->lang];
         $data['keywords'] = $page_data['metakeywords_' . $this->lang];
-        
+        // kezdokep    
+        $home_background_image = $this->home_model->getBackground();
+        if ($home_background_image !== '') {
+            $data['home_background_path'] =  Config::get('slider.upload_path') . $home_background_image;
+        } else {
+            $data['home_background_path'] = 'public/site_assets/images/home-bg.jpg';
+        }
+
+
         // szűrési paramétereket tartalmazó tömb
         $data['filter_params'] = $this->ingatlanok_model->get_filter_params(Session::get('ingatlan_filter'));
 //var_dump($data['filter_params']);
