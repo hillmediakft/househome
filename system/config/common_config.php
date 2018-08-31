@@ -70,10 +70,10 @@ $config['cookie'] = array(
 );
 
 $config['slider'] = array(
-    'width' => 1170,
-    'height' => 420,
+    'width' => 1920,
+    'height' => 810,
     'thumb_width' => 200,
-    'thumb_height' => 72,
+    'thumb_height' => 84,
     'upload_path' => UPLOADS . 'slider_photo/'
 );
 
