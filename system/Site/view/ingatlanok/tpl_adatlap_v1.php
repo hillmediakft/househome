@@ -81,9 +81,9 @@ use System\Libs\Language as Lang;
                                     </div>
                                 </div>
                             <?php } ?>
-                            <div style="padding: 0px 0px;">
+               <!--             <div style="padding: 0px 0px;">
                                 <?php echo Lang::get('kereso_ref_szam'); ?>: <span style="font-weight: 700; color:#000;"><?php echo 'S-' . $ingatlan['ref_num']; ?></span>
-                            </div>
+                            </div> -->
 
 
                         </div>
@@ -203,7 +203,7 @@ use System\Libs\Language as Lang;
                     <!-- GOMBOK -->
                     <div class="row">
                         <div class="col-sm-12">
-                            <a style="text-align: center; width: 100%; border-radius: 12px" id="arvaltozas_ertesites" class="simple-btn sm-button outlined red <?php echo ($ertesites_arvaltozasrol) ? 'disabled' : ''; ?>" data-id="<?php echo $ingatlan['id']; ?>" href="javascript:void(0);"><i class="fa fa-paper-plane-o"></i> <?php echo Lang::get('adatlap_arvaltozas_gomb'); ?></a>
+                            <a style="text-align: center; width: 100%; border-radius: 12px" id="arvaltozas_ertesites" class="simple-btn sm-button outlined main-color <?php echo ($ertesites_arvaltozasrol) ? 'disabled' : ''; ?>" data-id="<?php echo $ingatlan['id']; ?>" href="javascript:void(0);"><i class="fa fa-paper-plane-o"></i> <?php echo Lang::get('adatlap_arvaltozas_gomb'); ?></a>
                         </div>
 
                     </div>
@@ -214,20 +214,20 @@ use System\Libs\Language as Lang;
 
                             <ul class="adatlap_gombok">
                                 <li>
-                                    <a id="arvaltozas_ertesites" class="simple-btn sm-button outlined red <?php echo ($ertesites_arvaltozasrol) ? 'disabled' : ''; ?>" data-id="<?php echo $ingatlan['id']; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_arvaltozas_gomb'); ?>"><i class="fa fa-paper-plane-o"></i></a>
+                                    <a id="arvaltozas_ertesites" class="simple-btn sm-button outlined main-color <?php echo ($ertesites_arvaltozasrol) ? 'disabled' : ''; ?>" data-id="<?php echo $ingatlan['id']; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_arvaltozas_gomb'); ?>"><i class="fa fa-paper-plane-o"></i></a>
                                 </li>
                                 <li>
-                                    <a id="kedvencekhez_<?php echo $ingatlan['id']; ?>" data-id="<?php echo $ingatlan['id']; ?>" class="simple-btn sm-button outlined red <?php echo (Cookie::is_id_in_cookie('kedvencek', $ingatlan['id'])) ? 'disabled' : ''; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_kedvencekhez_gomb'); ?>"><i class="fa fa-heart"></i></a>
+                                    <a id="kedvencekhez_<?php echo $ingatlan['id']; ?>" data-id="<?php echo $ingatlan['id']; ?>" class="simple-btn sm-button outlined main-color <?php echo (Cookie::is_id_in_cookie('kedvencek', $ingatlan['id'])) ? 'disabled' : ''; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_kedvencekhez_gomb'); ?>"><i class="fa fa-heart"></i></a>
                                 </li>
                                 <li>
                                     <form style="display: inline;" id="adatlap_nyomtatas_form" method="POST" action="adatlap/<?php echo $ingatlan['id']; ?>">
-                                        <a id="adatlap_nyomtatas" class="simple-btn sm-button outlined red" title="<?php echo Lang::get('adatlap_nyomtatas_gomb'); ?>"><i class="fa fa-file"></i></a>
+                                        <a id="adatlap_nyomtatas" class="simple-btn sm-button outlined main-color" title="<?php echo Lang::get('adatlap_nyomtatas_gomb'); ?>"><i class="fa fa-print"></i></a>
                                         <input type="hidden" name="agent_id" value="<?php echo $agent['id']; ?>"/>
                                         <!-- <button id="adatlap_nyomtatas" type="submit" class="send-btn"><i class="fa fa-print"></i> <?php //echo Lang::get('adatlap_nyomtatas_gomb');              ?></button> -->
                                     </form>
                                 </li>
                                 <li>
-                                    <a id="myPopover" data-toggle="popover" data-placement="bottom" data-content="<?php echo $this->html_helper->socialMediaShare($this->getConfig('ingatlan_photo.upload_path') . $pictures[0], $ingatlan['ingatlan_nev_' . LANG]); ?>" class="simple-btn sm-button outlined red" href="javascript:void(0)" title="<?php echo Lang::get('adatlap_megosztas_gomb'); ?>"><i class="fa fa-share-alt"></i></a>
+                                    <a id="myPopover" data-toggle="popover" data-placement="bottom" data-content="<?php echo $this->html_helper->socialMediaShare($this->getConfig('ingatlan_photo.upload_path') . $pictures[0], $ingatlan['ingatlan_nev_' . LANG]); ?>" class="simple-btn sm-button outlined main-color" href="javascript:void(0)" title="<?php echo Lang::get('adatlap_megosztas_gomb'); ?>"><i class="fa fa-share-alt"></i></a>
                                 </li>
                             </ul>
 
