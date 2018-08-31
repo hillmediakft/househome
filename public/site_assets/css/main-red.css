@@ -116,7 +116,7 @@ a:hover{
 }
 /* line 13, scss/_header.scss */
 .extra-header .extra-item {
-    border-left: 1px solid #999;
+    border-left: 1px solid #fff;
     height: 36px;
     font-size: 13px;
     float: left;
@@ -139,7 +139,7 @@ a:hover{
 /* line 27, scss/_header.scss */
 .extra-header .extra-item.sociable .sociable-listing .sociable-item .social-icon {
     color: #fff;
-    border-right: 1px solid #999;
+    border-right: 1px solid #fff;
     padding-left: 9px;
     padding-right: 13px;
     display: block;
@@ -400,7 +400,7 @@ a:hover{
 }
 /* line 255, scss/_header.scss */
 .extra-header .extra-item:first-child, .extra-header .extra-item:last-child {
-    border-right: 1px solid #999;
+    border-right: 1px solid #fff;
 }
 
 /* line 261, scss/_header.scss */
@@ -572,7 +572,6 @@ header.header .h-cart-btn:hover {
     text-transform: uppercase;
     text-decoration: none;
     display: block;
-    /* padding: 0 20px; */
     padding: 10px 15px;
     z-index: 1000;
     position: relative;
@@ -586,11 +585,9 @@ header.header .h-cart-btn:hover {
 .nav-block .main-navigation > .navigation-listing > .navigation-item > a.search-button:hover {
     color: #fff;
     background: #e69900; 
-	border-radius: 5px;
+    border-radius: 5px;
 }
 
-
-border-radius: 5px;
 /* line 43, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item .overlay {
     -webkit-transition: 0.3s linear;
@@ -616,17 +613,18 @@ border-radius: 5px;
     list-style: none;
     padding: 0 20px;
     margin: 0;
-    background-color: #3a383b;
+    background-color: #fff;
     position: absolute;
     top: 40px;
     width: 270px;
     display: none;
     margin-top: -1px;
     z-index: 9998;
+    box-shadow: 1px 2px 2px #777;
 }
 /* line 71, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item .subnav .subnav-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
 }
 /* line 74, scss/_nav.scss */
@@ -675,7 +673,7 @@ border-radius: 5px;
 }
 /* line 116, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item .subnav .subnav-item a {
-    color: #939ba0;
+    color: #777;
     padding: 10px 0;
     width: 100%;
     display: block;
@@ -687,6 +685,9 @@ border-radius: 5px;
     -ms-transition: 0.3s linear;
     -o-transition: 0.3s linear;
     transition: 0.3s linear;
+}
+.nav-block .main-navigation > .navigation-listing > .navigation-item .subnav .subnav-item a:hover {
+    color: #00B7B6;
 }
 /* line 126, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item .subnav .subnav-item:first-child {
@@ -3040,64 +3041,64 @@ footer.footer .bottom-footer .copy {
 }
 /* line 1509, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.like:before {
-    margin-top: 20px;
+    margin-top: 26px;
     background-position: -50px 0;
 }
 /* line 1513, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.achivment:before {
-    margin-top: 20px;
+    margin-top: 26px;
     background-position: -106px 0;
 }
 /* line 1517, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.hand:before {
-    margin-top: 20px;
+    margin-top: 26px;
     background-position: -168px 0;
 }
 /* line 1521, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.papers:before {
-    margin-top: 16px;
+    margin-top: 26px;
     background-position: -131px -72px;
     width: 60px;
 }
 /* line 1526, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.human:before {
-    margin-top: 16px;
+    margin-top: 26px;
     background-position: -214px -76px;
     width: 60px;
 }
 /* line 1531, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.home:before {
-    margin-top: 16px;
+    margin-top: 26px;
     background-position: 4px -144px;
     width: 60px;
 }
 /* line 1536, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.micro:before {
-    margin-top: 16px;
+    margin-top: 26px;
     background-position: -58px -141px;
     width: 60px;
 }
 /* line 1541, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.cash:before {
-    margin-top: 16px;
+    margin-top: 26px;
     background-position: -124px -141px;
     width: 60px;
 }
 /* line 1546, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.deal:before {
-    margin-top: 16px;
+    margin-top: 26px;
     background-position: -199px -138px;
     width: 60px;
 }
 /* line 1551, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.cup:before {
-    margin-top: 16px;
+    margin-top: 26px;
     background-position: 3px -206px;
     width: 60px;
 }
 /* line 1556, scss/_slider.scss */
 .our-features-banner .single-feature .icon-container .icon.money:before {
-    margin-top: 16px;
+    margin-top: 26px;
     background-position: -129px -206px;
     width: 60px;
 }
@@ -5924,7 +5925,7 @@ footer.footer .bottom-footer .copy {
 .subscribe-banner .subscribe-block .subscribe-btn {
     display: inline-block;
     padding: 8px 18px;
-    background-color: #e6462a;
+    background-color: #ffaa00;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -17874,7 +17875,7 @@ body.shop-front header .cart-btn:hover {
     }
     /* line 57, scss/_responsive.scss */
     body .nav-block .main-navigation > .navigation-listing > .navigation-item > a {
-        padding: 0 20px;
+        padding: 10px 15px;
     }
     /* line 64, scss/_responsive.scss */
     body section.nav-block .main-navigation .navigation-listing .navigation-item a {
@@ -21250,6 +21251,7 @@ button:focus {
 }
 .extra-header .extra-item .country-select a img {
     margin-right: 2px;
+    border: 1px solid #fff;
 }
 .extra-header .extra-item .country-select a:hover {
     text-decoration: none;
@@ -21268,7 +21270,7 @@ footer.footer .widget .property-listing li {
 /* ************ form elements * */
 .form-control {
     border-radius: 0;
-    height: 35px;
+    height: 37px;
 }
 .form-control:focus {
     border-color: #999;
