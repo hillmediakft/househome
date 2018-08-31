@@ -71,6 +71,10 @@ var Home = function () {
     };
 */
 
+    // kezdőkép elérési út beállítása
+    document.getElementById("home_background_image").style.backgroundImage = "url(" + home_background_path + ")";
+
+
     var equalHeights = function () {
         setTimeout(function () {
             $('.object-slider.interesting-offer div.item').equalHeights();
