@@ -43,7 +43,7 @@
 */
 
 .modal-content .send-btn {
-    background-color: #73ac37;
+    background-color: #00B7B6;
     border: medium none;
     color: #fff;
     display: block;
@@ -111,7 +111,7 @@
 .detail-info-block .column-2 {
     border-right: 1px solid #e7e4e4;
     float: left;
-    padding: 2px 30px;
+    padding: 2px 20px;
     width: 50%;
 }
 
@@ -161,7 +161,7 @@
 /* *********** ingatlan infobox adatlap oldalon ****** */
 .ingatlan-info-box {
     background-color: #fff;
-    border: 1px solid #73ac37;
+    border: 1px solid #00B7B6;
     height: auto;
     margin: 20px 0 20px 0;
     overflow: hidden;
@@ -195,6 +195,7 @@
 }
 .ingatlan-info-box .agent-box .agent-image img {
     max-width: 85px;
+    border-radius: 50%;
 }
 .ingatlan-info-box .agent-box .agent-details {
     display: table-cell;
@@ -207,7 +208,9 @@
 }
 .ingatlan-info-box .agent-box .agent-details .agent-name h6{
     padding-bottom: 5px;
-    margin: 0;
+    margin: 5px 0 0 0;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .ingatlan-info-box .icon-box .heading .title {
@@ -272,7 +275,7 @@
     line-height: 1;
     color: #fff;
     text-align: center;
-    background-color: #73ac37;
+    background-color: #00B7B6;
     border: 1px solid #e7e4e4;
     border-radius: 0px;
 }
@@ -307,7 +310,7 @@
 }
 
 .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
-    color: #73ac37;
+    color: #00B7B6;
     text-decoration: none;
     background-color: none;
     border-top: 5px;
@@ -321,7 +324,7 @@
     right: 1px;
     width: 34px;
     height: 34px;
-    background-color: #73ac37;
+    background-color: #00B7B6;
 }
 
 .caret {
@@ -388,7 +391,7 @@ h3.section-title .lower-price {
 
 
 .badge.badge-danger {
-    background-color: #73ac37;
+    background-color: #00B7B6;
 }
 .kedvencek .main-sidebar {
     padding-top: 0px;
@@ -502,26 +505,26 @@ input.has-error {
     color: #000;
 }
 .saved_search_box .elem .link:hover {
-    color: #73ac37;
+    color: #00B7B6;
 }
 .saved_search_box .buttons .share {
     color: #3a383b;
     font-size: 12px;
 }
 .saved_search_box .buttons .share:hover {
-    color: #73ac37;
+    color: #00B7B6;
 }
 
 .save_search_button {
     padding:5px 8px;
     margin-bottom: 5px;
     background-color: #fff;
-    color: #73ac37;
-    border: 1px solid #73ac37;
+    color: #00B7B6;
+    border: 1px solid #00B7B6;
     width: 100%;
 }
 .save_search_button:hover {
-    background-color: #73ac37;
+    background-color: #00B7B6;
     color: #fff;
     -webkit-transition: 0.12s linear;
     -moz-transition: 0.12s linear;
@@ -554,7 +557,7 @@ input.has-error {
 
 .well {
     border-radius: 0px;
-    border-left: 5px solid #73ac37;
+    border-left: 5px solid #00B7B6;
 }
 @media only screen and (max-width: 370px) {
     /* ************ ADATLAP OLDAL  ********* */
@@ -602,7 +605,7 @@ input.has-error {
 }
 
 #social-share-icons a {
-    color: #73ac37;
+    color: #00B7B6;
 }
 
 #social-share-icons a.share_facebook {
@@ -713,7 +716,7 @@ footer.footer .bottom-footer .policies {
 }
 /*
 .object-slider .carousel .item-anchor .item-title:hover {
-    color: #73ac37;
+    color: #00B7B6;
 }
 */
 .object-slider .carousel .item-anchor .item-thumbnail,
@@ -730,7 +733,7 @@ footer.footer .bottom-footer .policies {
 }
 /*
 .objects-block .item-anchor .item-title:hover {
-    color: #73ac37;
+    color: #00B7B6;
 }
 */
 .objects-block .item-anchor .item-thumbnail,
@@ -743,7 +746,7 @@ p.text-16 {
     font-size: 16px;
 }
 p.outbound-link {
-    color: #73ac37; 
+    color: #00B7B6; 
 }
 
 hr {
@@ -804,7 +807,7 @@ hr {
         font-weight: bold;
         color: #fff;
         display: inline-block;
-        background: #73ac37;
+        background: #00B7B6;
         padding: 15px 30px;
         text-decoration: none;
     } 
