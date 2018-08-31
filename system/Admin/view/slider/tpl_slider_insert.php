@@ -81,8 +81,8 @@
                                 <div class="form-group">
                                     <label for="slider_status">Slide státusz</label>
                                     <select name="slider_status" class="form-control input-xlarge">
-                                        <option value="0">Inaktív</option>
                                         <option value="1">Aktív</option>
+                                        <option value="0">Inaktív</option>
                                     </select>
                                 </div>
 
