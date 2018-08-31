@@ -247,8 +247,8 @@ class Adatlap extends SiteController {
         $pdf->SetDrawColor(200, 200, 200);
 
         $pdf->SetFont('arial', '', 6);
-        $pdf->Cell(0, 3, $this->utf8_to_latin2_hun('1095 Budapest, Bakáts u. 1.'), 0, 2, 'L', 0);
-        $pdf->Cell(0, 3, $this->utf8_to_latin2_hun('Tel: 06-1-215-1490'), 0, 2, 'L', 0);
+        $pdf->Cell(0, 3, $this->utf8_to_latin2_hun('1999 Budapest, Minta u. 1.'), 0, 2, 'L', 0);
+        $pdf->Cell(0, 3, $this->utf8_to_latin2_hun('Tel: 06-1-555-1234'), 0, 2, 'L', 0);
         $pdf->Cell(0, 3, $this->utf8_to_latin2_hun('Mobil: ') . $this->utf8_to_latin2_hun($agent['phone']), 0, 2, 'L', 0);
         $pdf->Cell(0, 3, $this->utf8_to_latin2_hun('E-mail: ' . $this->utf8_to_latin2_hun($agent['email'])), 0, 2, 'L', 0);
         $pdf->SetXY(175, 14);
@@ -257,9 +257,9 @@ class Adatlap extends SiteController {
         $pdf->Cell(0, 3, $this->utf8_to_latin2_hun($agent['first_name']) . ' ' . $this->utf8_to_latin2_hun($agent['last_name']), 0, 2, 'L', 0);
         $pdf->Cell(0, 3, $this->utf8_to_latin2_hun('Ingatlan tanácsadó'), 0, 2, 'L', 0);
         $pdf->SetXY(135, 28);
-        $pdf->SetFillColor(158, 40, 40);
+        $pdf->SetFillColor(115,172,55);
         $pdf->SetTextColor(255, 255, 255);
-        $pdf->Cell(0, 5, 'https://ingatlanok-hitelek.hu', 0, 2, 'C', 1);
+        $pdf->Cell(0, 5, 'https://househome.hu', 0, 2, 'C', 1);
 
         // Cell(szélesség, magasság, "szöveg", border (0-L-T-R-B), új pozíció 1- új sor, align, háttérszín, link  )
         //Set x and y position for the main text, reduce font size and write content
