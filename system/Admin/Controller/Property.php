@@ -1606,7 +1606,17 @@ class Property extends AdminController {
                     //$imageobject->cropFillToSize($width, $height, '#fff');
                 // Levágja a kép széleit, ha a képarány más, minta a megadott
                     $imageobject->cropToSize($width, $height);
+                    
+                // Vízjel beállítások
+                $imageobject->watermark(ADMIN_IMAGE . 'watermark_logo.png');
+                $imageobject->watermark_x(-30); // jobboldal
+                $imageobject->watermark_y(-30); // lent
+                //$imageobject->watermark_position('BR');
+                //$imageobject->watermark_no_zoom('in', true);
+                //$imageobject->watermark_no_zoom('out', false);
+             
                 
+                // kép mentése
                 $imageobject->save($upload_path, $newfilename);
 
                 // kép neve bekerül a $new_filenames tömbbe
