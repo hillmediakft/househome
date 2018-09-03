@@ -106,7 +106,7 @@ use System\Libs\Language as Lang;
                                 <a href="#" class="prev-slide" data-jcarouselcontrol="true"><i class="fa fa-angle-left"></i></a>
                                 <a href="#" class="next-slide" data-jcarouselcontrol="true"><i class="fa fa-angle-right"></i></a>
                             </div>
-                            <a href="#" class="all-offers-btn"><?php echo Lang::get('home_osszes_ingatlan'); ?></a>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.index.' . LANG); ?>" class="all-offers-btn"><?php echo Lang::get('home_osszes_ingatlan'); ?></a>
                         </div>
                     </div>
                     <div class="obj-carousel carousel" data-jcarousel="true">
