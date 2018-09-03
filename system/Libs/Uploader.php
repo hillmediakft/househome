@@ -288,27 +288,57 @@ class Uploader
 	}
 
 	/**
-	 * Vízjel hozzáadása és beállításai
-	 *
-	 * picture		- adds a watermark on the image, value is a local filename. accepted files are GIF, JPG, BMP, PNG and PNG alpha
-	 * x 			- absolute watermark position, in pixels from the left border. can be negative (default: null)
-	 * y 			- absolute watermark position, in pixels from the top border. can be negative (default: null)
-	 * position 	- watermark position withing the image, a combination of one or two from 'TBLR': top, bottom, left, right (default: null)
-	 * no_zoom_in 	- prevents the watermark to be resized up if it is smaller than the image (default: true)
-	 * no_zoom_out 	- prevents the watermark to be resized down if it is bigger than the image (default: false)
-	 *
-	 * @param string $prop
-	 * @param mixed $value
+	 * Vízjel hozzáadása
+	 * 
+	 * @param string $filename - adds a watermark on the image, value is a local filename. accepted files are GIF, JPG, BMP, PNG and PNG alpha
 	 */
-	public function watermark($param, $value)
+	public function watermark($filename)
 	{
-		if ($param == 'picture') {
-			$this->handle->image_watermark = $value;
-		} else {
-			$property = 'image_watermark_' . $param;
-			$this->handle->$property = $value;
-		}
+		$this->handle->image_watermark = $filename;
 	}
+
+	/**
+	 * Absolute watermark position, in pixels from the left border. can be negative (default: null)
+	 * @param  integer $value
+	 */
+	public function watermark_x($value)
+	{
+		$this->handle->image_watermark_x = $value;
+	}
+
+	/**
+	 * Absolute watermark position, in pixels from the top border. can be negative (default: null)
+	 * @param  integer $value
+	 */
+	public function watermark_y($value)
+	{
+		$this->handle->image_watermark_y = $value;
+	}
+
+	/**
+	 * Watermark position withing the image, a combination of one or two from 'TBLR': top, bottom, left, right (default: null)
+	 * @param  string $value
+	 */
+	public function watermark_position($value)
+	{
+		$this->handle->image_watermark_position = $value;
+	}
+
+	/**
+	 * Vízjel átméretezés engyedélyezés, vagy tiltás
+	 * 
+	 * in - prevents the watermark to be resized up if it is smaller than the image (default: true)
+	 * out - prevents the watermark to be resized down if it is bigger than the image (default: false)
+	 * 
+	 * @param  string $type  'in' vagy 'out'
+	 * @param  bool   $value 
+	 */
+	public function watermark_no_zoom($type, $value)
+	{
+		$property = 'image_watermark_no_zoom_' . $type;
+		$this->handle->$property = $value;
+	}
+
 
 	/**
 	 * Kép elforgatása
