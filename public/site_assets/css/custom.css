@@ -336,7 +336,7 @@
     background-color: #fff;
     border-color: #e7e4e4;
     color: #808080;
-    font-family: "Lato-Regular",Arial,sans-serif;
+    font-family: "Source Sans Pro",Arial,sans-serif;
     font-size: 14px;
     font-weight: normal;
 }
@@ -389,9 +389,12 @@ h3.section-title .lower-price {
     color:#eee;
 }
 
-
 .badge.badge-danger {
-    background-color: #00B7B6;
+    background-color: #ffaa00;
+    border-radius: 10px;
+    line-height: 1.2;
+    margin-left: 3px;
+    margin-top: -2px;
 }
 .kedvencek .main-sidebar {
     padding-top: 0px;

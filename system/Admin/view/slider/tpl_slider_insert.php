@@ -71,7 +71,7 @@
                                 
                                 <div class="clearfix"></div>
                                 <div class="note note-info">
-                                    Kattintson a kiválasztás gombra! Ha másik képet szeretne kiválasztani, kattintson a megjelenő módosít gombra! Ha mégsem kívánja a kiválasztott képet feltölteni, kattintson a töröl gombra!
+                                    Kattintson a kiválasztás gombra! Ha másik képet szeretne kiválasztani, kattintson a megjelenő módosít gombra! Ha mégsem kívánja a kiválasztott képet feltölteni, kattintson a töröl gombra! <strong>Az optimális képméret 1920x550 képpont. </strong>
                                 </div>
 
                                 <div class="form-group">
