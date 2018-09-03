@@ -416,12 +416,19 @@ use System\Libs\Language as Lang;
                                         </div>
                                     <?php } ?>
 
+                                    <?php if (!is_null($ingatlan['rezsi'])) { ?>
+                                        <div class="info-item">
+                                            <span class="label-item"><?php echo Lang::get('jell_rezsi'); ?>:</span>
+                                            <span class="value"><?php echo $ingatlan['rezsi']; ?> Ft</span>
+                                        </div>
+                                    <?php } ?>
+									
                                     <?php if (!is_null($ingatlan['kozos_koltseg'])) { ?>
                                         <div class="info-item">
                                             <span class="label-item"><?php echo Lang::get('jell_kozos_koltseg'); ?>:</span>
                                             <span class="value"><?php echo $ingatlan['kozos_koltseg']; ?> Ft</span>
                                         </div>
-                                    <?php } ?>
+                                    <?php } ?>									
 
                                 </div>
 
