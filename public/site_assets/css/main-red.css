@@ -1188,14 +1188,17 @@ footer.footer .bottom-footer .copy {
 /*______________________SLIDERS_______________________*/
 /* line 2, scss/_slider.scss */
 .home-banner {
-    height: 550px;
+    height: 750px;
     background: url(../images/banners/home-top.jpg) no-repeat center;
     position: relative;
     margin-top: -65px;
+	background-size: cover;
 }
 /* line 6, scss/_slider.scss */
 .home-banner.style-2 {
     background: url("../images/home-bg.jpg") no-repeat center;
+    background-color: #eee;
+    background-size: contain;
 }
 /* line 9, scss/_slider.scss */
 .home-banner.style-3 {
