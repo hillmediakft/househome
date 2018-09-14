@@ -35,7 +35,7 @@ use System\Libs\Language as Lang;
 
                             <div class="icon-box">
                                 <div class="heading">
-                                      <span class="title">
+                                    <span class="title">
                                         <span class="price">
                                             Ár: <?php $this->html_helper->showPrice($ingatlan); ?>
                                         </span>
@@ -81,9 +81,9 @@ use System\Libs\Language as Lang;
                                     </div>
                                 </div>
                             <?php } ?>
-               <!--             <div style="padding: 0px 0px;">
-                                <?php echo Lang::get('kereso_ref_szam'); ?>: <span style="font-weight: 700; color:#000;"><?php echo 'S-' . $ingatlan['ref_num']; ?></span>
-                            </div> -->
+                            <!--             <div style="padding: 0px 0px;">
+                            <?php echo Lang::get('kereso_ref_szam'); ?>: <span style="font-weight: 700; color:#000;"><?php echo 'S-' . $ingatlan['ref_num']; ?></span>
+                                         </div> -->
 
 
                         </div>
@@ -102,7 +102,7 @@ use System\Libs\Language as Lang;
                                         <h6><?php echo $agent['first_name'] . ' ' . $agent['last_name']; ?></h6>
                                         <div><?php echo $agent['title_' . LANG]; ?></div>
                                     </div>
-  <!--                                  <div class="label label-danger"><?php //echo Lang::get('adatlap_hivjon_most_cimke');            ?></div> -->
+  <!--                                  <div class="label label-danger"><?php //echo Lang::get('adatlap_hivjon_most_cimke');             ?></div> -->
                                     <input type="hidden" name="agent_id" id="agent_id" value="<?php echo $agent['id']; ?>">
                                     <div>
                                         <div id="phone_number_box">
@@ -214,20 +214,20 @@ use System\Libs\Language as Lang;
 
                             <ul class="adatlap_gombok">
                                 <li>
-                                    <a id="arvaltozas_ertesites" class="simple-btn sm-button outlined main-color <?php echo ($ertesites_arvaltozasrol) ? 'disabled' : ''; ?>" data-id="<?php echo $ingatlan['id']; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_arvaltozas_gomb'); ?>"><i class="fa fa-paper-plane-o"></i></a>
-                                </li>
-                                <li>
                                     <a id="kedvencekhez_<?php echo $ingatlan['id']; ?>" data-id="<?php echo $ingatlan['id']; ?>" class="simple-btn sm-button outlined main-color <?php echo (Cookie::is_id_in_cookie('kedvencek', $ingatlan['id'])) ? 'disabled' : ''; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_kedvencekhez_gomb'); ?>"><i class="fa fa-heart"></i></a>
                                 </li>
                                 <li>
                                     <form style="display: inline;" id="adatlap_nyomtatas_form" method="POST" action="adatlap/<?php echo $ingatlan['id']; ?>">
                                         <a id="adatlap_nyomtatas" class="simple-btn sm-button outlined main-color" title="<?php echo Lang::get('adatlap_nyomtatas_gomb'); ?>"><i class="fa fa-print"></i></a>
                                         <input type="hidden" name="agent_id" value="<?php echo $agent['id']; ?>"/>
-                                        <!-- <button id="adatlap_nyomtatas" type="submit" class="send-btn"><i class="fa fa-print"></i> <?php //echo Lang::get('adatlap_nyomtatas_gomb');              ?></button> -->
+                                        <!-- <button id="adatlap_nyomtatas" type="submit" class="send-btn"><i class="fa fa-print"></i> <?php //echo Lang::get('adatlap_nyomtatas_gomb');               ?></button> -->
                                     </form>
                                 </li>
-                                <li>
+                          <!--      <li>
                                     <a id="myPopover" data-toggle="popover" data-placement="bottom" data-content="<?php echo $this->html_helper->socialMediaShare($this->getConfig('ingatlan_photo.upload_path') . $pictures[0], $ingatlan['ingatlan_nev_' . LANG]); ?>" class="simple-btn sm-button outlined main-color" href="javascript:void(0)" title="<?php echo Lang::get('adatlap_megosztas_gomb'); ?>"><i class="fa fa-share-alt"></i></a>
+                                </li> -->
+                                <li>
+                                    <?php echo $this->html_helper->socialMediaShare($this->getConfig('ingatlan_photo.upload_path') . $pictures[0], $ingatlan['ingatlan_nev_' . LANG]); ?>
                                 </li>
                             </ul>
 
@@ -422,7 +422,7 @@ use System\Libs\Language as Lang;
                                             <span class="value"><?php echo $ingatlan['rezsi']; ?> Ft</span>
                                         </div>
                                     <?php } ?>
-									
+
                                     <?php if (!is_null($ingatlan['kozos_koltseg'])) { ?>
                                         <div class="info-item">
                                             <span class="label-item"><?php echo Lang::get('jell_kozos_koltseg'); ?>:</span>
@@ -527,7 +527,7 @@ use System\Libs\Language as Lang;
 
                                                                 <?php $this->html_helper->showHeartIcon($value); ?>
 
-                                                                                        <!-- <span class="price-box"> -->
+                                                                                                <!-- <span class="price-box"> -->
                                                                 <?php //$this->html_helper->showPrice($value); ?>
                                                                 <!-- </span> -->
                                                             </div>
@@ -609,7 +609,7 @@ use System\Libs\Language as Lang;
                                                             <div class="preview">
                                                                 <?php $this->html_helper->showLowerPriceIcon($value); ?>
 
-                                                                                                                                                                                                                <!-- <a href="<?php //echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]);                   ?>"></a> -->
+                                                                                                                                                                                                                        <!-- <a href="<?php //echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]);                    ?>"></a> -->
 
                                                                 <?php if (!is_null($value['kepek'])) { ?>
                                                                     <img src="<?php echo $this->url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small'); ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
@@ -619,7 +619,7 @@ use System\Libs\Language as Lang;
 
                                                                 <?php $this->html_helper->showHeartIcon($value); ?>
 
-                                                                                                    <!-- <span class="price-box"> -->
+                                                                                                            <!-- <span class="price-box"> -->
                                                                 <?php //$this->html_helper->showPrice($value); ?>
                                                                 <!-- </span> -->
                                                             </div>
