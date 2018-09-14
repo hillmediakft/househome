@@ -467,7 +467,7 @@ function carouselInit() {
 
     var items_ag;
     if ($('.ag-carousel').length > 0) {
-        items_ag = 4;
+        items_ag = 3;
         // var jcarousel_obj = $('.obj-carousel');
         $('.ag-carousel').each(function () {
             var jcarousel_ag = $(this);
@@ -476,7 +476,7 @@ function carouselInit() {
                         var width = jcarousel_ag.innerWidth();
                         var inner_width = jcarousel_ag.parent().width();
                         if (width >= 992) {
-                            items_ag = 4;
+                            items_ag = 3;
                         } else if (width >= 767) {
                             items_ag = 3;
                         } else if (width >= 640) {

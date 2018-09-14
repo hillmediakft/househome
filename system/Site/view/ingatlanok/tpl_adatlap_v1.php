@@ -505,7 +505,7 @@ use System\Libs\Language as Lang;
                                             <a href="#" class="next-slide"><i class="fa fa-angle-right"></i></a>
                                         </div>
                                     </div>
-                                    <div class="obj-carousel carousel">
+                                    <div class="ag-carousel carousel">
                                         <ul>
                                             <?php
                                             foreach ($hasonlo_ingatlan as $value) {
@@ -593,7 +593,7 @@ use System\Libs\Language as Lang;
                                             <a href="#" class="next-slide"><i class="fa fa-angle-right"></i></a>
                                         </div>
                                     </div>
-                                    <div class="obj-carousel carousel">
+                                    <div class="ag-carousel carousel">
                                         <ul>
                                             <?php
                                             foreach ($nemreg_megtekintett_ingatlanok as $value) {

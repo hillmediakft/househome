@@ -4469,9 +4469,9 @@ footer.footer .bottom-footer .copy {
 .blog-posts-holder .carousel .item .item-info .price,
 .interesting-offer .carousel .item .item-info .price,
 .featured-products .carousel .item .item-info .price {
-    text-transform: uppercase;
+    text-transform: none;
     font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     color: #e6462a;
     float: none;
 }
