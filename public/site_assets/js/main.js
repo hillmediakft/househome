@@ -411,7 +411,7 @@ function carouselInit() {
                         if (width >= 992) {
                             items_obj = 4;
                         } else if (width >= 767) {
-                            items_obj = 3;
+                            items_obj = 4;
                         } else if (width >= 640) {
                             items_obj = 2;
                         } else {

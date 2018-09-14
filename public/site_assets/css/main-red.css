@@ -518,7 +518,7 @@ header.header .h-cart-btn:hover {
     margin-bottom: -1px;
     z-index: 100;
     position: relative;
-	box-shadow: 2px 2px 3px #999;
+    box-shadow: 2px 2px 3px #999;
 }
 .nav-block .logo {
     float: left;
@@ -547,16 +547,16 @@ header.header .h-cart-btn:hover {
     float: left;
     position: relative;
     /*padding: 21px 0;*/
-	margin: 0 5px;
-	background: #00B7B6;
-	border-radius: 5px;
+    margin: 0 5px;
+    background: #00B7B6;
+    border-radius: 5px;
 }
 /* line 21, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item:hover {
     /*padding: 21px 0;*/
     cursor: pointer;
-	border-radius: 5px;
-	background: #009e9d;
+    border-radius: 5px;
+    background: #009e9d;
 }
 /* line 26, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item:hover > .overlay {
@@ -580,7 +580,7 @@ header.header .h-cart-btn:hover {
 .nav-block .main-navigation > .navigation-listing > .navigation-item > a.search-button {
     color: #fff;
     background: #ffaa00; 
-	border-radius: 5px;
+    border-radius: 5px;
 }
 .nav-block .main-navigation > .navigation-listing > .navigation-item > a.search-button:hover {
     color: #fff;
@@ -603,6 +603,7 @@ header.header .h-cart-btn:hover {
     top: 0;
     opacity: 0.4;
     display: none;
+    border-radius: 5px;
 }
 /* line 55, scss/_nav.scss */
 .nav-block .main-navigation > .navigation-listing > .navigation-item:last-child a {
@@ -1192,7 +1193,7 @@ footer.footer .bottom-footer .copy {
     background: url(../images/banners/home-top.jpg) no-repeat center;
     position: relative;
     margin-top: -65px;
-	background-size: cover;
+    background-size: cover;
 }
 /* line 6, scss/_slider.scss */
 .home-banner.style-2 {
@@ -5580,13 +5581,13 @@ footer.footer .bottom-footer .copy {
     padding: 5px 10px;
     border-radius: 50%;
     color: #fff;
- }
- .object-slider.interesting-offer .jcarousel-pagination .active {
+}
+.object-slider.interesting-offer .jcarousel-pagination .active {
     background-color: #00B7B6;
     padding: 5px 10px;
     border-radius: 50%;
     color: #fff;
- }
+}
 /* line 2933, scss/_slider.scss */
 .banner-with-text .banner-entry .logo {
     margin-bottom: 43px;
