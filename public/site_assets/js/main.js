@@ -1241,22 +1241,22 @@ function initBannerMap1() {
 
         for (var i in locations) {
 
-            /*
+            
              var marker;
              marker = new google.maps.Marker({
              position: new google.maps.LatLng(locations[i][1], locations[i][2]),
              map: map,
              icon: locations[i][3],
              });
-             */
+             
 
-            var circle = new google.maps.Circle({
+   /*         var circle = new google.maps.Circle({
                 map: map,
                 center: new google.maps.LatLng(locations[i][1], locations[i][2]),
                 radius: circle_size,
                 strokeColor: "#73ac37",
                 fillColor: "#73ac37"
-            });
+            });  */
 
         }
     }
@@ -1363,6 +1363,8 @@ function initContacMap() {
             zoom: 17,
             scrollwheel: false,
             disableDefaultUI: true,
+            zoomControl: true,
+            streetViewControl: true,
             center: myLatlng
         };
 
