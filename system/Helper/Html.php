@@ -29,9 +29,9 @@ class Html {
             }
         } else {
             if (isset($ingatlan['ar_kiado_eredeti']) && $ingatlan['ar_kiado_eredeti'] != $ingatlan['ar_kiado']) {
-                $price = number_format($ingatlan['ar_kiado']) . ' Ft ' . '<span class="lower-price">' . number_format($ingatlan['ar_kiado_eredeti']) . ' Ft</span>';
+                $price = number_format($ingatlan['ar_kiado'], 0, '.', ' ') . ' Ft ' . '<span class="lower-price">' . number_format($ingatlan['ar_kiado_eredeti']) . ' Ft</span>';
             } else {
-                $price = number_format($ingatlan['ar_kiado']) . ' Ft';
+                $price = number_format($ingatlan['ar_kiado'], 0, '.', ' ') . ' Ft';
             }
         }
         echo $price;
