@@ -5,6 +5,7 @@ use System\Core\SiteController;
 use System\Core\View;
 use System\Libs\Config;
 use System\Libs\Session;
+use System\Libs\DI;
 
 class Home extends SiteController {
 
@@ -41,8 +42,11 @@ class Home extends SiteController {
         $data['district_list'] = $this->ingatlanok_model->district_list_query_with_prop_no();
         
         // kiemelt ingatlanok
-        $data['all_properties'] = $this->ingatlanok_model->kiemelt_properties_query(10);
-
+        $featured_properties = $this->ingatlanok_model->kiemelt_properties_query(10);
+        $arr_helper = DI::get('arr_helper');
+        // tömb véletlenszerű újrarendezése, hogy ne mindig a legfrissebbek jelenjenek meg elől
+        $data['all_properties'] = $arr_helper->shuffle_assoc($featured_properties);
+        
         // ingatlan értékesítők
         $data['agents'] = $this->ingatlanok_model->get_agent();
         // csak azok az ügynökök jelennek meg, akiknek van ingatlanjuk
