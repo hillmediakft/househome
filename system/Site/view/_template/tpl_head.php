@@ -131,13 +131,13 @@ include($this->path('tpl_forgottenpw_modal'));
                                                         </li>
 
                                                     </ul>
-                                                    <!--          <button class="mobile_menu_btn toggle-nav visible-xs">
-                                                                  <span class="sandwich">
-                                                                      <span class="sw-topper"></span>
-                                                                      <span class="sw-bottom"></span>
-                                                                      <span class="sw-footer"></span>
-                                                                  </span>
-                                                              </button> -->
+                                                    <button class="mobile_menu_btn toggle-nav visible-xs">
+                                                        <span class="sandwich">
+                                                            <span class="sw-topper"></span>
+                                                            <span class="sw-bottom"></span>
+                                                            <span class="sw-footer"></span>
+                                                        </span>
+                                                    </button> 
                                                 </nav>
 
                                             </div>

@@ -4,7 +4,7 @@ use System\Libs\Config;
 use System\Libs\Language as Lang;
 ?>
 
-<div class="">
+<div id="home_background_image" class="home-banner style-2">
     <div class="container">
 
         <div class="banner-content">
@@ -20,7 +20,7 @@ use System\Libs\Language as Lang;
                             <div class="row">
 
                                 <!-- ELADÓ/KIADÓ -->
-                                <div class="col-sm-3">
+                                <div class="col-xs-6">
                                     <span class="item-label"><?php echo Lang::get('kereso_elado'); ?>/<?php echo Lang::get('kereso_kiado'); ?></span>
                                     <div id="tipus_select_div_mobile" class="ui-front">
                                         <select name="tipus" id="tipus_select_mobile" data-icon="false" class="select filter-select">
@@ -32,7 +32,7 @@ use System\Libs\Language as Lang;
                                 </div>
 
                                 <!-- VÁROS LISTA -->
-                                <div class="col-sm-3">
+                                <div class="col-xs-6">
                                     <span class="item-label"><?php echo Lang::get('kereso_varos'); ?></span>
                                     <div id="varos_select_div_mobile" class="ui-front">
                                         <select name="varos" id="varos_select_mobile" data-icon="false" class="select filter-select">
@@ -43,7 +43,7 @@ use System\Libs\Language as Lang;
                                 </div>
 
                                 <!-- KERÜLET LISTA -->
-                                <div class="col-sm-3">
+                                <div class="col-xs-6">
                                     <span class="item-label"><?php echo Lang::get('kereso_kerulet'); ?></span>
                                     <div id="district_select_div_mobile">
                                         <select name="kerulet[]" id="district_select_mobile" class="selectpicker" data-selected-text-format="count" multiple disabled="disabled" title="-- <?php echo Lang::get('kereso_mindegy'); ?> --">
@@ -54,7 +54,7 @@ use System\Libs\Language as Lang;
                                 </div>
 
                                 <!-- KATEGÓRIA -->
-                                <div class="col-sm-3">
+                                <div class="col-xs-6">
                                     <?php
                                     $selected_kategoria = isset($filter_params['kategoria']) ? $filter_params['kategoria'][0]['kat_id'] : '';
                                     ?>
@@ -75,7 +75,7 @@ use System\Libs\Language as Lang;
                             <div class="row">
 
                                 <!-- ALAPTERÜLET -->
-                                <div class="col-sm-4">
+                                <div class="col-xs-12">
                                     <span class="item-label"><?php echo Lang::get('kereso_alapterulet'); ?></span>
                                     <div class="form-group">
                                         <div class="input-group">
@@ -88,7 +88,7 @@ use System\Libs\Language as Lang;
                                 </div>
 
                                 <!-- ÁR -->
-                                <div class="col-sm-4">
+                                <div class="col-xs-12">
                                     <span class="item-label"><?php echo Lang::get('kereso_ar'); ?></span>
                                     <div class="form-group">
                                         <div class="input-group">
@@ -100,7 +100,7 @@ use System\Libs\Language as Lang;
                                     </div>
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-xs-6">
                                     <button class="find-now-btn"><?php echo Lang::get('kereso_kereses'); ?></button>
                     <!-- <a href="#" class="visible-xs find-now-btn"><?php //echo Lang::get('kereso_kereses');   ?></a> -->
                                 </div>

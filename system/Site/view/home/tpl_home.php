@@ -30,7 +30,7 @@ use System\Libs\Language as Lang;
                 <h2 class="block-title"><?php echo Lang::get('home_szolgaltatasok_cim'); ?></h2>
                 <span class="sub-title"><?php echo Lang::get('home_szolgaltatasok_szoveg'); ?></span>
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-xs-6">
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
@@ -43,7 +43,7 @@ use System\Libs\Language as Lang;
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-xs-6">
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
@@ -56,7 +56,7 @@ use System\Libs\Language as Lang;
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-xs-6">
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
@@ -69,7 +69,7 @@ use System\Libs\Language as Lang;
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-xs-6">
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
