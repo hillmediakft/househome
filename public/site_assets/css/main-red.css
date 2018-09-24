@@ -21158,6 +21158,9 @@ body.shop-front header .cart-btn:hover {
     .home-banner .banner-content .main-filter {
         top: 10px;
     }
+	.main-filter {
+		margin-top: 25px;
+	}	
     .main-filter .filter-form .item-label {
         font-size: 14px;
         color: #777;

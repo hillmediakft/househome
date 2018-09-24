@@ -556,6 +556,7 @@ input.has-error {
 
     .slicknav_menu {
         display:block;
+		box-shadow: 1px 2px 3px #999;
     }
 }
 

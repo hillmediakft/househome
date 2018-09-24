@@ -4,7 +4,7 @@ use System\Libs\Config;
 use System\Libs\Language as Lang;
 ?>
 
-<div id="home_background_image" class="home-banner style-2">
+<div id="home_background_image_mobile" class="home-banner style-2">
     <div class="container">
 
         <div class="banner-content">

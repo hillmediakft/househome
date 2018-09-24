@@ -73,6 +73,12 @@ include($this->path('tpl_forgottenpw_modal'));
                                 </div>
                                 </div>
 
+<header class="header hidden-md hidden-lg hidden-sm">
+    <div class="container">
+
+    </div>
+</header>								
+								
                                 <div class="nav-block hidden-xs">
                                     <div class="container">
                                         <div class="row">
@@ -85,9 +91,6 @@ include($this->path('tpl_forgottenpw_modal'));
 
 
                                                 <nav class="main-navigation">
-
-
-
                                                     <ul class="navigation-listing" id="mobile_menu">
                                                         <li class="navigation-item <?php echo $this->html_helper->menuActive('home', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
                                                             <a href="<?php echo $this->request->get_uri('site_url'); ?>"><i class="fa fa-home"></i></a>
