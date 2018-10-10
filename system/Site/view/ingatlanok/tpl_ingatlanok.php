@@ -105,7 +105,17 @@ use System\Libs\Language as Lang;
                                             <div class="item">
                                                 <div class="preview">
                                                     <?php $this->html_helper->showLowerPriceIcon($value); ?>
-
+                                            <!-- eladó/kiadó cimke-->                                        
+                                            <?php
+                                            if ($value['tipus'] == 1) {
+                                                $label = Lang::get('kereso_elado');
+                                                $css_class = 'sale';
+                                            } else {
+                                                $label = Lang::get('kereso_kiado');
+                                                $css_class = 'rest';
+                                            }
+                                            ?>
+                                            <span class="item-label <?php echo $css_class; ?>"><?php echo $label; ?></span>
                                                     <!-- <a href="<?php //echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>"></a>                                         -->
                                                     <?php if (!is_null($value['kepek'])) { ?>
                                                         <img src="<?php echo $this->url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small'); ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
@@ -150,16 +160,6 @@ use System\Libs\Language as Lang;
                                                     <?php echo $value['ingatlan_nev_' . LANG]; ?>
                                                     </span>
                                                     <!-- item text -->
-                                                    <p>
-                                                        <?php
-                                                        /*
-                                                        echo $value['city_name'];
-                                                        echo (isset($value['kerulet'])) ? ', ' . $value['kerulet'] . '. ' . Lang::get('adatlap_kerulet') : '';
-                                                        echo (($value['utca_megjelenites'] == 1) && (!is_null($value['utca']))) ? '<br>' . $value['utca'] : '';
-                                                        */
-                                                        echo $this->str_helper->substrWord($value['leiras_' . LANG], 120, ' ...');
-                                                        ?>
-                                                    </p>
 
                                                 </div>
                                             </div>
@@ -243,16 +243,7 @@ use System\Libs\Language as Lang;
                                                 <span class="item-title">
                                                 <?php echo $value['ingatlan_nev_' . LANG]; ?>
                                                 </span>
-                                                <p>
-                                                    <?php
-                                                    /*
-                                                    echo $value['city_name'];
-                                                    echo (isset($value['kerulet'])) ? ', ' . $value['kerulet'] . '. ' . Lang::get('adatlap_kerulet') : '';
-                                                    echo (($value['utca_megjelenites'] == 1) && (!is_null($value['utca']))) ? '<br>' . $value['utca'] : '';
-                                                    */
-                                                    echo $this->str_helper->substrWord($value['leiras_' . LANG], 250, ' ...');
-                                                    ?>
-                                                </p>
+
                                             </div>
                                         </div>
 
@@ -275,7 +266,7 @@ use System\Libs\Language as Lang;
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="empty-space"></div>
+                            <div class="empty-space-20"></div>
                         </div>
                     </div>
                 </div>

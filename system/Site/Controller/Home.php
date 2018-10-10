@@ -14,6 +14,7 @@ class Home extends SiteController {
         parent::__construct();
         $this->loadModel('home_model');
         $this->loadModel('ingatlanok_model');
+        $this->loadModel('blog_model');
     }
 
     public function index()
@@ -61,6 +62,7 @@ class Home extends SiteController {
             $data['agents'] = array();
         }
 
+        $data['blog_list'] = $this->blog_model->getBlogSidebar(2);
 
         $view = new View();
         $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));

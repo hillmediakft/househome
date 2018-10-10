@@ -47,6 +47,7 @@ class Blog_model extends SiteModel {
         $this->query->set_columns(array(
             'blog.id',
             'blog.title_' . $this->lang,
+            'blog.body_' . $this->lang,
             'blog.picture',
             'blog.add_date'
             ));

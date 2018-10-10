@@ -428,7 +428,8 @@ function carouselInit() {
         })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         $('.object-slider').find('.prev-slide')
                 .jcarouselControl({
@@ -495,7 +496,8 @@ function carouselInit() {
         })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         $('.best-agents .prev-slide')
                 .jcarouselControl({
@@ -551,7 +553,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
         $('.country-holder .prev-slide')
                 .jcarouselControl({
                     target: '-=1'
@@ -636,7 +639,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
         $('.blog-posts-holder .prev-slide')
                 .jcarouselControl({
                     target: '-=1'
@@ -683,7 +687,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
         $('.partners-holder .prev-slide')
                 .jcarouselControl({
                     target: '-=1'
@@ -709,7 +714,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         $('#slideshow-main .jcarousel-arrows .prev-slide', this)
                 .on('jcarouselcontrol:inactive', function () {
@@ -767,7 +773,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         carouselNavigation.jcarousel('items').each(function () {
             var item = $(this);
@@ -856,7 +863,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         carouselNavigation.jcarousel('items').each(function () {
             var item = $(this);
@@ -886,7 +894,8 @@ function carouselInit() {
             })
                     .jcarousel({
                         wrap: 'circular'
-                    });
+                    })
+					.jcarouselSwipe(); // init jcarouselSwipe
         })
 
 
@@ -955,7 +964,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         //jcarouselControl
         $('.style-2 .testimonials-holder .prev-slide')
@@ -980,7 +990,8 @@ function carouselInit() {
                 //jcarousel
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         //jcarouselControl
         $('.testimonials-holder .prev-slide')
@@ -1002,7 +1013,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'circular'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         $('.sidebar .widget.agents .prev-slide')
                 .jcarouselControl({
@@ -1021,7 +1033,8 @@ function carouselInit() {
                 })
                 .jcarousel({
                     wrap: 'both'
-                });
+                })
+				.jcarouselSwipe(); // init jcarouselSwipe
 
         $('.property-carousel-holder .prev-slide')
                 .jcarouselControl({
@@ -1345,16 +1358,16 @@ function initContacMap() {
         return false;
     function initialize() {
         var image = {
-            url: 'public/site_assets/images/map-marker.png'
+            url: 'public/site_assets/images/markers/banner-map/1.6.png'
         };
         var orangeImg = {
-            url: 'public/site_assets/images/markers/orange-map-marker.png'
+            url: 'public/site_assets/images/markers/banner-map/1.6.png'
         };
         var darkGreenImg = {
-            url: 'public/site_assets/images/markers/dark-green-map-marker.png'
+            url: 'public/site_assets/images/markers/banner-map/1.6.png'
         };
         var darkGreenImg2 = {
-            url: 'public/site_assets/images/markers/dark-green-map-marker-2.png'
+            url: 'public/site_assets/images/markers/banner-map/1.6.png'
         };
 
         var myLatlng = new google.maps.LatLng(47.480434, 19.053523);

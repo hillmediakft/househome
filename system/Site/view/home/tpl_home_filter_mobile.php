@@ -82,7 +82,7 @@ use System\Libs\Language as Lang;
                                             <input name="min_alapterulet" type="text" class="form-control" placeholder="minimum" value="<?php echo (isset($filter_params['min_alapterulet'])) ? $filter_params['min_alapterulet'] : ''; ?>">
                                             <div class="input-group-addon input-group-addon-hypen">-</div>
                                             <input name="max_alapterulet" type="text" class="form-control" placeholder="maximum" value="<?php echo (isset($filter_params['max_alapterulet'])) ? $filter_params['max_alapterulet'] : ''; ?>">
-                                            <div class="input-group-addon">m<sup>2</sup></div>
+                                            <div class="input-group-addon" style="width: 50px;">m<sup>2</sup></div>
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@ use System\Libs\Language as Lang;
                                             <input name="min_ar" type="text" class="form-control" placeholder="minimum" value="<?php echo (isset($filter_params['min_ar'])) ? $filter_params['min_ar'] : ''; ?>">
                                             <div class="input-group-addon input-group-addon-hypen" id="ar_min_mertek_mobile">-</div>
                                             <input name="max_ar" type="text" class="form-control" placeholder="maximum" value="<?php echo (isset($filter_params['max_ar'])) ? $filter_params['max_ar'] : ''; ?>">
-                                            <div class="input-group-addon" id="ar_mertek_mobile">M Ft</div>
+                                            <div class="input-group-addon" style="width: 50px;" id="ar_mertek_mobile">M Ft</div>
                                         </div>
                                     </div>
                                 </div>

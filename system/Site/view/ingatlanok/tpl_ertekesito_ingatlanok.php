@@ -25,7 +25,7 @@ use System\Libs\Language as Lang;
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="empty-space"></div>
+                            <div class="empty-space-35"></div>
                         </div>
                     </div>
 

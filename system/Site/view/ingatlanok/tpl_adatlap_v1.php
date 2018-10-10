@@ -88,9 +88,6 @@ use System\Libs\Language as Lang;
 
                         </div>
 
-
-                        <!-- <div class="col-sm-4">                     </div>  -->
-
                         <div class="col-sm-4">
                             <div class="agent-box">
                                 <div class="agent-image">
@@ -102,7 +99,7 @@ use System\Libs\Language as Lang;
                                         <h6><?php echo $agent['first_name'] . ' ' . $agent['last_name']; ?></h6>
                                         <div><?php echo $agent['title_' . LANG]; ?></div>
                                     </div>
-  <!--                                  <div class="label label-danger"><?php //echo Lang::get('adatlap_hivjon_most_cimke');             ?></div> -->
+  <!--                                  <div class="label label-danger"><?php //echo Lang::get('adatlap_hivjon_most_cimke');               ?></div> -->
                                     <input type="hidden" name="agent_id" id="agent_id" value="<?php echo $agent['id']; ?>">
                                     <div>
                                         <div id="phone_number_box">
@@ -211,7 +208,6 @@ use System\Libs\Language as Lang;
 
                     <div class="row">
                         <div class="col-md-12">
-
                             <ul class="adatlap_gombok">
                                 <li>
                                     <a id="kedvencekhez_<?php echo $ingatlan['id']; ?>" data-id="<?php echo $ingatlan['id']; ?>" class="simple-btn sm-button outlined main-color <?php echo (Cookie::is_id_in_cookie('kedvencek', $ingatlan['id'])) ? 'disabled' : ''; ?>" href="javascript:void(0);" title="<?php echo Lang::get('adatlap_kedvencekhez_gomb'); ?>"><i class="fa fa-heart"></i></a>
@@ -220,34 +216,34 @@ use System\Libs\Language as Lang;
                                     <form style="display: inline;" id="adatlap_nyomtatas_form" method="POST" action="adatlap/<?php echo $ingatlan['id']; ?>">
                                         <a id="adatlap_nyomtatas" class="simple-btn sm-button outlined main-color" title="<?php echo Lang::get('adatlap_nyomtatas_gomb'); ?>"><i class="fa fa-print"></i></a>
                                         <input type="hidden" name="agent_id" value="<?php echo $agent['id']; ?>"/>
-                                        <!-- <button id="adatlap_nyomtatas" type="submit" class="send-btn"><i class="fa fa-print"></i> <?php //echo Lang::get('adatlap_nyomtatas_gomb');               ?></button> -->
+                                        <!-- <button id="adatlap_nyomtatas" type="submit" class="send-btn"><i class="fa fa-print"></i> <?php //echo Lang::get('adatlap_nyomtatas_gomb');                 ?></button> -->
                                     </form>
                                 </li>
-                          <!--      <li>
-                                    <a id="myPopover" data-toggle="popover" data-placement="bottom" data-content="<?php echo $this->html_helper->socialMediaShare($this->getConfig('ingatlan_photo.upload_path') . $pictures[0], $ingatlan['ingatlan_nev_' . LANG]); ?>" class="simple-btn sm-button outlined main-color" href="javascript:void(0)" title="<?php echo Lang::get('adatlap_megosztas_gomb'); ?>"><i class="fa fa-share-alt"></i></a>
-                                </li> -->
+                                <!--      <li>
+                                          <a id="myPopover" data-toggle="popover" data-placement="bottom" data-content="<?php echo $this->html_helper->socialMediaShare($this->getConfig('ingatlan_photo.upload_path') . $pictures[0], $ingatlan['ingatlan_nev_' . LANG]); ?>" class="simple-btn sm-button outlined main-color" href="javascript:void(0)" title="<?php echo Lang::get('adatlap_megosztas_gomb'); ?>"><i class="fa fa-share-alt"></i></a>
+                                      </li> -->
                                 <li>
                                     <?php echo $this->html_helper->socialMediaShare($this->getConfig('ingatlan_photo.upload_path') . $pictures[0], $ingatlan['ingatlan_nev_' . LANG]); ?>
                                 </li>
                             </ul>
-
-                            <!-- ELŐZŐ-KÖVETKEZŐ INGATLAN -->
-                            <?php $talali_lista = Session::get('talalati_lista'); ?>
-                            <?php if ($talali_lista) : ?>
-                                <div class="col-sm-12">
-                                    <div>
-                                        <a style="text-align: center; width: 20%; float: left" class="simple-btn sm-button outlined red" href="<?php echo $this->url_helper->talalatiListaElozo($ingatlan['id'], LANG, Session::get('talalati_lista')); ?>"><i class="fa fa-arrow-left"></i> </a>
-                                    </div>
-                                    <div>
-                                        <a style="text-align: center; width: 52%; float: left; margin: 0 4% 0 4%;" class="simple-btn sm-button outlined red" href="<?php echo Session::get('talalati_lista_url'); ?>"><?php echo Lang::get('adatlap_talalati_lista'); ?></a>
-                                    </div>
-                                    <div>
-                                        <a style="text-align: center; width: 20%; float: right" class="simple-btn sm-button outlined red" href="<?php echo $this->url_helper->talalatiListaKovetkezo($ingatlan['id'], LANG, Session::get('talalati_lista')); ?>"><i class="fa fa-arrow-right"></i> </a>
-                                    </div>
-                                </div>
-                            <?php endif ?>
-
                         </div>
+                    </div>
+                    <div class="row">
+                        <!-- ELŐZŐ-KÖVETKEZŐ INGATLAN -->
+                        <?php $talali_lista = Session::get('talalati_lista'); ?>
+                        <?php if ($talali_lista) : ?>
+                            <div class="col-sm-12">
+                                <div>
+                                    <a style="text-align: center; width: 20%; float: left" class="simple-btn sm-button outlined red" href="<?php echo $this->url_helper->talalatiListaElozo($ingatlan['id'], LANG, Session::get('talalati_lista')); ?>"><i class="fa fa-arrow-left"></i> </a>
+                                </div>
+                                <div>
+                                    <a style="text-align: center; width: 52%; float: left; margin: 0 4% 0 4%;" class="simple-btn sm-button outlined red" href="<?php echo Session::get('talalati_lista_url'); ?>"><?php echo Lang::get('adatlap_talalati_lista'); ?></a>
+                                </div>
+                                <div>
+                                    <a style="text-align: center; width: 20%; float: right" class="simple-btn sm-button outlined red" href="<?php echo $this->url_helper->talalatiListaKovetkezo($ingatlan['id'], LANG, Session::get('talalati_lista')); ?>"><i class="fa fa-arrow-right"></i> </a>
+                                </div>
+                            </div>
+                        <?php endif ?>
                     </div>
 
 
@@ -271,7 +267,7 @@ use System\Libs\Language as Lang;
                                             <input type="hidden" name="agent_email" value="<?php echo $agent['email']; ?>">
                                             <input type="hidden" name="ref_num" value="<?php echo 'S-' . $ingatlan['ref_num']; ?>">
                                             <input type="hidden" name="url" value="<?php echo $this->request->get_uri('current_url'); ?>">
-                                            <input type="checkbox" name="afsz_confirm" required oninvalid="this.setCustomValidity('Nem fogadta el az Adatvédelmi Nyilatkozatot.')" oninput="setCustomValidity('')"/><span>Elfogadom az <a href="/uploads/files/adatvedelmi-szabalyzat.pdf">Adatvédelmi Nyilatkozatot</a></span>
+                                            <input type="checkbox" name="afsz_confirm" required oninvalid="this.setCustomValidity('Nem fogadta el az Adatvédelmi Nyilatkozatot.')" oninput="setCustomValidity('')"/><span><span class="checkbox-text">Elfogadom az <a href="/uploads/files/adatvedelmi-szabalyzat.pdf">Adatvédelmi Nyilatkozatot</span></a></span>
                                             <button type="submit" class="send-btn" id="submit-button"><?php echo Lang::get('kapcsolat_email_kuldes'); ?></button>
                                         </form>
                                     </div>
@@ -527,7 +523,7 @@ use System\Libs\Language as Lang;
 
                                                                 <?php $this->html_helper->showHeartIcon($value); ?>
 
-                                                                                                <!-- <span class="price-box"> -->
+                                                                                                                <!-- <span class="price-box"> -->
                                                                 <?php //$this->html_helper->showPrice($value); ?>
                                                                 <!-- </span> -->
                                                             </div>
@@ -609,7 +605,7 @@ use System\Libs\Language as Lang;
                                                             <div class="preview">
                                                                 <?php $this->html_helper->showLowerPriceIcon($value); ?>
 
-                                                                                                                                                                                                                        <!-- <a href="<?php //echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]);                    ?>"></a> -->
+                                                                                                                                                                                                                                        <!-- <a href="<?php //echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]);                      ?>"></a> -->
 
                                                                 <?php if (!is_null($value['kepek'])) { ?>
                                                                     <img src="<?php echo $this->url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small'); ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
@@ -619,7 +615,7 @@ use System\Libs\Language as Lang;
 
                                                                 <?php $this->html_helper->showHeartIcon($value); ?>
 
-                                                                                                            <!-- <span class="price-box"> -->
+                                                                                                                            <!-- <span class="price-box"> -->
                                                                 <?php //$this->html_helper->showPrice($value); ?>
                                                                 <!-- </span> -->
                                                             </div>

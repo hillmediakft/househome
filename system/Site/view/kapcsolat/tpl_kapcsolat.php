@@ -1,4 +1,5 @@
 <?php
+
 use System\Libs\Language as Lang;
 ?>
 <div id="content" class="container-fluid">
@@ -18,14 +19,14 @@ use System\Libs\Language as Lang;
             <div class="col-sm-8 col-md-9">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="empty-space"></div>
+                        <div class="empty-space-35"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="contacts-listing">
                             <div class="row">
-                                <div class="col-md-3 col-sm-6">
+                                <div class="col-md-3 col-xs-6">
                                     <div class="contact-item">
                                         <div class="icon">
                                             <i class="fa fa-map-marker"></i>
@@ -35,7 +36,7 @@ use System\Libs\Language as Lang;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-6">
+                                <div class="col-md-3 col-xs-6">
                                     <div class="contact-item">
                                         <div class="icon">
                                             <i class="fa fa-clock-o"></i>
@@ -45,7 +46,7 @@ use System\Libs\Language as Lang;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-6">
+                                <div class="col-md-3 col-xs-6">
                                     <div class="contact-item">
                                         <div class="icon">
                                             <i class="fa fa-phone"></i>
@@ -56,7 +57,7 @@ use System\Libs\Language as Lang;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-6">
+                                <div class="col-md-3 col-xs-6">
                                     <div class="contact-item">
                                         <div class="icon">
                                             <i class="fa fa-envelope"></i>
@@ -129,7 +130,7 @@ use System\Libs\Language as Lang;
                     <!-- KIEMELT INGATLANOK DOBOZ -->
                     <?php include($this->path('tpl_modul_kiemeltingatlanok')); ?>
                     <!-- BANNER -->
-                    <?php include($this->path('tpl_modul_banner_befektetoknek')); ?>
+<?php include($this->path('tpl_modul_banner_befektetoknek')); ?>
                 </aside>        
             </div> <!-- SIDEBAR END -->
         </div>

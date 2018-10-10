@@ -72,14 +72,24 @@ var Home = function () {
 */
 
     // kezdőkép elérési út beállítása
-    document.getElementById("home_background_image").style.backgroundImage = "url(" + home_background_path + ")";
-	document.getElementById("home_background_image_mobile").style.backgroundImage = "url(" + home_background_path + ")";
+	 var width = $(window).width();
+        if (width > 480) {
+            document.getElementById("home_background_image").style.backgroundImage = "url(" + home_background_path + ")";
+        } else {
+        //  document.getElementById("home_background_image_mobile").style.backgroundImage = "url(" + home_background_path + ")";
+        }
 
     var equalHeights = function () {
         setTimeout(function () {
             $('.object-slider.interesting-offer div.item').equalHeights();
         }, 200);
     };
+    
+     var equalHeightsServices = function () {
+        setTimeout(function () {
+            $('.col-sm-3.col-xs-6 div.single-feature').equalHeights();
+        }, 200);
+    };   
 
     return {
         //main function to initiate the module
@@ -87,6 +97,7 @@ var Home = function () {
             //enableDistrict();
             //locationsInput();
             equalHeights();
+            equalHeightsServices();
         }
     };
 

@@ -106,7 +106,7 @@ use System\Libs\Language as Lang;
                                 <a href="#" class="prev-slide" data-jcarouselcontrol="true"><i class="fa fa-angle-left"></i></a>
                                 <a href="#" class="next-slide" data-jcarouselcontrol="true"><i class="fa fa-angle-right"></i></a>
                             </div>
-                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.index.' . LANG); ?>" class="all-offers-btn"><?php echo Lang::get('home_osszes_ingatlan'); ?></a>
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.index.' . LANG); ?>" class="all-offers-btn hidden-xs"><?php echo Lang::get('home_osszes_ingatlan'); ?></a>
                         </div>
                     </div>
                     <div class="obj-carousel carousel" data-jcarousel="true">
@@ -123,7 +123,17 @@ use System\Libs\Language as Lang;
                                     <div class="item">
                                         <div class="preview">
                                             <?php $this->html_helper->showLowerPriceIcon($value); ?>
-
+                                            <!-- eladó/kiadó cimke-->                                        
+                                            <?php
+                                            if ($value['tipus'] == 1) {
+                                                $label = Lang::get('kereso_elado');
+                                                $css_class = 'sale';
+                                            } else {
+                                                $label = Lang::get('kereso_kiado');
+                                                $css_class = 'rest';
+                                            }
+                                            ?>
+                                            <span class="item-label <?php echo $css_class; ?>"><?php echo $label; ?></span>
                                             <?php if ($value['kepek']) { ?>
                                                 <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlanok.adatlap.' . LANG) . '/' . $value['id'] . '/' . $this->str_helper->stringToSlug($value['ingatlan_nev_' . LANG]); ?>">
                                                     <img src="<?php echo $this->url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small'); ?>" alt="<?php echo $value['ingatlan_nev_' . LANG]; ?>">
@@ -141,18 +151,18 @@ use System\Libs\Language as Lang;
                                         </div>
                                         <div class="item-thumbnail">
                                             <div class="single-thumbnail">
-                                                <i class="icon sleep"></i>
+
                                                 <span class="value"><?php echo $value['kat_nev_' . LANG]; ?></span>
                                             </div>
                                             <div class="single-thumbnail">
-                                                <i class="icon bath"></i>
+
                                                 <span class="value"><?php
                                                     $felszobaszam = (!empty($value['felszobaszam'])) ? '+ ' . $value['felszobaszam'] . ' ' : '';
                                                     echo (!empty($value['szobaszam'])) ? $value['szobaszam'] . ' ' . $felszobaszam . mb_strtolower(Lang::get('jell_szobaszam'), 'UTF-8') : '';
                                                     ?></span>
                                             </div>
                                             <div class="single-thumbnail">
-                                                <i class="icon corner"></i>
+
                                                 <span class="value"><?php echo $value['alapterulet']; ?> m<sup>2</sup></span>
                                             </div>
                                         </div>
@@ -260,116 +270,32 @@ use System\Libs\Language as Lang;
         <div class="latest gray-bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-sm-12">
                         <h2 class="block-title">Hírek</h2>
                         <ul class="latest-news-listing row">
-                            <li class="col-sm-6">
-                                <div class="item">
-                                    <div class="preview">
-                                        <a href="#">
-                                            <img alt="img" src="public/site_assets/images/270-170.png">
-                                        </a>
-                                    </div>
-                                    <span class="title"><a href="#">Donec placerat augue vitae quam finibus semper.</a></span>
-                                    <p>Cras commodo vehicula sem nec convallis. Cras eu dapibus urna. Suspendisse potenti.</p>
-                                    <div class="item-thumbnail">
-                                        <div class="single-item date">
-                                            <i class="fa fa-calendar"></i>
-                                            <a class="value" href="">2018-07-26</a>
+                            <?php foreach ($blog_list as $blog) : ?>
+                                <li class="col-sm-3">
+                                    <div class="item">
+                                        <div class="preview">
+                                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.hirek.index.' . LANG) . '/' . $this->str_helper->stringToSlug($blog['title_' . LANG]) . '/' . $blog['id']; ?>">
+                                                <img alt="<?php echo $blog['title_' . LANG]; ?>" src="<?php echo Config::get('blogphoto.upload_path') . $blog['picture']; ?>">
+                                            </a>
                                         </div>
-                                        <div class="single-item views">
-                                            <i class="fa fa-eye"></i>
-                                            <a class="value" href="#">1234</a>
-                                        </div>
-                                        <div class="single-item comment">
-                                            <i class="fa fa-comments"></i>
-                                            <a class="value" href="#">13</a>
+                                        <span class="title"><a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.hirek.index.' . LANG) . '/' . $this->str_helper->stringToSlug($blog['title_' . LANG]) . '/' . $blog['id']; ?>"><?php echo $blog['title_' . LANG]; ?></a></span>
+                                        <p><?php echo $this->str_helper->sentenceTrim($blog['body_' . LANG], 1); ?></p>
+                                        <div class="item-thumbnail">
+                                            <div class="single-item date">
+                                                <i class="fa fa-calendar"></i>
+                                                <a class="value" href=""><?php echo $blog['add_date']; ?></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="col-sm-6">
-                                <div class="item">
-                                    <div class="preview">
-                                        <a href="#">
-                                            <img alt="img" src="public/site_assets/images/270-170.png">
-                                        </a>
-                                    </div>
-                                    <span class="title"><a href="#">Sed elit felis, tempor nec egestas sit amet, porttitor ut magna.</a></span>
-                                    <p>Nullam convallis est a est maximus, eget lacinia magna pharetra. Cum sociis natoque penatibus et magnis.</p>
-                                    <div class="item-thumbnail">
-                                        <div class="single-item date">
-                                            <i class="fa fa-calendar"></i>
-                                            <a class="value" href="">2018.08.02</a>
-                                        </div>
-                                        <div class="single-item views">
-                                            <i class="fa fa-eye"></i>
-                                            <a class="value" href="#">1234</a>
-                                        </div>
-                                        <div class="single-item comment">
-                                            <i class="fa fa-comments"></i>
-                                            <a class="value" href="#">13</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            <?php endforeach ?>
+
                         </ul>
                     </div>
-                    <div class="col-sm-12 col-md-6">
-                        <h2 class="block-title">Blog bejegyzések</h2>
-                        <ul class="latest-blog-posts">
-                            <li class="item">
-                                <div class="preview">
-                                    <a href="#">
-                                        <img alt="img" src="public/site_assets/images/270-170.png">
-                                    </a>
-                                </div>
-                                <div class="descr">
-                                    <span class="title"><a href="#">Mauris quis metus dictum, porttitor.</a></span>
-                                    <p>Nullam ac vestibulum nisl, in rutrum felis. Pellentesque quis facilisis nisl. Aliquam ut tincidunt sem. Sed at condimentum.</p>
-                                    <div class="item-thumbnail">
-                                        <div class="single-item date">
-                                            <i class="fa fa-calendar"></i>
-                                            <a class="value" href="">2018-08-03</a>
-                                        </div>
-                                        <div class="single-item views">
-                                            <i class="fa fa-eye"></i>
-                                            <a class="value" href="#">1234</a>
-                                        </div>
-                                        <div class="single-item comment">
-                                            <i class="fa fa-comments"></i>
-                                            <a class="value" href="#">13</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="preview">
-                                    <a href="#">
-                                        <img alt="img" src="public/site_assets/images/270-170.png">
-                                    </a>
-                                </div>
-                                <div class="descr">
-                                    <span class="title"><a href="#">Cras commodo vehicula sem nec.</a></span>
-                                    <p>Nullam ac vestibulum nisl, in rutrum felis. Pellentesque quis facilisis nisl. Aliquam ut tincidunt sem. Sed at condimentum.</p>
-                                    <div class="item-thumbnail">
-                                        <div class="single-item date">
-                                            <i class="fa fa-calendar"></i>
-                                            <a class="value" href="">2018-07-23</a>
-                                        </div>
-                                        <div class="single-item views">
-                                            <i class="fa fa-eye"></i>
-                                            <a class="value" href="#">1234</a>
-                                        </div>
-                                        <div class="single-item comment">
-                                            <i class="fa fa-comments"></i>
-                                            <a class="value" href="#">13</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
             <div class="empty-space"></div>
@@ -381,5 +307,5 @@ use System\Libs\Language as Lang;
 
 <!-- kezdőkép adat a javascriptnek -->
 <script type="text/javascript">
-var home_background_path = '<?php echo $home_background_path; ?>';
+    var home_background_path = '<?php echo $home_background_path; ?>';
 </script>
