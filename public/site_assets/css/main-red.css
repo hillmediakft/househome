@@ -524,6 +524,9 @@ header.header .h-cart-btn:hover {
     float: left;
     padding: 5px 0 5px 0;
 }
+.nav-block .logo img {
+    max-width: 190px;
+}
 /* line 8, scss/_nav.scss */
 .nav-block .main-navigation {
     float: right;
