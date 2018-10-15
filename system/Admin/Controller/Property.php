@@ -1609,8 +1609,8 @@ class Property extends AdminController {
                     
                 // Vízjel beállítások
                 $imageobject->watermark(ADMIN_IMAGE . 'watermark_logo.png');
-                $imageobject->watermark_x(-30); // jobboldal
-                $imageobject->watermark_y(-30); // lent
+                $imageobject->watermark_x(-230); // jobboldal
+                $imageobject->watermark_y(-255); // lent
                 //$imageobject->watermark_position('BR');
                 //$imageobject->watermark_no_zoom('in', true);
                 //$imageobject->watermark_no_zoom('out', false);
