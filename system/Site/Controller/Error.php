@@ -22,7 +22,7 @@ class Error extends SiteController {
         $data['keywords'] = $page_data['metakeywords_' . $this->lang];
         
         $view = new View();
-        $view->setHelper(array('url_helper'));
+        $view->setHelper(array('url_helper', 'html_helper'));
 
         //$view->setLazyRender();
 //$this->view->debug(true); 
@@ -41,7 +41,7 @@ class Error extends SiteController {
         $data['keywords'] = $page_data['metakeywords_' . $this->lang];
         
         $view = new View();
-        $view->setHelper(array('url_helper'));
+        $view->setHelper(array('url_helper', 'html_helper'));
 		
         //$view->setLazyRender();
 //$this->view->debug(true); 

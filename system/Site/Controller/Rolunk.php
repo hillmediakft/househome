@@ -29,7 +29,7 @@ class Rolunk extends SiteController {
  //       $data['category_list'] = $this->ingatlanok_model->list_query('ingatlan_kategoria');
         $data['district_list'] = $this->ingatlanok_model->district_list_query_with_prop_no();
         // kiemelt ingatlanok
- //       $data['all_properties'] = $this->ingatlanok_model->kiemelt_properties_query(10);
+        $data['kiemelt_ingatlanok'] = $this->ingatlanok_model->kiemelt_properties_query(4);
 
         $view = new View();
         $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));

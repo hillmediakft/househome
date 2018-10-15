@@ -57,13 +57,13 @@
                                 <div class="tab-pane fade active in" id="tab_1_1">
 
                                     <div class="form-group">
-                                        <label for="page_metatitle_hu">Az oldal címe</label>   
-                                        <input type='text' name='page_metatitle_hu' class='form-control' value="<?php echo $page['metatitle_hu'] ?>"/>
+                                        <label for="page_metatitle_hu">Az oldal címe (max. 60 karakter)</label>   
+                                        <input type='text' name='page_metatitle_hu' class='form-control' id="maxlength_page_metatitle_hu" maxlength="60" value="<?php echo $page['metatitle_hu'] ?>"/>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="page_metadescription_hu">Az oldal leírása</label>  
-                                        <input type='text' name='page_metadescription_hu' class='form-control' value="<?php echo $page['metadescription_hu'] ?>">
+                                        <label for="page_metadescription_hu">Az oldal leírása (max. 200 karakter)</label>  
+                                        <textarea type='text' name='page_metadescription_hu' id="maxlength_page_metadescription_hu" maxlength="200" class='form-control'><?php echo $page['metadescription_hu'] ?></textarea>
                                     </div>
 
                                     <div class="form-group">
@@ -82,13 +82,13 @@
                                 <div class="tab-pane fade" id="tab_1_2">
                         
                                     <div class="form-group">
-                                        <label for="page_metatitle_en">Az oldal címe</label>   
-                                        <input type='text' name='page_metatitle_en' class='form-control' value="<?php echo $page['metatitle_en'] ?>"/>
+                                        <label for="page_metatitle_en">Az oldal címe (max. 60 karakter)</label>   
+                                        <input type='text' name='page_metatitle_en' class='form-control' id="maxlength_page_metatitle_en" maxlength="60" value="<?php echo $page['metatitle_en'] ?>"/>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="page_metadescription_en">Az oldal leírása</label>  
-                                        <input type='text' name='page_metadescription_en' class='form-control' value="<?php echo $page['metadescription_en'] ?>">
+                                        <label for="page_metadescription_en">Az oldal leírása (max. 200 karakter)</label>  
+                                        <textarea type='text' name='page_metadescription_en' id="maxlength_page_metadescription_en" maxlength="200" class='form-control'><?php echo $page['metadescription_hu'] ?></textarea>
                                     </div>
 
                                     <div class="form-group">

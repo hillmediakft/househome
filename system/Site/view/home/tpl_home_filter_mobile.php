@@ -100,7 +100,7 @@ use System\Libs\Language as Lang;
                                     </div>
                                 </div>
 
-                                <div class="col-xs-6">
+                                <div class="col-xs-12">
                                     <button class="find-now-btn"><?php echo Lang::get('kereso_kereses'); ?></button>
                     <!-- <a href="#" class="visible-xs find-now-btn"><?php //echo Lang::get('kereso_kereses');   ?></a> -->
                                 </div>

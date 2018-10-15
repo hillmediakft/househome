@@ -420,7 +420,7 @@ function carouselInit() {
                         $.when(
                                 jcarousel_obj.css('width', inner_width + 'px')
                                 ).then(function () {
-                            width = (jcarousel_obj.innerWidth() / items_obj) - ((30 * items_obj - 30) / items_obj);
+                            width = (jcarousel_obj.innerWidth() / items_obj) - ((10 * items_obj - 10) / items_obj);
                             jcarousel_obj.jcarousel('items').css('width', width + 'px');
                         });
                     })

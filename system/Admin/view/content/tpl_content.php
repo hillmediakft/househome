@@ -16,8 +16,6 @@
 			</div>
 			<!-- END PAGE TITLE & BREADCRUMB-->
 		<!-- END PAGE HEADER-->
-
-	
 	<!-- BEGIN PAGE CONTENT-->
 	<div class="row">
 		<div class="col-md-12">
@@ -39,7 +37,6 @@
 						-->
 					</div>
 					<div class="portlet-body">
-
 						<table class="table table-striped table-bordered table-hover" id="content">
 							<thead>
 								<tr class="heading">
@@ -50,21 +47,17 @@
 								</tr>
 							</thead>
 							<tbody>
-
-					<?php foreach($all_content as $content) { ?>
-								<tr class="odd gradeX">
-									<td><?php echo $content['id'];?></td>
-									<td><?php echo $content['name'];?></td>
-									<td><?php echo $content['title'];?></td>
-										
-									<td>
-										<a class="btn btn-sm green" href="admin/content/edit/<?php echo $content['id'];?>" ><i class="fa fa-pencil"></i>
-										Szerkeszt</a>
-									</td>
-								</tr>
-
-					<?php } ?>					
-
+								<?php foreach($all_content as $content) { ?>								
+									<tr class="odd gradeX">
+										<td><?php echo $content['id'];?></td>
+										<td><?php echo $content['name'];?></td>
+										<td><?php echo $content['title'];?></td>
+										<td>
+											<a class="btn btn-sm green" href="admin/content/edit/<?php echo $content['id'];?>" ><i class="fa fa-pencil"></i>
+											Szerkeszt</a>
+										</td>
+									</tr>
+								<?php } ?>
 							</tbody>
 						</table>
 					</div> <!-- END USER GROUPS PORTLET BODY-->

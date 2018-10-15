@@ -1239,7 +1239,7 @@ footer.footer .bottom-footer .copy {
 .home-banner .banner-content {
     height: 100px;
     position: relative;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.5);
     padding: 10px;
     margin-top: 300px;
 }
@@ -2274,8 +2274,9 @@ footer.footer .bottom-footer .copy {
     border: none;
     outline: none;
     color: #fff;
-    padding: 10px 0;
+    padding: 9px 0;
     text-transform: uppercase;
+    box-shadow: 1px 1px 2px #444;
 }
 /* line 881, scss/_slider.scss */
 .main-filter .filter-form .find-now-btn:hover {
@@ -3279,7 +3280,7 @@ footer.footer .bottom-footer .copy {
 .interesting-offer .carousel ul li,
 .featured-products .carousel ul li {
     float: left;
-    margin: 0 30px 0 0px;
+    margin: 0 10px 0 0px;
 }
 /* line 1699, scss/_slider.scss */
 .object-slider.latest-properties,
@@ -4241,7 +4242,7 @@ footer.footer .bottom-footer .copy {
 .blog-posts-holder .carousel .item .item-thumbnail,
 .interesting-offer .carousel .item .item-thumbnail,
 .featured-products .carousel .item .item-thumbnail {
-    padding: 0 19px;
+    padding: 0 5px;
     background-color: #fff;
 }
 /* line 2042, scss/_slider.scss */
@@ -4282,10 +4283,10 @@ footer.footer .bottom-footer .copy {
 .blog-posts-holder .carousel .item .item-thumbnail .single-thumbnail .icon,
 .interesting-offer .carousel .item .item-thumbnail .single-thumbnail .icon,
 .featured-products .carousel .item .item-thumbnail .single-thumbnail .icon {
-    width: 25px;
+    width: 21px;
     height: 16px;
     display: inline-block;
-    margin-right: 6px;
+    margin-right: 3px;
 }
 /* line 2057, scss/_slider.scss */
 .object-slider .carousel .item .item-thumbnail .single-thumbnail .icon.bath,
@@ -11706,15 +11707,15 @@ a.simple-btn.outlined.main-color:hover {
 .main-sidebar .widget.banner .banner-entry .banner-title {
     color: #fff;
     font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
-    font-size: 22px;
-    text-transform: uppercase;
+    font-size: 16px;
+    text-transform: none;
     display: block;
     margin-bottom: 1px;
 }
 /* line 3342, scss/_shortcodes.scss */
 .main-sidebar .widget.banner .banner-entry .banner-sub {
-    font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
-    font-size: 16px;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 14px;
     color: #eee;
     display: block;
     margin-bottom: 17px;
@@ -11722,11 +11723,11 @@ a.simple-btn.outlined.main-color:hover {
 /* line 3349, scss/_shortcodes.scss */
 .main-sidebar .widget.banner .banner-entry .learn-more {
     font-family: 'Source Sans Pro-Bold', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
     display: inline-block;
     background: #00B7B6;
-    padding: 10px 35px;
+    padding: 10px 20px;
     text-decoration: none;
 }
 /* line 3357, scss/_shortcodes.scss */
@@ -17357,8 +17358,8 @@ span.sub-title.left {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     color: #000;
-    margin-bottom: 32px;
-    margin-top: 24px;
+    margin-bottom: 18px;
+    margin-top: 30px;
 }
 
 /* line 223, scss/_tipography.scss */
@@ -19347,14 +19348,15 @@ body.shop-front header .cart-btn:hover {
     /* line 1441, scss/_responsive.scss */
     body .home-banner .banner-content .find-now-btn {
         position: relative;
-        background-color: #00B7B6;
+        background-color: #ffaa00;
         padding: 0px;
         font-size: 16px;
         color: #fff;
         text-decoration: none;
         line-height: 38px;
-        margin-left: 0px;
-        margin-top: 10px;
+        margin: 10px auto 0 auto;
+        width: auto;
+        padding: 0 15px;
     }
 
     .home-banner.style-2 {

@@ -7,7 +7,7 @@ function createDiv(){
     var bodytag = document.getElementsByTagName('body')[0];
     var div = document.createElement('div');
     div.setAttribute('id','cookie-law');
-    div.innerHTML = '<p>Weboldalunk a jobb felhasználói élmény biztosítása érdekében sütiket (cookie) használ. A Weboldal használatával Ön beleegyezik a sütik használatába. <a class="cookie-banner simple-btn sm-button filled red" href="javascript:void(0);" onclick="removeMe();"><span>Értem</span></a></p>';    
+    div.innerHTML = '<p>Weboldalunk a jobb felhasználói élmény biztosítása érdekében sütiket (cookie) használ. A Weboldal használatával Ön beleegyezik a sütik használatába. Ha nem engedélyezi őket, számítógépe böngészőjében bármikor beállíthatja a tiltásukat / eltávolításukat. <a style="color: #eee; text-decoration: underline;" href="https://househome.hu/adatkezelesi-szabalyzat">Adatkezelési tájékoztató</a><a class="cookie-banner simple-btn sm-button filled red" href="javascript:void(0);" onclick="removeMe();"><span>Értem</span></a></p>';    
  // Be advised the Close Banner 'X' link requires jQuery
      
     // bodytag.appendChild(div); // Adds the Cookie Law Banner just before the closing </body> tag

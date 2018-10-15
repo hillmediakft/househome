@@ -4,8 +4,7 @@ use System\Libs\Language as Lang;
 ?>
 <div class="widget banner">
     <div class="banner-img">
-        <!-- <img src="<?php //echo SITE_IMAGE; ?>berbeadoknak_banner.jpg" alt=""> -->
-        <img src="<?php echo SITE_IMAGE; ?>banner_placeholder.jpg" alt="">
+        <img src="<?php echo SITE_IMAGE; ?>berbeadoknak_banner.jpg" alt="">
     </div>
     <div class="banner-entry">
         <span class="banner-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>

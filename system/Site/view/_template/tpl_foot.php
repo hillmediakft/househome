@@ -119,7 +119,7 @@ use System\Libs\Language as Lang;
                 </div>
                 <div class="col-sm-6">
                     <div class="policies">
-                        <span><a href="/uploads/files/adatvedelmi-szabalyzat.pdf" target="_blank"><?php echo Lang::get('footer_adatvedelem'); ?></a> | <a href="/uploads/files/penzkezelesi-szabalyzat.pdf" target="_blank"><?php echo Lang::get('footer_penzkezeles'); ?></a></span>
+                        <span><a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.adatkezelesi-szabalyzat.index.' . LANG); ?>"><?php echo Lang::get('footer_adatvedelem'); ?></a></span>
                     </div>
                 </div>
             </div>

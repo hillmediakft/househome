@@ -80,10 +80,10 @@ $config['url'] = array(
             'en' => 'profile'
             )
     ),
-    'befektetoknek' => array(
+    'ingatlan-kezeles' => array(
         'index' => array(
-            'hu' => 'befektetoknek',
-            'en' => 'investors'
+            'hu' => 'ingatlan-kezeles',
+            'en' => 'property-management'
             )
     ),
     'berbeadoknak' => array(
@@ -92,13 +92,23 @@ $config['url'] = array(
             'en' => 'how-to-let-out'
             )
     ),
+    'berloknek' => array(
+        'index' => array(
+            'hu' => 'berloknek',
+            'en' => 'how-to-rent'
+            )
+    ),    
     'mennyit-er-az-ingatlanom' => array(
         'index' => array(
             'hu' => 'mennyit-er-az-ingatlanom',
             'en' => 'how-much-is-my-property-worth'
             )
     ),         
-
-
+    'adatkezelesi-szabalyzat' => array(
+        'index' => array(
+            'hu' => 'adatkezelesi-szabalyzat',
+            'en' => 'privacy-policy'
+            )
+    )
 );
 ?>

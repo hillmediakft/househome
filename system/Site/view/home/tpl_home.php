@@ -9,7 +9,6 @@ use System\Libs\Language as Lang;
     <?php include($this->path('tpl_home_filter')); ?>
 </div>
 
-
 <!-- KERESÉS FORM MOBIL -->
 <div class="main-filter hidden-sm hidden-md hidden-lg">
     <?php include($this->path('tpl_home_filter_mobile')); ?>
@@ -20,10 +19,7 @@ use System\Libs\Language as Lang;
     </div>
 </div>
 
-
 <div id="content" class="container-fluid">
-
-
     <div class="row">
         <div class="our-features-banner gray-bg light">
             <div class="container">
@@ -34,7 +30,7 @@ use System\Libs\Language as Lang;
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
-                                    <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>"><span class="icon lg-icon papers"></span></a>
+                                    <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.mennyit-er-az-ingatlanom.index.' . LANG); ?>"><span class="icon lg-icon papers"></span></a>
                                 </div>
                             </div>
                             <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.mennyit-er-az-ingatlanom.index.' . LANG); ?>">
@@ -47,10 +43,10 @@ use System\Libs\Language as Lang;
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
-                                    <span class="icon lg-icon like"></span>
+                                    <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlan-kezeles.index.' . LANG); ?>"><span class="icon lg-icon like"></span></a>
                                 </div>
                             </div>
-                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.befektetoknek.index.' . LANG); ?>">
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.ingatlan-kezeles.index.' . LANG); ?>">
                                 <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_2_cim'); ?></span>
                                 <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_2_szoveg'); ?></span>
                             </a>
@@ -60,10 +56,10 @@ use System\Libs\Language as Lang;
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
-                                    <span class="icon lg-icon human"></span>
+                                    <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berloknek.index.' . LANG); ?>"><span class="icon lg-icon human"></span></a>
                                 </div>
                             </div>
-                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
+                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berloknek.index.' . LANG); ?>">
                                 <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
                                 <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
                             </a>
@@ -73,12 +69,12 @@ use System\Libs\Language as Lang;
                         <div class="single-feature">
                             <div class="icon-container">
                                 <div class="icon-border">
-                                    <span class="icon lg-icon home"></span>
+                                     <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>"><span class="icon lg-icon home"></span></a>
                                 </div>
                             </div>
                             <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.berbeadoknak.index.' . LANG); ?>">
-                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
-                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_3_szoveg'); ?></span>
+                                <span class="main-title"><?php echo Lang::get('home_szolgaltatasok_4_cim'); ?></span>
+                                <span class="featured-sub-title colored"><?php echo Lang::get('home_szolgaltatasok_4_szoveg'); ?></span>
                             </a>
                         </div>
                     </div>
@@ -86,14 +82,6 @@ use System\Libs\Language as Lang;
             </div>
         </div>
     </div>   
-
-
-
-
-
-
-
-
 
     <div class="container">
         <div class="row">
@@ -111,14 +99,10 @@ use System\Libs\Language as Lang;
                     </div>
                     <div class="obj-carousel carousel" data-jcarousel="true">
                         <ul style="left: -300px; top: 0px;">
-
-
                             <?php
                             foreach ($all_properties as $value) {
                                 $photo_array = json_decode($value['kepek']);
                                 ?>
-
-
                                 <li style="width: 270px;">
                                     <div class="item">
                                         <div class="preview">
@@ -150,19 +134,19 @@ use System\Libs\Language as Lang;
                                             </span>
                                         </div>
                                         <div class="item-thumbnail">
-                                            <div class="single-thumbnail">
-
+                                            <div class="single-thumbnail sleep">
+                                                <i class="icon sleep"></i>
                                                 <span class="value"><?php echo $value['kat_nev_' . LANG]; ?></span>
                                             </div>
-                                            <div class="single-thumbnail">
-
+                                            <div class="single-thumbnail bath">
+                                                <i class="icon bath"></i>
                                                 <span class="value"><?php
                                                     $felszobaszam = (!empty($value['felszobaszam'])) ? '+ ' . $value['felszobaszam'] . ' ' : '';
                                                     echo (!empty($value['szobaszam'])) ? $value['szobaszam'] . ' ' . $felszobaszam . mb_strtolower(Lang::get('jell_szobaszam'), 'UTF-8') : '';
                                                     ?></span>
                                             </div>
-                                            <div class="single-thumbnail">
-
+                                            <div class="single-thumbnail area">
+                                                <i class="icon corner"></i>
                                                 <span class="value"><?php echo $value['alapterulet']; ?> m<sup>2</sup></span>
                                             </div>
                                         </div>
@@ -175,31 +159,17 @@ use System\Libs\Language as Lang;
                                                 echo $value['city_name'];
                                                 echo (isset($value['kerulet'])) ? ', ' . $value['kerulet'] . '. ' . Lang::get('adatlap_kerulet') : '';
                                                 ?></p>
-
                                         </div>
                                     </div>
                                 </li>
-
                             <?php } ?>
-
                         </ul>
                     </div>
                     <div class="jcarousel-pagination"></div>
                 </div>
             </div>
         </div>
-
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <div class="row">
         <div class="our-agents gray-bg">
@@ -208,7 +178,6 @@ use System\Libs\Language as Lang;
                 <div class="best-agents">
                     <div class="jcarousel-arrows">
                         <a href="#" class="prev-slide"><i class="fa fa-angle-left"></i></a>
-
                         <a href="#" class="next-slide"><i class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="ag-carousel carousel">
@@ -239,10 +208,6 @@ use System\Libs\Language as Lang;
                                     </div>
                                 </li>
                             <?php endforeach; ?>
-
-
-
-
                         </ul>
                     </div>
                 </div>
@@ -292,17 +257,13 @@ use System\Libs\Language as Lang;
                                     </div>
                                 </li>
                             <?php endforeach ?>
-
                         </ul>
                     </div>
-
                 </div>
             </div>
             <div class="empty-space"></div>
         </div>
     </div>
-
-
 </div>
 
 <!-- kezdőkép adat a javascriptnek -->

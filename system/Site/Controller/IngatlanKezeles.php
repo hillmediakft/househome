@@ -4,18 +4,18 @@ namespace System\Site\Controller;
 use System\Core\SiteController;
 use System\Core\View;
 
-class MennyitErAzIngatlanom extends SiteController {
+class IngatlanKezeles extends SiteController {
 
     function __construct()
     {
         parent::__construct();
-        $this->loadModel('MennyitErAzIngatlanom_model');
+        $this->loadModel('ingatlan_kezeles_model');
         $this->loadModel('ingatlanok_model');
     }
 
     public function index()
     {
-        $page_data = $this->MennyitErAzIngatlanom_model->getPageData('mennyit-er-az-ingatlanom');
+        $page_data = $this->ingatlan_kezeles_model->getPageData('ingatlan-kezeles');
         
         $data = $this->addGlobalData();
         $data['title'] = $page_data['metatitle_' . $this->lang];
@@ -33,13 +33,11 @@ class MennyitErAzIngatlanom extends SiteController {
 
         $view = new View();
         $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));
-        
-        $view->add_link('js', SITE_JS . 'pages/mennyit_er_az_ingatlanom.js');
 
         //$view->setLazyRender();
 //$this->view->debug(true); 
- //       $view->add_link('js', SITE_JS . 'pages/hitel.js');
-        $view->render('mennyiterazingatlanom/tpl_mennyiterazingatlanom', $data);
+ //       $view->add_link('js', SITE_JS . 'pages/ingatlan_kezeles.js');
+        $view->render('ingatlan_kezeles/tpl_ingatlan_kezeles', $data);
     }
 }
 ?>

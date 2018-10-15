@@ -37,7 +37,6 @@ class Pages extends AdminController {
 		$id = (int) $id;
 
 			if($this->request->is_post()) {
-				
 				if ($this->request->has_post('page_body_hu')) {
 					$data['body_hu'] = $this->request->get_post('page_body_hu', 'strip_danger_tags');
 					$data['body_en'] = $this->request->get_post('page_body_en', 'strip_danger_tags');
@@ -52,7 +51,7 @@ class Pages extends AdminController {
 				// új adatok beírása az adatbázisba (update) a $data tömb tartalmazza a frissítendő adatokat 
 				$result = $this->pages_model->update($id, $data);
 				
-				if($result !== false) {
+				if($result) {
 		            Message::set('success', 'page_update_success');
 					$this->response->redirect('admin/pages');
 				} else {
@@ -67,7 +66,7 @@ class Pages extends AdminController {
 		$data['description'] = 'Oldal szerkesztése description';
 		$data['page'] = $this->pages_model->onePage($id);
 
-		$view->add_links(array('bootbox', 'ckeditor', 'vframework', 'page_update'));
+		$view->add_links(array('bootbox', 'ckeditor', 'vframework', 'page_update', 'bootstrap_maxlength'));
 		$view->render('pages/tpl_page_update', $data);
 	}
 

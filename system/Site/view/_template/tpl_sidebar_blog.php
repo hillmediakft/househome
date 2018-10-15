@@ -18,7 +18,7 @@ use System\Libs\Config;
         </div>
 
         <!-- BANNER -->
-        <?php include($this->path('tpl_modul_banner_befektetoknek')); ?>
+        <?php include($this->path('tpl_modul_banner_ingatlan_kezeles')); ?>
         <?php include($this->path('tpl_modul_banner_mennyiterazingatlanom')); ?>
 
     </aside>

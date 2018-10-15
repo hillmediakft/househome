@@ -291,7 +291,7 @@ use System\Libs\Language as Lang;
                     <?php include($this->path('tpl_modul_hirek')); ?>
 
                     <?php include($this->path('tpl_modul_banner_mennyiterazingatlanom')); ?>
-<?php include($this->path('tpl_modul_banner_befektetoknek')); ?>
+<?php include($this->path('tpl_modul_banner_ingatlan_kezeles')); ?>
 
                     <!-- BANNER -->
                     <?php include($this->path('tpl_modul_banner_berbeadoknak')); ?>

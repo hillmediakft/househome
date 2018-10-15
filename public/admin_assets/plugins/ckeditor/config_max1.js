@@ -21,14 +21,13 @@ CKEDITOR.editorConfig = function (config) {
     // toolbar
 
     config.toolbar = [
-        {name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
-        {name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']},
-        {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
+        {name: 'basicstyles', items: ['Bold', 'Italic', '-', 'RemoveFormat']},
+        {name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
+        {name: 'clipboard', items: ['Cut', 'Copy', 'PasteText', '-', 'Undo', 'Redo']},
         {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
         '/',
         {name: 'insert', items: ['Image', 'Youtube', 'Table', 'HorizontalRule', 'SpecialChar']},
-        {name: 'styles', items: ['Styles', 'Format', 'FontSize']},
-        {name: 'colors', items: ['TextColor', 'BGColor']},
+        {name: 'styles', items: ['Format']},
         {name: 'document', items: ['Source']},
         {name: 'tools', items: ['Templates']},
         {name: 'preview', items: ['Preview']}

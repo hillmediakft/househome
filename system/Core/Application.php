@@ -105,10 +105,12 @@ class Application {
 
             //mennyit-er-az-ingatlanom
             $router->get('/mennyit-er-az-ingatlanom', 'MennyitErAzIngatlanom@index');
-            // befektetoknek
-            $router->get('/befektetoknek', 'Befektetoknek@index');
+            // bérlőknek
+            $router->get('/berloknek', 'Berloknek@index');
             // berbeadoknak
             $router->get('/berbeadoknak', 'Berbeadoknak@index');
+            // befektetoknek
+            $router->get('/ingatlan-kezeles', 'IngatlanKezeles@index');
             // Az ön hirdetése
             $router->get('/on-hirdetese', 'OnHirdetese@index');
             // keresés elmentése - AJAX
@@ -116,9 +118,9 @@ class Application {
             $router->post('/adatlap/:id', 'Adatlap@index');
 
             $router->get('ingatlanok/nem-talalhato-az-ingatlan', 'ingatlanok@nem_talalhato_az_ingatlan');
-            
-            // ingyenes elemzés oldal
-            $router->get('/ingyenes-elemzes', 'Ingyenes_elemzes@index');
+
+            // adatkezelési szabalyzat
+            $router->get('/adatkezelesi-szabalyzat', 'AdatkezelesiSzabalyzat@index');            
 
 
             // xml convert

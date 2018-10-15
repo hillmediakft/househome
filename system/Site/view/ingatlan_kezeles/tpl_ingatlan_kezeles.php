@@ -6,7 +6,7 @@
                 <div class="breadcrumbs">
                     <span class="clickable"><a href="<?php echo $this->request->get_uri('site_url');?>"><?php echo Lang::get('menu_home'); ?></a></span>
                     <span class="delimiter">/</span>
-                    <span class="active-page"><?php echo Lang::get('home_szolgaltatasok_3_cim'); ?></span>
+                    <span class="active-page"><?php echo Lang::get('home_szolgaltatasok_2_cim'); ?></span>
                 </div>
             </div>
         </div>

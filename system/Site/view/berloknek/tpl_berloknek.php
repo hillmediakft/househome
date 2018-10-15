@@ -13,9 +13,18 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-9">
                 <?php echo $body; ?>
             </div>
+            <!-- SIDEBAR -->
+                <div class="col-md-3">
+                    <aside class="sidebar main-sidebar">
+                        <!-- KIEMELT INGATLANOK DOBOZ -->
+                        <?php include($this->path('tpl_modul_kiemeltingatlanok')); ?>
+                        <!-- KIEMELT INGATLANOK DOBOZ -->
+                        <?php include($this->path('tpl_modul_banner_mennyiterazingatlanom')); ?>
+                    </aside>        
+                </div> <!-- SIDEBAR END -->
         </div>
     </div>
 </div>

@@ -25,6 +25,29 @@ var Page_update = function () {
         });	 		
 	};
 
+    var handleMaxlength = function() {
+        $('#maxlength_page_metadescription_hu').maxlength({
+            limitReachedClass: "label label-danger",
+            threshold: 150
+        });
+
+        $('#maxlength_page_metadescription_en').maxlength({
+            limitReachedClass: "label label-danger",
+            threshold: 150
+        });
+
+        $('#maxlength_page_metatitle_hu').maxlength({
+            limitReachedClass: "label label-danger",
+            threshold: 50
+        });
+
+        $('#maxlength_page_metatitle_en').maxlength({
+            limitReachedClass: "label label-danger",
+            threshold: 50
+        });        
+
+    }	
+
     return {
 
         //main function to initiate the module
@@ -37,6 +60,7 @@ var Page_update = function () {
 				page_body_hu: "config_max1",
 				page_body_en: "config_max1"
 			});
+			handleMaxlength();
 			
         }
 

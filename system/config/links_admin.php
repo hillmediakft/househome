@@ -128,6 +128,10 @@ $link['autocomplete'] = array(
 	'js' => ADMIN_ASSETS . 'plugins/autocomplete/src/jquery.autocomplete.js'
 );
 
+$link['bootstrap_maxlength'] = array(
+	'js' => ADMIN_ASSETS . 'plugins/bootstrap-maxlength/bootstrap-maxlength.min.js'
+);
+
 /*----------------- OLDALSPECIFIKUS LINKEK --------------------*/
 
 // blog
