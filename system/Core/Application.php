@@ -175,6 +175,14 @@ class Application {
                 $router->get('/investors', 'Befektetoknek@index');
                 // berbeadoknak
                 $router->get('/how-to-let-out', 'Berbeadoknak@index');
+                // bérlőknek
+                $router->get('/how-to-rent', 'Berloknek@index');
+                // befektetoknek
+                $router->get('/property-management', 'IngatlanKezeles@index');
+                // Az ön hirdetése
+                $router->get('/your-ad', 'OnHirdetese@index'); 
+                // adatkezelési szabalyzat
+                $router->get('/privacy-policy', 'AdatkezelesiSzabalyzat@index');                  
                 // keresés elmentése - AJAX
                 $router->post('/kereses/savesearch', 'Kereses@saveSearch');
 

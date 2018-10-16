@@ -109,6 +109,12 @@ $config['url'] = array(
             'hu' => 'adatkezelesi-szabalyzat',
             'en' => 'privacy-policy'
             )
-    )
+    ),
+     'on-hirdetese' => array(
+        'index' => array(
+            'hu' => 'on-hirdetese',
+            'en' => 'your-ad'
+            )
+    )   
 );
 ?>

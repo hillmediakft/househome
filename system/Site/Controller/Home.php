@@ -62,7 +62,7 @@ class Home extends SiteController {
             $data['agents'] = array();
         }
 
-        $data['blog_list'] = $this->blog_model->getBlogSidebar(2);
+        $data['blog_list'] = $this->blog_model->getBlogSidebar(4);
 
         $view = new View();
         $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));

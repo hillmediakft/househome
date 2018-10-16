@@ -236,7 +236,7 @@ use System\Libs\Language as Lang;
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2 class="block-title">Hírek</h2>
+                        <h2 class="block-title"><?php echo Lang::get('home_hirek'); ?></h2>
                         <ul class="latest-news-listing row">
                             <?php foreach ($blog_list as $blog) : ?>
                                 <li class="col-sm-3">

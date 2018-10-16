@@ -129,7 +129,7 @@ include($this->path('tpl_forgottenpw_modal'));
                                                             <div class="overlay"></div>
                                                         </li> 
                                                         <li class="navigation-item <?php echo $this->html_helper->menuActive('kereses', NULL, 'active', strtolower($this->request->get_controller()), strtolower($this->request->get_action())); ?>">
-                                                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.kereses.index.' . LANG); ?>" class="search-button"><i class="fa fa-search"></i> <?php echo "Keresés"; ?></a>
+                                                            <a href="<?php echo $this->request->get_uri('site_url') . Config::get('url.kereses.index.' . LANG); ?>" class="search-button"><i class="fa fa-search"></i> <?php echo Config::get('url.kereses.index.' . LANG); ?></a>
                                                             <div class="overlay"></div>
                                                         </li>
 
