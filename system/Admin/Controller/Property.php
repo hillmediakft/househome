@@ -2091,7 +2091,7 @@ class Property extends AdminController {
                 $html_data .= "<td>" . $img . "</td>";
                 $html_data .= "<td><strong>S-" . $value['ref_num'] . "</strong></td>";
                 $html_data .= "<td>" . $value['ingatlan_nev_hu'] . "</td>";
-                $html_data .= "<td><a style='color:blue;' href='" . BASE_URL . 'ingatlanok/adatlap/' . $value['id'] . '/' . $str_helper->stringToSlug($value['ingatlan_nev_hu']) . '?referens=' . $user->id . "' target='_blank'>Megtekintés</a></td>";
+                $html_data .= "<td><a style='color:blue;' href='" . BASE_URL . "ingatlanok/adatlap/" . $value['id'] . "/" . $str_helper->stringToSlug($value['ingatlan_nev_hu']) . "?referens=" . $user->id . "&utm_source=email&utm_medium=email&utm_campaign=ajanlas_" . $value['ref_num'] . "' target='_blank'>Megtekintés</a></td>";
                 $html_data .= "</tr>\r\n";
             }
 
