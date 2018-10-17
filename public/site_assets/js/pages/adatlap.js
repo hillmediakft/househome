@@ -159,6 +159,20 @@ var Adatlap = function () {
             });
         });	
 	}
+
+    var initSticky = function () {
+        var viewportWidth = $(window).width();
+        if (viewportWidth > 1024) {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    $("#sticker").sticky({topSpacing: -20});
+                } 
+                if ($(this).scrollTop() < 100) {
+                    $("#sticker").unstick();
+                } 
+            });
+        }
+    };    
 		
     /*
      * Google térkép objektumok
@@ -222,6 +236,7 @@ var Adatlap = function () {
             adatlapNyomtatas();
             initShare();
 			getPhoneNumber();
+            initSticky();
         },
 
     };

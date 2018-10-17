@@ -10,7 +10,6 @@ $(window).load(function () {
 
 $(document).ready(function () {
     "use string";
-    initSticky();
     initControls();
     // initRange();
 //	languageDropDownInit();
@@ -155,13 +154,6 @@ var countDown = function () {
                         );
             });
         })
-    }
-};
-
-var initSticky = function () {
-    var viewportWidth = $(window).width();
-    if (viewportWidth > 1024) {
-        $("#sticker").sticky({topSpacing: -20});
     }
 };
 
@@ -317,7 +309,7 @@ function languageDropDownInit() {
 
 function initScrollTop() {
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 800) {
             $('.scroll-top-btn').fadeIn();
         } else {
             $('.scroll-top-btn').fadeOut();
@@ -488,7 +480,7 @@ function carouselInit() {
                         $.when(
                                 jcarousel_ag.css('width', inner_width + 'px')
                                 ).then(function () {
-                            width = (jcarousel_ag.innerWidth() / items_ag) - ((30 * items_ag - 30) / items_ag);
+                            width = (jcarousel_ag.innerWidth() / items_ag) - ((10 * items_ag - 10) / items_ag);
                             jcarousel_ag.jcarousel('items').css('width', width + 'px');
                         });
                     })
