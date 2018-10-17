@@ -72,6 +72,8 @@ $config['events'] = array(
 		$from_email = $price_change_data['settings']['email'];
 		$from_name = $price_change_data['settings']['ceg'];
 		$subject = 'Ingatlan árváltozás értesítés';
+		$price_change_data['url'] = $price_change_data['url'] . '?utm_source=email&utm_medium=email&utm_campaign=arvaltozas_' . $price_change_data['ingatlan_ref_id']; 
+
 		$template_data = array(
 			'ingatlan_ref_id' => $price_change_data['ingatlan_ref_id'],
 			'ingatlan_nev' => $price_change_data['ingatlan_nev'],

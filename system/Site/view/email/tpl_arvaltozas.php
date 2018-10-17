@@ -30,16 +30,16 @@
                                                                 <table border="0" cellpadding="0" cellspacing="5">
                                                                     <tbody>
                                                                         <tr>
-                                                                            <td style="width: 100px;">Ingatlan azonosító:</td><td>{ingatlan_ref_id}</td>
+                                                                            <td style="width: 150px;">Ingatlan azonosító:</td><td>{ingatlan_ref_id}</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="width: 100px;">Ingatlan név:</td><td>{ingatlan_nev}</td>
+                                                                            <td style="width: 150px;">Ingatlan név:</td><td>{ingatlan_nev}</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="width: 100px;">Eredeti ár:</td><td>{ar_eredeti} Ft</td>
+                                                                            <td style="width: 150px;">Eredeti ár:</td><td>{ar_eredeti} Ft</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="width: 100px;">Új ár:</td><td>{ar_uj} Ft</td>
+                                                                            <td style="width: 150px;">Új ár:</td><td>{ar_uj} Ft</td>
                                                                         </tr> 
                                                                     </tbody>
                                                                 </table>
@@ -49,17 +49,21 @@
                                                 </table>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                <div style="margin-top:20px; text-align: center;">
+                                                    <a href="{url}" target="_blank">Az ingatlan adatlapjának megnyitása</a>
+                                                </div>
+                                                <p style="color: #666; margin-top:20px; text-align: left;">Ezt az üzenetet azért kapta, mert weblapunkon (househome.hu) a fenti ingatlanhoz árfigyelés funkciót állított be. Az árfigyelést a fiókjába (Profil) belépve bármikor törölheti.
+                                                </p> 
+                                            </td>
+                                        </tr>
                                     </table>
                                 </td>
                             </tr>
 
                             <!-- END MAIN CONTENT AREA -->
                         </table>
-
-                        <div style="margin-top:20px; text-align: center;">
-                            <a href="{url}" target="_blank">Az ingatlan adatlapja.</a>
-                        </div>
-
 
                         <!-- START FOOTER -->
                         <div style="clear: both; padding-top: 10px; text-align: center; width: 100%;">
