@@ -141,8 +141,8 @@ class Report extends AdminController {
 			$photo_array = json_decode($value['kepek']);
             $array[$key]['id'] = $value['id'];
             $array[$key]['title'] = $value['ingatlan_nev_hu'];
-            $array[$key]['url'] = 'https://ingatlanok-hitelek.hu/ingatlanok/adatlap/' . $value['id'] . '/' . $str_helper->stringToSlug($value['ingatlan_nev_' . 'hu']);
-            $array[$key]['img_url'] = 'https://ingatlanok-hitelek.hu/' . $url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small');
+            $array[$key]['url'] = BASE_URL . 'ingatlanok/adatlap/' . $value['id'] . '/' . $str_helper->stringToSlug($value['ingatlan_nev_' . 'hu']);
+            $array[$key]['img_url'] = BASE_URL . $url_helper->thumbPath(Config::get('ingatlan_photo.upload_path') . $photo_array[0], false, 'small');
             $array[$key]['varos'] = $value['city_name'] . ' ' . $kerulet;
             if ($value['tipus'] == 1) {
                 $array[$key]['ar'] = $value['ar_elado'];
