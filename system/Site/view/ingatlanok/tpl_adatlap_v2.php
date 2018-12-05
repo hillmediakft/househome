@@ -563,12 +563,17 @@ use System\Libs\Language as Lang;
                             </div>
                         </div>
                     </div>
-
-                    <?php //include($this->path('tpl_modul_banner')); ?>
-                    <?php include($this->path('tpl_modul_banner_mennyiterazingatlanom')); ?>
-                    <?php include($this->path('tpl_modul_banner_befektetoknek')); ?>
-                    <?php include($this->path('tpl_modul_banner_berbeadoknak')); ?>
-
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <?php include($this->path('tpl_modul_banner_mennyiterazingatlanom')); ?>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <?php include($this->path('tpl_modul_banner_befektetoknek')); ?>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <?php include($this->path('tpl_modul_banner_berbeadoknak')); ?>
+                        </div>
+                    </div>
                 </aside>
             </div>
 

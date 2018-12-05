@@ -47,7 +47,7 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                                <p>Az űrlapot a https://ingatlanok-hitelek.hu/on-hirdetese oldalról küldték.</p>
+                                                <p>Az űrlapot a househome.hu/on-hirdetese oldalról küldték.</p>
                                             </td>
                                         </tr>
                                     </table>

@@ -98,7 +98,7 @@ class Emailer {
     public function __construct($from_email, $from_name, $to_email, $to_name, $subject, $template_data, $template, $attachment = array())
     {
         $this->from_name = $from_name;
-        $this->from_email = $from_email;
+        $this->from_email = $to_email;
         $this->to_email = $to_email;
         $this->to_name = $to_name;
         $this->subject = $subject;

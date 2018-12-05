@@ -20,6 +20,7 @@ class Home extends SiteController {
     public function index()
     {
         $page_data = $this->home_model->getPageData('kezdo_oldal');
+       
         
         $data = $this->addGlobalData();
         $data['title'] = $page_data['metatitle_' . $this->lang];
@@ -32,8 +33,8 @@ class Home extends SiteController {
         } else {
             $data['home_background_path'] = 'public/site_assets/images/home-bg.jpg';
         }
-
-
+        // oldal id-je
+        $data['page_id'] = 'home';
         // szűrési paramétereket tartalmazó tömb
         $data['filter_params'] = $this->ingatlanok_model->get_filter_params(Session::get('ingatlan_filter'));
 //var_dump($data['filter_params']);

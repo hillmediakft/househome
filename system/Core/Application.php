@@ -97,6 +97,7 @@ class Application {
             $router->post('/user/register', 'user@register'); // ajax
             $router->post('/user/forgottpw', 'user@forgottpw'); // ajax
             $router->get('/felhasznalo/ellenorzes/:id/:hash', 'user@verify', array('id', 'activation_hash')); // ajax
+            $router->get('/felhasznalo/sikeres-regisztracio', 'user@thank_you'); 
 
             $router->post('/sendemail/init/:title', 'SendEmail@init', array('type'));
 
@@ -164,6 +165,7 @@ class Application {
                 $router->post('/user/register', 'user@register'); // ajax
                 $router->post('/user/forgottpw', 'user@forgottpw'); // ajax
                 $router->get('/felhasznalo/ellenorzes/:id/:hash', 'user@verify', array('id', 'activation_hash')); // ajax
+                $router->get('/felhasznalo/sikeres-regisztracio', 'user@thank_you'); 
 
                 $router->post('/sendemail/init/:title', 'SendEmail@init', array('type')); //ajax
                 // landing page    

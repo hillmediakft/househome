@@ -47,7 +47,7 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                                <p>Az űrlapot a https://ingatlanok-hitelek.hu/mennyit-er-az-ingatlanom oldalról küldték.</p>
+                                                <p>Az űrlapot a househome.hu/mennyit-er-az-ingatlanom oldalról küldték.</p>
                                             </td>
                                         </tr>
                                     </table>

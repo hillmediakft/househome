@@ -49,7 +49,7 @@ use System\Libs\Auth;
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo SITE_ASSETS; ?>vendors/slicknav/dist/slicknav.css">
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->url_helper->autoversion(SITE_CSS . 'main-red.css'); ?>" />
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->url_helper->autoversion(SITE_CSS . 'custom.css'); ?>" />
-        <link rel="shortcut icon" href="<?php echo SITE_IMAGE; ?>favicon.ico" />
+        <link rel="shortcut icon" href="<?php echo SITE_IMAGE; ?>favicon.ico?20181019" />
         <!-- END GLOBAL MANDATORY STYLES -->
 
         <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
@@ -60,7 +60,7 @@ use System\Libs\Auth;
     </head>
     <!-- END HEAD -->
 
-    <body>
+    <body <?php echo (isset($page_id)) ? 'id=' . $page_id : ''; ?>>
 	<?php if (ENV == "production") { ?>
 <!-- Google Tag Manager (noscript) -->
 

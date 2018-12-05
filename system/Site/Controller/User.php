@@ -19,6 +19,7 @@ class User extends SiteController {
 	{
 		parent::__construct();
 		$this->loadModel('user_model');
+		$this->loadModel('ingatlanok_model');
 	}
 
 	/**
@@ -28,6 +29,36 @@ class User extends SiteController {
 	{
 		$this->response->redirect('error');
 	}
+
+	/**
+	 *	Ne legyen 'sima' user oldal
+	 */
+	public function thank_you()
+	{
+		$page_data = $this->user_model->getPageData('registration-thank-you');
+        
+        $data = $this->addGlobalData();
+        $data['title'] = $page_data['metatitle_' . $this->lang];
+        $data['description'] = $page_data['metadescription_' . $this->lang];
+        $data['keywords'] = $page_data['metakeywords_' . $this->lang];
+        
+        $data['body'] = $page_data['body_' . $this->lang];
+        
+        // a keresőhöz szükséges listák alőállítása
+        //$data['city_list'] = $this->ingatlanok_model->city_list_query_with_prop_no();
+ // $data['category_list'] = $this->ingatlanok_model->list_query('ingatlan_kategoria');
+        //$data['district_list'] = $this->ingatlanok_model->district_list_query_with_prop_no();
+        // kiemelt ingatlanok
+        $data['kiemelt_ingatlanok'] = $this->ingatlanok_model->kiemelt_properties_query(4);
+
+        $view = new View();
+        $view->setHelper(array('url_helper', 'str_helper', 'html_helper'));
+
+        //$view->setLazyRender();
+//$this->view->debug(true); 
+ //       $view->add_link('js', SITE_JS . 'pages/hitel.js');
+        $view->render('user/tpl_thank_you', $data);
+	}	
 
 	/**
 	 *	Felhasználó bejelentkezés
@@ -304,7 +335,7 @@ class User extends SiteController {
 			Message::set('error', 'account_activation_failed');
 		}
 
-		$this->response->redirect();
+		$this->response->redirect('felhasznalo/sikeres-regisztracio');
     }
 
 	/**

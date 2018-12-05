@@ -172,6 +172,19 @@ class Request {
 	}
 
 	/**
+	 * HTTP protol visszadása: http:// vagy https:// 
+	 */
+	public function get_protocol()
+	{
+		if (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1)) {
+			return 'https://';
+		}
+		else {
+			return 'http://';
+		}
+	}	
+	
+	/**
 	 * HTTP Referer visszaadása a $_SERVER szuperglobális tömbből
 	 */
 	public function get_httpreferer()

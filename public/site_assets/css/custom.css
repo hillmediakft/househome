@@ -555,7 +555,7 @@ input.has-error {
     display:none;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 766px) {
     /* #menu is the original menu */
     #menu_mobile {
         display:none;
@@ -608,7 +608,7 @@ input.has-error {
 }
 
 #sticker {
-    z-index: 10000!important;
+    z-index: 100000!important;
 }
 
 .popover {

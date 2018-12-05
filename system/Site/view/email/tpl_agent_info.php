@@ -62,7 +62,7 @@
                             <table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
                                 <tr>
                                     <td style="color: #999999; font-size: 12px; text-align: center">
-                                        <p style="color: #999999; font-size: 12px; text-align: center;">Ez az üzenet az ingatlanok-hitelek.hu weboldalon keresztül érkezett!</p>
+                                        <p style="color: #999999; font-size: 12px; text-align: center;">Ez az üzenet az househome.hu weboldalon keresztül érkezett!</p>
                                     </td>
                                 </tr>
                                 <tr>

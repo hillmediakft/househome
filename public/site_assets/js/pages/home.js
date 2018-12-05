@@ -79,6 +79,21 @@ var Home = function () {
         //  document.getElementById("home_background_image_mobile").style.backgroundImage = "url(" + home_background_path + ")";
         }
 
+        // kezdőkép elérési út beállítása
+     var setsliderImageHeight = function () {
+        if (width < 480) {
+            var height = $(window).height() - 84;
+        } else {
+            var height = $(window).height() - 100;
+        }
+
+        $('.home-banner').css('height',height);
+
+        }
+
+       
+   
+
     var equalHeights = function () {
         setTimeout(function () {
             $('.object-slider.interesting-offer div.item').equalHeights();
@@ -98,6 +113,7 @@ var Home = function () {
             //locationsInput();
             equalHeights();
             equalHeightsServices();
+            setsliderImageHeight();
         }
     };
 

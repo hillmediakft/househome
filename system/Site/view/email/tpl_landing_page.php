@@ -47,7 +47,7 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                                <p>Az űrlapot a https://ingatlanok-hitelek.hu/marketing/{friendlyurl} oldalról küldték.</p>
+                                                <p>Az űrlapot a househome.hu/marketing/{friendlyurl} oldalról küldték.</p>
                                             </td>
                                         </tr>
                                     </table>

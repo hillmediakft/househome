@@ -15,7 +15,7 @@ include($this->path('tpl_forgottenpw_modal'));
 ?>
 <div class="extra-header">
     <div class="container">
-        <div class="left-part">
+        <div class="left-part hidden-xs">
             <div class="extra-item sociable">
                 <ul class="sociable-listing">
                     <li class="sociable-item">
@@ -31,7 +31,7 @@ include($this->path('tpl_forgottenpw_modal'));
             <div class="extra-item login">
                 <span class="event-entry">
                     <!-- MOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! fa fa-heart-o -->
-                    <a href="javascript:void(0);" id="kedvencek"><i class="fa fa-heart-o"></i><span class="kedvencek-szoveg"><?php echo Lang::get('header_top_kedvencek'); ?></span>
+                    <a href="javascript:void(0);" id="kedvencek"><i class="fa fa-heart-o"></i><span class="kedvencek-szoveg hidden-xs"><?php echo Lang::get('header_top_kedvencek'); ?></span>
                         <?php echo '<span class="badge badge-danger">' . count(json_decode(Cookie::get('kedvencek'))) . '</span>'; ?>
                     </a>
                 </span>
@@ -40,10 +40,10 @@ include($this->path('tpl_forgottenpw_modal'));
             <div class="extra-item event">
                 <div class="country-select">
                     <?php if ($this->request->get_uri('langcode') == "en") { ?>
-                        <a href="/"><img alt="" class="flag" src="<?php echo SITE_IMAGE; ?>flag_hu.jpg"> <span>Magyar</span></a>
+                        <a href="/"><img alt="" class="flag" src="<?php echo SITE_IMAGE; ?>flag_hu.jpg"> <span class="hidden-xs">Magyar</span></a>
                     <?php } ?>
                     <?php if ($this->request->get_uri('langcode') == "hu") { ?>
-                        <a href="/en"><img alt="" class="flag" src="<?php echo SITE_IMAGE; ?>flag_en.jpg"> <span>English<span></a>
+                        <a href="/en"><img alt="" class="flag" src="<?php echo SITE_IMAGE; ?>flag_en.jpg"> <span class="hidden-xs">English<span></a>
                                 <?php } ?>
                                 </div>
                                 </div>

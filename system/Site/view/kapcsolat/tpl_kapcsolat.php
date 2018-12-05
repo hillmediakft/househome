@@ -86,7 +86,7 @@ use System\Libs\Language as Lang;
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="kapcsolat-urlap">
                     <div class="col-sm-12">
                         <h4 class="column-title"><?php echo Lang::get('kapcsolat_email_cim'); ?></h4>
                         <div class="contacts-block">
@@ -130,7 +130,7 @@ use System\Libs\Language as Lang;
                     <!-- KIEMELT INGATLANOK DOBOZ -->
                     <?php include($this->path('tpl_modul_kiemeltingatlanok')); ?>
                     <!-- BANNER -->
-<?php include($this->path('tpl_modul_banner_befektetoknek')); ?>
+<?php include($this->path('tpl_modul_banner_ingatlan_kezeles')); ?>
                 </aside>        
             </div> <!-- SIDEBAR END -->
         </div>

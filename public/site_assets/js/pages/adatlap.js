@@ -152,7 +152,7 @@ var Adatlap = function () {
                 url: 'getphonenumber',
                 data: 'id=' + agentId,
                 success: function (data) {
-                    $('#phone_number_box').html('<a class="simple-btn sm-button filled green" style="margin-top: 10px;" href="tel:' + data + '">' + data + '</ä>');
+                    $('#phone_number_box').html('<a class="simple-btn sm-button filled green" style="margin-top: 10px; background-color: #004283" href="tel:' + data + '">' + data + '</ä>');
 
 
                 }
@@ -164,10 +164,10 @@ var Adatlap = function () {
         var viewportWidth = $(window).width();
         if (viewportWidth > 1024) {
             $(window).scroll(function () {
-                if ($(this).scrollTop() > 300) {
+                if ($(this).scrollTop() > 500) {
                     $("#sticker").sticky({topSpacing: -20});
                 } 
-                if ($(this).scrollTop() < 100) {
+                if ($(this).scrollTop() < 300) {
                     $("#sticker").unstick();
                 } 
             });

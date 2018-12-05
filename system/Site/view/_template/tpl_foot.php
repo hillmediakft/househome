@@ -113,7 +113,7 @@ use System\Libs\Language as Lang;
             <div class="bottom-footer">
                 <div class="col-sm-6">
                     <div class="copy">
-                        <span>© <?php echo date('Y') . ' ' . $settings['ceg']; ?> – <?php echo Lang::get('footer_jog'); ?> | <a href="http://www.onlinemarketingguru.hu/weboldal-keszites.html" target="_blank"><?php echo Lang::get('footer_weboldal_keszites'); ?></a>
+                        <span>© <?php echo date('Y') . ' ' . $settings['ceg']; ?> – <?php echo Lang::get('footer_jog'); ?> <!-- | <a href="http://www.onlinemarketingguru.hu/weboldal-keszites.html" target="_blank"><?php echo Lang::get('footer_weboldal_keszites'); ?></a> -->
                         </span>
                     </div>
                 </div>

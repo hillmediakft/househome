@@ -91,6 +91,10 @@ body, html {
     outline: 0;
 }
 
+a, a:visited, a:focus, a:active, a:hover{
+    outline:0 none !important;
+}
+
 /* line 1594, scss/_slider.scss */
 a:hover{
     text-decoration: none;
@@ -1193,16 +1197,15 @@ footer.footer .bottom-footer .copy {
 /* line 2, scss/_slider.scss */
 .home-banner {
     height: 650px;
-    background: url(../images/banners/home-top.jpg) no-repeat top center;
-    position: relative;
+    background: #eee;
+	position: relative;
     margin-top: 0px;
     background-size: cover;
 }
 /* line 6, scss/_slider.scss */
 .home-banner.style-2 {
-    background: url("../images/home-bg.jpg") no-repeat top center;
     background-color: #eee;
-    background-size: contain;
+    background-size: cover;
 }
 /* line 9, scss/_slider.scss */
 .home-banner.style-3 {
@@ -3254,6 +3257,12 @@ footer.footer .bottom-footer .copy {
 .featured-products .carousel {
     position: relative;
     overflow: hidden;
+}
+/* line 1684, scss/_slider.scss */
+#home .object-slider .carousel
+{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 /* line 1687, scss/_slider.scss */
 .object-slider .carousel ul,
@@ -5897,6 +5906,7 @@ footer.footer .bottom-footer .copy {
     padding-bottom: 22px;
     display: table;
     width: 100%;
+	background: url("../images/subscribe-banner-bg.jpg");
 }
 /* line 3187, scss/_slider.scss */
 .subscribe-banner .logo-block {
@@ -9425,6 +9435,7 @@ a.simple-btn.outlined.main-color:hover {
 /* line 1468, scss/_shortcodes.scss */
 .latest-news-listing li .item .preview a img {
     width: 100%;
+    border: 1px solid #e7e4e4;
 }
 /* line 1471, scss/_shortcodes.scss */
 .latest-news-listing li .item .preview a:hover {
@@ -11718,7 +11729,7 @@ a.simple-btn.outlined.main-color:hover {
     font-size: 14px;
     color: #eee;
     display: block;
-    margin-bottom: 17px;
+    margin-bottom: 0px;
 }
 /* line 3349, scss/_shortcodes.scss */
 .main-sidebar .widget.banner .banner-entry .learn-more {
@@ -17860,7 +17871,7 @@ body.shop-front header .cart-btn:hover {
 }
 @media only screen and (min-width: 1367px) and (max-width: 1480px) {
     .home-banner {
-        height: 700px;
+        height: 600px;
     }
 }
 @media only screen and (min-width: 1481px) and (max-width: 1920px) {
@@ -19294,7 +19305,7 @@ body.shop-front header .cart-btn:hover {
     }
     /* line 1407, scss/_responsive.scss */
     body header.header {
-        padding-top: 20px;
+        padding-top: 0px;
     }
     /* line 1409, scss/_responsive.scss */
     body header.header .logo {
@@ -19329,7 +19340,7 @@ body.shop-front header .cart-btn:hover {
     /* line 1435, scss/_responsive.scss */
     body .home-banner {
         height: 500px;
-        margin-top: -35px;
+        margin-top: -8px;
     }
     .home-banner.style-2 {
         background: #eee;
@@ -21046,7 +21057,16 @@ body.shop-front header .cart-btn:hover {
     }
     .interesting-offer .jcarousel-arrows {
         margin-right: 0px;
-    }     
+    }
+    .extra-header .extra-item.login {
+    padding: 10px 5px;
+    }    
+    body header.header {
+        padding-top: 0px;
+    } 
+    body .home-banner {
+    margin-top: -8px;
+}
 }
 @media only screen and (max-width: 320px) {
     /* line 2998, scss/_responsive.scss */
@@ -21195,11 +21215,11 @@ body.shop-front header .cart-btn:hover {
         top: 10px;
     }
     .main-filter {
-        margin-top: 25px;
+        margin-top: 0px;
     }	
     .main-filter .filter-form .item-label {
         font-size: 14px;
-        color: #777;
+        color: #fff;
         margin-bottom: 5px;
     }
     .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
@@ -21404,4 +21424,55 @@ a {
 } 
 .ingatlan-info-box .icon-box .heading .icon {
     margin-right: 5px;
+}
+
+.home-jcarousel-arrows {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    z-index: 10;
+    left: 0;
+    right: 0;
+}
+.home-jcarousel-arrows .prev-slide {
+    margin-left: 0px;
+    line-height: 30px;
+    background-color: #00B7B6;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.home-jcarousel-arrows .next-slide {
+    float: right;
+    margin-right: 0px;
+    line-height: 30px;
+    background-color: #00B7B6;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.widget.banner .banner-img {
+    position: relative;
+}
+.widget.banner .banner-img .banner-entry {
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    bottom: 0px;
+}
+.widget.banner .banner-title a {
+    color: #fff;
+}
+.widget.banner .banner-title a:hover {
+    color: #eee;
 }
